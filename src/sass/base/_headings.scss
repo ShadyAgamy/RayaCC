@@ -1,0 +1,20 @@
+.main_left_heading {
+    min-width: 300px;
+    max-width: 400px;
+    min-height: 50px;
+    border-bottom: 1px solid #DFDFDE;
+    display: flex;
+
+    &  >h1,h2,h3,h4 {
+        color: #A7A9AC;
+        border-bottom: 2px solid #A7A9AC;
+        margin-bottom: -1px;
+
+    }
+}
+
+
+.main_right_heading {
+    min-width: 360px;
+    justify-content: flex-end;
+}

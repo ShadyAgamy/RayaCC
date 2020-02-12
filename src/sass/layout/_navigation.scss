@@ -1,0 +1,159 @@
+.navbar {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    height: 54px;
+    @include displayFlex;
+    padding: 0.5rem 4.5rem;
+    z-index: 999;
+    font-family: 'Cinzel', serif;
+    @include respond(tab-land){
+        top: 15px;
+    }
+
+
+    &__logo {
+        width: 125px;
+       img {
+        width :100%;
+       } 
+    }
+
+    .nav {
+        @include displayFlex;
+
+        .btn_text {
+            font-size: 13px;
+            margin-right: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: .8rem 1.6rem;
+            border-radius: 16px;
+
+            img {
+                width:23px;
+            } 
+        }
+
+    }
+
+    
+
+    &__donateBtn {
+      margin-right: 4rem;
+
+        &-btn {
+            background: transparent;
+            padding: .5rem 2rem;
+            color: white;
+            border: 1px solid #fff;
+            
+            @media all and (max-width: 400px) {
+                padding: .6rem 2.5rem;
+                margin-left: 2rem; 
+            }
+
+        }
+    }
+
+    &__langBtn {
+        margin-right: 5rem;
+        &-btn {
+            font-family: arabicFont;
+            font-size: 1.8rem !important;
+        }
+    }
+
+    &__menu {
+        display: none;
+        @include respond(tab-land){
+            display: block;
+        }
+       
+      
+        &-link {
+            display: inline-block;
+            height: 15px;
+
+            span {
+                width: 3rem;
+                height: 2.5px;              
+                position: relative;
+                background: white;
+                display: inline-block;
+                border-radius: 100px;
+               
+
+                &::after,
+                &::before {
+                    content: '';
+                    width: 3rem;
+                    height: 2.5px;      
+                    background: white;
+                    border-radius: 100px;
+                    
+                   
+                    position: absolute;
+                    left: 0;
+                }
+
+                &::after {
+                    top: 7px;
+                }
+
+                &::before {
+                    bottom: 7px;
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+}
+
+.customLayOut {
+    .navbar {
+        background: #EFEFEF;
+        top: 0;
+        position: fixed;
+
+        .navbar__logo {
+            width: 90px;
+        }
+    }
+
+   .navbar__nav > div:nth-of-type(-n+3) {
+        .btn_text {
+            &:hover, &.active {
+                background-color: #C1DDCD;
+                
+            }
+        }
+        
+    }
+
+    .navbar__nav .btn_text {
+        color  :#0F9B49;    
+    }
+
+    .navbar__donateBtn-btn.btn {
+        color  :#0F9B49;
+        border-color:#0F9B49;
+    }
+}
+
+
+.customLayOut {
+    .navbar__menu-link span,.navbar__menu-link span::after, .navbar__menu-link span::before {
+        background-color: #318D62;
+    }
+}

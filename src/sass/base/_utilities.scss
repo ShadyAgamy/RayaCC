@@ -1,0 +1,42 @@
+.textCenter{
+    text-align: center!important;
+}
+
+
+.marginBottom_small{margin-bottom: 1.4rem!important;}
+.marginBottom_medium{margin-bottom: 4.6rem!important;
+    @include respond(tab-port){
+        margin-bottom: 3.6rem!important;
+    }
+}
+.marginBottom_large{margin-bottom: 8rem!important;
+    @include respond(tab-port){
+        margin-bottom: 6rem!important;
+    }
+}
+
+.marginTop_small{margin-top: 1.4rem!important;}
+.marginTop_medium{margin-top: 3.5rem!important;}
+.marginTop_large{margin-top: 8rem!important;}
+.marginTop_huge{margin-top: 10rem!important;}
+
+
+#loading {
+    background:#fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999999;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
+}
+
+
