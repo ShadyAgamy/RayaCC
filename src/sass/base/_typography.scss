@@ -3,6 +3,7 @@
 }
 
 
+
 @font-face {
     font-family: arabicFont;
     src: url("../fonts/GE SS Two Medium.otf");
@@ -27,6 +28,12 @@
 
 p {
     font-weight: normal;
+    &.para {
+        font-size: 15px;
+        color: #58595B;
+        line-height: 1.7;
+
+    }
 }
 
 h1,h2,h3,h4,h5,div,p,ul,li,a,input{
@@ -51,6 +58,11 @@ li{
     text-transform: capitalize;
 }
 
+img.arrow {
+    margin-right: .5rem;
+    width: 14px!important;
+    height: 9px!important;
+}
 //PRIMARY HEADING
 .primary-text{
     color:$colorWhite;

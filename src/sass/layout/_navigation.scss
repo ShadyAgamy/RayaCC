@@ -110,6 +110,61 @@
             }
         }
     }
+
+    .menu-item#langSelect {
+        select {
+           background: transparent;
+           border: none;
+           appearance: none;
+           color:#FFFFFF ;
+           font-size: 13px;
+           position: relative;    
+       }
+       &:after {
+           content: '';
+           background: url("../img/home/down_w.png") right 1rem center no-repeat !important;
+           background-size: 1.4rem !important;
+           border: 0;
+           z-index: 1000;
+           display: block;
+           width: 30px;
+           height: 1rem;
+           position: absolute;
+           top: 50%;
+           right: 15px;
+           transform: translateY(-50%);
+           
+       }
+   }
+
+    &.navGray {
+        background-color: #EAEAEA;
+        position: fixed;
+        top: 0;
+        height: 64px;
+
+        .navbar__logo {
+            width: 82px;
+        }
+        .menu-item{
+            a {
+                color: #143B64;
+                font-weight: bold;
+            }
+        }
+
+        .menu-item#langSelect {
+            select {
+                color: #0B63AC;
+            }
+
+            &:after {
+                background: url("../img/home/down_b.png") right 1rem center no-repeat !important;
+            }
+        }
+    }
+    
+    
 }
 
 @media (max-width: 768px) {
@@ -157,3 +212,5 @@
         background-color: #318D62;
     }
 }
+
+

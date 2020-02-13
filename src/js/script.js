@@ -80,6 +80,7 @@ $( document ).ready(function() {
 
 
 
+    $(".navbar.navGray").find(".navbar__logo img").attr("src", "./img/home/logo.png")
 
 
 
