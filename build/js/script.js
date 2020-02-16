@@ -99,6 +99,8 @@ $("body").click((e) => {
 
 
 
+
+// ///change navbar background to gray when scroll in homepage and in all other pages  ////
 $(window).scroll(function() {    
     checkMenuScrollTop();
 });
@@ -110,17 +112,14 @@ function checkMenuScrollTop() {
     
     if ($("body").hasClass("homePage")) { // homepage only
         if (scroll > 550) {
-        
-            $("body").addClass("customLayOut");
-            $(".navbar").css("position", "fixed");
+            $(".navbar").addClass("navGray");
             $(".navbar__logo img").attr('src', "img/home/logo.png");
             $(".lang_selected_arrow").attr('src', "./img/home/down_b.png");
             // if(dir == "rtl") {
             //     $(".navbar__logo img").attr('src', "img/icons/logoAr.png");
             // }
         } else {
-            $("body").removeClass("customLayOut");
-            $(".navbar").css("position", "absolute");
+            $(".navbar").removeClass("navGray");
             $(".navbar__logo img").attr('src', "img/home/logo-w.png");
             $(".lang_selected_arrow").attr('src', "./img/home/down_w.png");
             // if(dir == "rtl") {
@@ -133,6 +132,13 @@ function checkMenuScrollTop() {
         }
     }
 }
+
+// //////////////////////////
+
+
+
+
+
 
 
 
