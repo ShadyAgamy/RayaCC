@@ -79,8 +79,22 @@ $( document ).ready(function() {
     }
 
 
-
+// change lang selct chevron color depend on navbar 
     $(".navbar.navGray").find(".navbar__logo img").attr("src", "./img/home/logo.png")
+
+
+$(".lang_selected").on("click", () => {
+   $("#langsList").fadeToggle(); 
+})
+$("body").click((e) => {
+    e.stopPropagation();
+    if ($(e.target).hasClass('lang_selected') || $(e.target).hasClass('langSelect') ||$(e.target).hasClass('lang_selected_lang') || $(e.target).hasClass('lang_selected_arrow')) {
+        return false;  
+    } else {
+        $("#langsList").fadeOut();
+    }
+    
+})
 
 
 

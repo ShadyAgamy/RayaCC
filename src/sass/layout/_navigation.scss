@@ -112,29 +112,55 @@
     }
 
     .menu-item#langSelect {
-        select {
-           background: transparent;
-           border: none;
-           appearance: none;
-           color:#FFFFFF ;
-           font-size: 13px;
-           position: relative;    
-       }
-       &:after {
-           content: '';
-           background: url("../img/home/down_w.png") right 1rem center no-repeat !important;
-           background-size: 1.4rem !important;
-           border: 0;
-           z-index: 1000;
-           display: block;
-           width: 30px;
-           height: 1rem;
-           position: absolute;
-           top: 50%;
-           right: 15px;
-           transform: translateY(-50%);
-           
-       }
+    align-self: flex-start;
+    position: relative;
+    & > div {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 99999;
+        cursor: pointer;
+
+        span {
+            font-size: 13px;
+            color: #fff;
+            text-transform: capitalize;
+            margin: 1rem;
+        }
+
+        img {
+            width: 12px;
+        }
+    }
+
+    #langsList {
+        position: absolute;
+        top: 100%;
+        left: -3rem;
+        background: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        min-width: 100px;
+        border: none;
+        display: none;
+
+
+        li {
+            a {
+                color: #58595B;
+                font-size: 13px;
+                padding: 1.5rem 1.2rem;
+                text-transform: capitalize;
+                display: block;
+            }
+
+            width: 100%;
+            &:not(:last-of-type) {
+                border-bottom: 1px solid #EFEFEF;
+            }
+            
+        }
+    }
    }
 
     &.navGray {
