@@ -80,7 +80,8 @@ $( document ).ready(function() {
 
 
 // change lang selct chevron color depend on navbar 
-    $(".navbar.navGray").find(".navbar__logo img").attr("src", "./img/home/logo.png")
+    $(".navbar.navGray").find(".navbar__logo img").attr("src", "./img/home/logo.png");
+    $(".navbar.navGray").find(".lang_selected_arrow").attr("src", "./img/home/down_b.png");
 
 
 $(".lang_selected").on("click", () => {
@@ -97,6 +98,41 @@ $("body").click((e) => {
 })
 
 
+
+$(window).scroll(function() {    
+    checkMenuScrollTop();
+});
+checkMenuScrollTop();
+
+function checkMenuScrollTop() {
+    var scroll = $(window).scrollTop();
+    var dir = $("html").attr("dir");
+    
+    if ($("body").hasClass("homePage")) { // homepage only
+        if (scroll > 550) {
+        
+            $("body").addClass("customLayOut");
+            $(".navbar").css("position", "fixed");
+            $(".navbar__logo img").attr('src', "img/home/logo.png");
+            $(".lang_selected_arrow").attr('src', "./img/home/down_b.png");
+            // if(dir == "rtl") {
+            //     $(".navbar__logo img").attr('src', "img/icons/logoAr.png");
+            // }
+        } else {
+            $("body").removeClass("customLayOut");
+            $(".navbar").css("position", "absolute");
+            $(".navbar__logo img").attr('src', "img/home/logo-w.png");
+            $(".lang_selected_arrow").attr('src', "./img/home/down_w.png");
+            // if(dir == "rtl") {
+            //     $(".navbar__logo img").attr('src', "img/icons/logoAr2.png");
+            // }
+        }
+    }  else { //other pages
+        if(dir == "rtl") {
+            $(".navbar__logo img").attr('src', "img/icons/logoAr.png");
+        }
+    }
+}
 
 
 

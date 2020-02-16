@@ -50,14 +50,16 @@
                 <li class="menu-item">
                     <a href="" class="btn_text" >CONTACT US</a>
                 </li>
-                <li class="menu-item" id="langSelect">
-                    <select name="" >
-                        <option value="">english</option>
-                    </select>
-                </li>
-                
-                <li id="navbar__menu" class="navbar__menu">
-                    <a href="" class="navbar__menu-link"><span></span></a> 
+                <li class="menu-item" id="langSelect" class="langSelect">
+                    <div class="lang_selected">
+                        <span class="lang_selected_lang">english</span>
+                        <img class="lang_selected_arrow" src="./img/home/down_w.png" alt="">
+                    </div>
+                    
+                    <ul id="langsList">
+                        <li><a href="">english</a></li>
+                        <li><a href="">arabic</a></li>
+                    </ul>
                 </li>
                 
             </ul>
@@ -151,20 +153,42 @@
             <div class="swiper-container">
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
+                <div class="swiper-pagination_cert">
+                    <img src="./img/who-we-are/certification/cer_1_min.png" alt="">
+                    <img src="./img/who-we-are/certification/cer_2_min.png" alt="">
+                    <img src="./img/who-we-are/certification/cer_3_min.png" alt="">
+                    <img src="./img/who-we-are/certification/cer_4_min.png" alt="">
+                </div>
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide">
-                        <img src="./img/who-we-are/certification/cer_1.png" alt="">
-                        <p class="para">Raya is certified with the latest COPC CSP Standard, which is a global performance management system designed to balance and improve the quality, accuracy, and efficiency of service to generate higher customer satisfaction and leverage profitability. Ray a has implemented COPC standards in 2006 and has successfully achieved the certification in 2007 and recertification annually ever since on the following versions till date (4.1, 4.2, 4.3, 4.4, 5.2 and 6.0 consecutively).</p>
+                        <div>
+                            <img src="./img/who-we-are/certification/cer_1.png" alt="">
+                            <p class="para">Raya is certified with the latest COPC CSP Standard, which is a global performance management system designed to balance and improve the quality, accuracy, and efficiency of service to generate higher customer satisfaction and leverage profitability. Ray a has implemented COPC standards in 2006 and has successfully achieved the certification in 2007 and recertification annually ever since on the following versions till date (4.1, 4.2, 4.3, 4.4, 5.2 and 6.0 consecutively).</p>
+                        </div>
+                        
                     </div>
                     <div class="swiper-slide">
-                        <img src="./img/who-we-are/certification/cer_2.png" alt="">
-                        <p class="para">Raya is certified with the latest COPC CSP Standard, which is a global performance management system designed to balance and improve the quality, accuracy, and efficiency of service to generate higher customer satisfaction and leverage profitability. Ray a has implemented COPC standards in 2006 and has successfully achieved the certification in 2007 and recertification annually ever since on the following versions till date (4.1, 4.2, 4.3, 4.4, 5.2 and 6.0 consecutively).</p>
+                        <div>
+                            <img src="./img/who-we-are/certification/cer_2.png" alt="">
+                            <p class="para">Raya is certified with the latest COPC CSP Standard, which is a global performance management system designed to balance and improve the quality, accuracy, and efficiency of service to generate higher customer satisfaction and leverage profitability. Ray a has implemented COPC standards in 2006 and has successfully achieved the certification in 2007 and recertification annually ever since on the following versions till date (4.1, 4.2, 4.3, 4.4, 5.2 and 6.0 consecutively).</p>
+                        </div>
+                        </div>
+                        
+                    <div class="swiper-slide">
+                        <div>
+                            <img src="./img/who-we-are/certification/cer_3.png" alt="">
+                            <p class="para">Raya is certified with the latest COPC CSP Standard, which is a global performance management system designed to balance and improve the quality, accuracy, and efficiency of service to generate higher customer satisfaction and leverage profitability. Ray a has implemented COPC standards in 2006 and has successfully achieved the certification in 2007 and recertification annually ever since on the following versions till date (4.1, 4.2, 4.3, 4.4, 5.2 and 6.0 consecutively).</p>
+                        </div>
+                        
                     </div>
                     <div class="swiper-slide">
-                        <img src="./img/who-we-are/certification/cer_3.png" alt="">
-                        <p class="para">Raya is certified with the latest COPC CSP Standard, which is a global performance management system designed to balance and improve the quality, accuracy, and efficiency of service to generate higher customer satisfaction and leverage profitability. Ray a has implemented COPC standards in 2006 and has successfully achieved the certification in 2007 and recertification annually ever since on the following versions till date (4.1, 4.2, 4.3, 4.4, 5.2 and 6.0 consecutively).</p>
+                        <div>
+                            <img src="./img/who-we-are/certification/cer_4.png" alt="">
+                            <p class="para">Raya is certified with the latest COPC CSP Standard, which is a global performance management system designed to balance and improve the quality, accuracy, and efficiency of service to generate higher customer satisfaction and leverage profitability. Ray a has implemented COPC standards in 2006 and has successfully achieved the certification in 2007 and recertification annually ever since on the following versions till date (4.1, 4.2, 4.3, 4.4, 5.2 and 6.0 consecutively).</p>
+                        </div>
+                        
                     </div>
                 </div>
                 
@@ -308,15 +332,20 @@
         <script src="js/script.js"></script>
 
         <script>
-
-            var menu = ['Slide 1', 'Slide 2', 'Slide 3'];
+            var certImgsSrcs = [];
+            $(".swiper-pagination_cert img").each((i, el) => {
+               
+                certImgsSrcs.push( $(el).attr("src"))
+            }) 
+            
             var mySwiper = new Swiper ('.certification .swiper-container', {
                 // If we need pagination
                 pagination: {
                 el: '.swiper-pagination',
                         clickable: true,
                     renderBullet: function (index, className) {
-                    return '<span class="' + className + '">' + (menu[index]) + '</span>';
+                    // return '<span class="' + className + '">' + (menu[index]) + '</span>';
+                    return '<img class="' + className + '" src="' + (certImgsSrcs[index]) + '">';
                     },
                 },
 

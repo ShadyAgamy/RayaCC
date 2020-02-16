@@ -152,6 +152,7 @@
                 padding: 1.5rem 1.2rem;
                 text-transform: capitalize;
                 display: block;
+                font-weight: 300;
             }
 
             width: 100%;
@@ -180,13 +181,9 @@
         }
 
         .menu-item#langSelect {
-            select {
-                color: #0B63AC;
-            }
-
-            &:after {
-                background: url("../img/home/down_b.png") right 1rem center no-repeat !important;
-            }
+           .lang_selected_lang{
+               color: #0B63AC;
+           } 
         }
     }
     
@@ -203,40 +200,30 @@
 
 .customLayOut {
     .navbar {
-        background: #EFEFEF;
+        background: #EAEAEA;
         top: 0;
         position: fixed;
 
         .navbar__logo {
-            width: 90px;
+            width: 73px;
+        }
+
+        .lang_selected_lang{
+            color: #0B63AC!important;
+        }
+
+        .menu-item .btn_text {
+            color: #143B64;
         }
     }
 
-   .navbar__nav > div:nth-of-type(-n+3) {
-        .btn_text {
-            &:hover, &.active {
-                background-color: #C1DDCD;
-                
-            }
-        }
-        
-    }
-
-    .navbar__nav .btn_text {
-        color  :#0F9B49;    
-    }
-
-    .navbar__donateBtn-btn.btn {
-        color  :#0F9B49;
-        border-color:#0F9B49;
-    }
+   
+    
 }
 
 
 .customLayOut {
-    .navbar__menu-link span,.navbar__menu-link span::after, .navbar__menu-link span::before {
-        background-color: #318D62;
-    }
+   
 }
 
 
