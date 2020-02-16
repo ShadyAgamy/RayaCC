@@ -418,17 +418,17 @@
            margin-left: 1rem;
         }
     }
-    &_b {
+    &_b,&_hr {
         
         a {
             background: #0D2B4A;
+
+            &:hover {
+                background: #37689B;
+            }
         }
     }
 
-    &_hr {
-
-        a {
-            background: #37689B;
-        }
-    }
+       
+    
 }

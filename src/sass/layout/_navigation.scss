@@ -7,7 +7,7 @@
     height: 54px;
     @include displayFlex;
     padding: 0.5rem 4.5rem;
-    z-index: 999;
+    z-index: 9999999;
     font-family: 'Cinzel', serif;
     @include respond(tab-land){
         top: 15px;

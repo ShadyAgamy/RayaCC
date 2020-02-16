@@ -28,6 +28,7 @@
         .header_main_video_cont {
             img {
                 width: 733px;
+                filter: brightness(0.8);
             }
         }
     }
@@ -149,6 +150,29 @@
 }
 
 .certification{
+
+    &_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5rem;
+
+        .main_left_heading {
+            min-width: 59rem;
+
+            h2 {
+                font-size: 65px;
+            }
+
+            
+        }
+
+        p {
+            max-width: 630px;
+            margin: 2rem auto 0;
+        }
+
+    }
     .swiper-container{
         width: 80%;
         margin: 8rem auto;
@@ -185,12 +209,15 @@
     }
 
     .swiper-slide {
+        height: auto!important;
         div {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 6.5rem 10rem;
             width: 59%;
+            height: auto;
+            max-height: 90%!important;
             margin: 0 auto;
             box-shadow: 0px 3px 16px #00000029;
             
@@ -218,4 +245,356 @@
     .swiper-button-next {
         right: 14%;
     }
+}
+
+
+.Languages{
+    margin: 7rem 0 ;
+    &_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5rem;
+        .main_left_heading {
+            min-width: 49rem;
+
+            h2 {
+                font-size: 65px;
+            }
+
+            
+        }
+    }
+
+    &_img {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -14rem;
+        margin-right: 15rem;
+        img {
+            width: 920px;
+            height: 610px;
+        }
+    }
+}
+
+.DIFFERENTIATORS {
+    &_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5rem;
+        .main_left_heading {
+            min-width: 68rem;
+
+            h2 {
+                font-size: 65px;
+            }
+
+            
+        }
+    }
+
+    &_tabs {
+        display: flex;
+
+        .tab {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 0rem 4rem 7rem;
+            width: 200rem;
+
+            .tablinks{
+                width: 100%;
+                display: block;
+                background: none;
+                border: none;
+                color: #143B64;
+                font-size: 14px;
+                margin-bottom: 3rem;
+                padding: 1.5rem 1rem;
+                padding-left: 3rem;
+                border-radius: 26px 0 0 26px;
+                display: flex;
+                outline: none;
+
+                &.active {
+                    background: #0B63AC;  
+                    color: white;
+                    position: relative;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        bottom: -49px;
+                        right: 0px;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        -webkit-box-shadow: 15px 15px 0 0 #0B63AC;
+                        box-shadow: 17px 22px 0 0 #0B63AC;
+                        transform: rotateZ(-102deg);
+                    }
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: -49px;
+                        right: 0px;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        box-shadow: 17px 22px 0 0 #0B63AC;
+                        transform: rotateZ(-2deg);
+                    }
+                }
+                
+            }
+        }
+
+        .tabcontents{
+            background: #0B63AC;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20rem 9rem;
+            max-height: 600px;
+            min-width: 92rem;
+
+
+            .tabcontent{
+                display: none;
+                &.openDefault {
+                    display: block;
+                }
+                h3 {
+                    font-size: 27px;
+                    margin-bottom: 2rem;
+                }
+
+                p {
+                    font-size: 15px;
+                    line-height: 1.8; 
+                }
+            }
+        }
+    }
+}
+
+
+
+// mission and value 
+.header.about.mv {
+    margin-bottom: 15rem;
+    .header_main_text {
+        width: 211rem;
+        margin-left: 15rem;
+        margin-right: -38rem;
+    }
+
+    .header_main_video_cont{
+        margin-right: 8rem;
+    }
+}
+
+.v_m {
+    display: flex;
+    padding-left: 6rem;
+    &-vision {
+        width: 43%;
+        .main_left_heading {
+            max-width: 103%;
+            margin-bottom: 2rem; 
+
+            h2 {
+                font-size: 40px;
+                color: #0B63AC;
+            }
+        }
+
+        p {
+            width: 278px;
+            color: #143B64;
+            font-size: 20px; 
+        }
+    }
+
+    &-mission {
+        padding-top: 4rem;
+        width: 74%;
+        background: #0B63AC;
+        min-height: 440px;
+
+        .main_left_heading.main_right_heading {
+            min-width: 276px;
+            max-width: 280px;
+            
+            h2 {
+                color: white;
+                border-bottom: 2px solid white;
+            }
+        }
+
+        &_content {
+            display: flex;
+            flex-direction: column;
+            margin: 4rem 0 0 12rem;
+
+            li {
+                list-style: none;
+                font-size: 20px;
+                color: white;
+                font-weight: 300;
+                position: relative;
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    left: -19px;
+                    top: 10px;
+                    width: .8rem;
+                    height: .8rem;
+                    background: #143B64;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    &.dream {
+        margin-top: -9rem;
+        padding-left: 20rem;
+
+        .v_m-vision {
+            position: relative;
+            z-index: -1;
+
+            .v_m-mission_content {
+                margin: 6rem 0 0 3rem;
+                 li {
+                    color : #143B64;
+                 }
+                
+            }
+        }
+
+        .dream-img{
+            margin-top: 5rem;
+            margin-left: 8rem;
+            img {
+                width: 376px;
+            }
+        }
+    }
+}
+
+
+.ffsTabs {
+   
+    .ffs_tabs {
+        flex-direction: column;
+        align-items: unset;
+        margin: 0 5rem 0 10rem;
+        .tab {
+            display: flex;
+
+            .ffs_tabs-tab {
+                border: none !important;
+                padding: 2.5rem 2rem !important;
+                width: 12rem;
+                align-items: center;
+                justify-content: center;
+                min-height: unset;
+
+                &.active {
+                    box-shadow: 0px -2px 16px #00000029;
+                }
+
+                img {
+                    width: 40px;
+                }
+
+                h3 {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .ffs_tabcontents {
+            padding: 3rem 4rem;
+            height: 24rem;
+            box-shadow: 0px 12px 16px #00000029;
+            margin-top: -.3rem;
+
+            .tabcontent {
+                display: none;
+
+                &.openDefault {
+                    display: block;
+                }
+
+                h3 {
+                    font-size: 27px;
+                    color: #143B64;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+.me_Kh {
+    width: 100%;
+    height: 587px;
+    background-image: url("../img/mission vision/medhat khalil.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+
+    .me_Kh_text {
+        background: rgba(255,255,255,.5);
+        border-radius: 100vw;
+        width: 937px;
+        height: 937px;
+        display: flex;
+        padding: 16rem 0rem 0 19rem;
+       
+        flex-direction: column;
+        z-index: 1;
+        position: relative;
+        transform: translate(13rem, 19px);  
+
+        h2 {
+            font-size: 42px;
+            color: #0B63AC;
+            line-height: 1;
+            width: 60%;
+        }
+
+        .me_Kh_name {
+            margin-top: 6rem;
+
+            h4 {
+                font-size: 20px;
+                color: #143B64;
+            }
+
+            span {
+                font-weight: 300;
+                color: #58595B;
+                font-size: 13px;
+                margin-top: -.5rem;
+                display: block;
+
+            }
+        }
+    }
+
 }
