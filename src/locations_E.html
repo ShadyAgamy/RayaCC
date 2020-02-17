@@ -76,12 +76,12 @@
         <header class="header about"> 
             <div class="header_main">
                 <div class="header_main_text">
-                    <h3>SOLUTIONS</h3>
-                    <h1>CUSTOMER EXPERIENCE MANAGEMENT</h1>
+                    <h3>LOCATIONS</h3>
+                    <h1>EGYPT</h1>
                 </div>
              
                <div class="header_main_video_cont">
-                    <img src="./img/solutions/header.jpg" alt="">
+                    <img src="./img/locations/Cairo/head.jpg" alt="">
                </div>
               
             </div>        
@@ -90,29 +90,80 @@
 
 
         <div class="about_cont near">
-            <section class="solutionsTabs">
-                <a class="active" href=""><img src="./img/solutions/Tabs/1.png" data-src="./img/solutions/Tabs/1_w.png" alt=""></a>
-                <a href=""><img src="./img/solutions/Tabs/2.png" data-src="./img/solutions/Tabs/2_w.png" alt=""></a>
-                <a href=""><img src="./img/solutions/Tabs/3.png" data-src="./img/solutions/Tabs/3_w.png" alt=""></a>
-                <a href=""><img src="./img/solutions/Tabs/4.png" data-src="./img/solutions/Tabs/4_w.png" alt=""></a>
+            <section class="solutionsTabs Locations">
+                <a class="active" href=""><span>EGYPT</span> </a>
+                <a href=""><span>UAE</span></a>
+                <a href=""><span>POLAND</span></a>
+                
             </section>
 
-            <section class="wwa_sec cem">
-                <div class="wwa_sec_text">
-                    <h2>CUSTOMER EXPERIENCE MANAGEMENT</h2>
-                    <p class="para">Ray Contact Centre is a world class Business Process Outsourcing Service Provider offering contact centre services, back office services, inside sales channel management and professional services . Ray Contact Centre with its Call Centre services caters to clients, including global fortune 500 companies in Europe, Middle East & Africa in 25 different languages. Ray Contact Centre serves its clients from Ten contact centre facilities across three continents from Egypt, Poland, and UAE.</p>
-                    
-                </div>
-                <div class="wwa_sec_img">
-                    <img src="./img/solutions/sec_1.jpg" alt="">
-                </div>
-            </section>
-    
+             <!-- SOLUTIONS  -->
+        <section class="solutions Locations">
+            <div class="solutions_content">
+                <div class="solutions_content_slider">
+                   
+                    <div class="solutions_swiper swiper-container" data-pagination-type='progress'>      
+                        <div class="swiper-wrapper">   
+                            <div class="swiper-slide">
+                                <img src="./img/locations/Cairo/MP3.jpg" alt="">
+                            </div>  
+                            <div class="swiper-slide">
+                                <img src="./img/home/9T5A8983.jpg" alt="">
+                            </div> 
+                            <div class="swiper-slide">
+                                <img src="./img/locations/Cairo/MP3.jpg" alt="">
+                            </div>   
+                            <div class="swiper-slide">
+                                <img src="./img/home/9T5A8983.jpg" alt="">
+                            </div>     
+                        </div>          
+                    </div>
+                    <div class="depend_text_swiper swiper-container">      
+                        <div class="swiper-wrapper">   
+                            <div class="swiper-slide">
+                                <div>
+                                    <h5>Maadi Park 1</h5>
+                                </div>
+                                
+                            </div>  
+                            <div class="swiper-slide">
+                                <div>
+                                    <h5>Maadi Park 2</h5>
+                                </div>
+                                
+                            </div>   
+                            <div class="swiper-slide">
+                                <div>
+                                    <h5>Maadi Park 3</h5>
+                                </div>
+                                
+                            </div>   
+                            <div class="swiper-slide">
+                                <div>
+                                    <h5>Maadi Park 4</h5>
+                                </div>
+                                
+                            </div>   
+                        </div>          
+                    </div>
 
-    
+                    <div class="main_slider_footer">
+                        <div class="swiper-pagination blue"></div>
+                        <div class="main__footer_toggler">
+                                <div class="swiper-button-prev_b"></div>
+                                <div class="swiper-button-next_b"></div>
+                        </div>                
+                    </div>
+                </div>
+
+                <div class="sec_txt">
+                    <p class="para">Located strategically between three continents Egypt has proven itself as a global Business Process / Call Centre Outsourcing destination specifically for Europe, Middle East, and Africa, with world class competitive industry standards, offering a combination of operational expertise, skilled labor, cutting edge technology and competitive pricing. According to A.T. Kearney 2016 Global Services Locations, Egypt ranks 1st in MEA and 4th in the EMEA region on a global scale of outsourcing services destinations. Egypt provides unique advantages as an offshoring location for IT, Telecom and Business processes outsourcing with around 60,000 professionals working in the BPO sector. In line with the government’s initiative to reinforce IT and offshore services in Egypt, 49% of Egypt’s 24 million working pool works in service sectors.</p>
+                </div>
+            </div>
+            
+        </section>
+
         
-        
-    
             <!-- DIFFERENTIATORS -->
             <section class="DIFFERENTIATORS cx_manage">
                 <div class="DIFFERENTIATORS_tabs">
@@ -302,30 +353,31 @@
         <script src="js/script.js"></script>
 
         <script>
-            var certImgsSrcs = [];
-            $(".swiper-pagination_cert img").each((i, el) => {
-               
-                certImgsSrcs.push( $(el).attr("src"))
-            }) 
-            
-            var mySwiper = new Swiper ('.certification .swiper-container', {
-                // If we need pagination
+              $(document).ready(function() {
+            var solution_slider = new Swiper ('.solutions_swiper.swiper-container', {
+                slidesPerView: 'auto',
+                spaceBetween: 0, 
                 pagination: {
-                el: '.swiper-pagination',
-                        clickable: true,
-                    renderBullet: function (index, className) {
-                    // return '<span class="' + className + '">' + (menu[index]) + '</span>';
-                    return '<img class="' + className + '" src="' + (certImgsSrcs[index]) + '">';
-                    },
-                },
-
-                // Navigation arrows
+                el: '.solutions .swiper-pagination',
+                type: 'progressbar',
+            },
                 navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.solutions .swiper-button-next_b',
+                prevEl: '.solutions .swiper-button-prev_b',
                 },
+               
+                
+
             })
 
+            var quoteSwiper = new Swiper('.depend_text_swiper', {
+                slidesPerView: 'auto',
+                spaceBetween: 0, 
+               
+            });
+
+            solution_slider.controller.control = quoteSwiper;
+            quoteSwiper.controller.control = solution_slider;
 
             
             function tabName(evt, TabContent) {
@@ -357,7 +409,7 @@
             // WOW ANIMATION
               new WOW().init();
              
-
+            });
         </script>
     </body>
 

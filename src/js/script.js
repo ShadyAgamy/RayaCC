@@ -136,6 +136,11 @@ function checkMenuScrollTop() {
 // //////////////////////////
 
 
+if ($(".solutionsTabs a.active"))  { 
+    var img = $(".solutionsTabs a.active").find("img");
+    var imgNewSrc = $(img).attr("data-src");
+    $(img).attr("src",imgNewSrc )
+}
 
 
 

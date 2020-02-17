@@ -1,0 +1,80 @@
+.solutionsTabs.Locations {
+    a {
+        width: auto;
+        padding: 4rem 2.5rem 2rem;
+        span {
+            font-size: 20px;
+            color : #0B63AC;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        &.active {
+            span {
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+
+.solutions.Locations {
+    margin: 6rem 0;
+    .solutions_content {
+        height: auto;
+        display: flex;
+
+        .solutions_content_slider {
+            width: 37%;
+            margin-bottom: 0;
+            position: relative;
+
+            .solutions_swiper {
+                margin-left: unset;
+            }
+            .swiper-slide {
+                width: 102%;
+                img {
+                    margin-left: 0rem;
+                }
+            }
+
+            .depend_text_swiper {
+                position: absolute;
+                bottom: 2px;
+                right: 2%;
+                width: 20rem;
+
+                .swiper-slide {
+
+                    & > div {
+                        background: #0B63AC;
+                        font-size: 2rem;
+                        padding: 1.8rem 1rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        margin-left: -1rem;
+
+                        h5 {
+                            display: block;
+                            color: white;
+                            font-weight: normal;
+                            font-size: 15px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .sec_txt {
+            width: 57%;
+            display: flex;
+            align-items: center;
+
+            p {
+                width: 84%; 
+            }
+        }
+    }
+}

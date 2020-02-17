@@ -298,7 +298,7 @@
             }
 
             .main_slider_footer {
-                margin: 3rem 0 0 1rem;
+                margin: 3rem 0 0 4rem;
             }
 
         }
@@ -306,10 +306,11 @@
 
     .solutions_swiper{
         margin: 0 0;
-        //margin-left: 1rem;
+        width: 100%;
+        margin-left: 40px;
         .swiper-wrapper{
             width: 100%;
-            max-width: 570px;
+            //max-width: 570px;
             margin: 0rem;
             .swiper-slide{
                 height: 355px;

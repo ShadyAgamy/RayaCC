@@ -1,12 +1,91 @@
 .solutionsTabs {
     display: flex;
     align-items: center;
+    padding: 0 4.5rem;
 
     a {
         width: 65px;
-        padding: 1rem .5rem;
+        padding: 2rem 1rem 1.5rem;
+        margin-right: 2rem;
+
+        &.active {
+            background-color: #0B63AC;
+        }
         img {
             width: 40px;
         }
     }
+}
+
+.about_cont.near {
+    margin-top: 0;
+}
+
+.wwa_sec.cem {
+    margin-top: 8rem;
+    align-items: center;
+    .wwa_sec_text {
+        align-self: unset;
+        h2 {
+            font-size: 23px;
+            color: #0B63AC;
+            max-width: 38rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        p {
+
+        }
+    }
+
+    .wwa_sec_img {
+        img {
+            width: 435px;
+            height: auto;
+        }
+    }
+}
+
+.DIFFERENTIATORS.cx_manage{
+    margin-top: 11rem;
+
+    .tab {
+        background: #4184C5;
+
+
+        .tablinks {
+            color: white;
+            text-transform: capitalize;
+            font-size: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .tablinks.active {
+            background: white;
+            color: #143B64;
+
+            &:before, &:after {
+                box-shadow: 17px 22px 0 0 white;
+            } 
+            
+        }
+    }
+
+    .tabcontents {
+        background-color: white;
+        .tabcontent h3 {
+            color: #0B63AC;
+            font-size: 46px;
+            width: 30rem;
+            text-transform: uppercase;
+            line-height: .9;
+        }
+
+        .tabcontent p {
+            color: #58595B;
+        }
+    } 
+
+   
 }
