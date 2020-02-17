@@ -1,0 +1,12 @@
+.solutionsTabs {
+    display: flex;
+    align-items: center;
+
+    a {
+        width: 65px;
+        padding: 1rem .5rem;
+        img {
+            width: 40px;
+        }
+    }
+}

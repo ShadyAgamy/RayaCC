@@ -1,12 +1,13 @@
 .header.about {
     min-height: 450px;
     max-height: 450px;
-    margin-bottom: 24rem;
     .header_main{
+        padding: 12rem 4.5rem 0 0;
         &_text {
+            width: 75%;
             color: white;
             margin-left: 18rem;
-            margin-right: -21rem;
+            margin-right: -68rem;
             position: relative;
             z-index: 999;
            
@@ -22,16 +23,23 @@
                 font-size: 65px;
                 font-weight: 900;
                 font-family: 'Montserrat', sans-serif;
+                line-height: .9;
+                margin-top: 1rem;
             }
         }
 
         .header_main_video_cont {
+            width: 30%;
             img {
                 width: 733px;
                 filter: brightness(0.8);
             }
         }
     }
+}
+
+.about_cont {
+    margin-top: 24rem; 
 }
 
 .wwa_sec{
