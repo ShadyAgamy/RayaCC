@@ -44,3 +44,29 @@
         }
     }
 }
+
+
+.industry_sec.news_single {
+    display: flex;
+    justify-content: space-between;
+    margin: 11rem 20rem 4.5rem;
+    .industry_sec_text {
+        width: 80%;
+    }
+    .social_links {
+        display: flex;
+        align-items: center; 
+        flex-direction: column;
+        a {
+            margin-bottom: 1rem;
+        }   
+    }
+}
+
+
+.more_news {
+    .main_left_heading {
+        margin-bottom: 5rem; 
+    }
+    padding-bottom: 8rem;
+}

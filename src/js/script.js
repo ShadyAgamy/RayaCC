@@ -93,8 +93,26 @@ $("body").click((e) => {
         return false;  
     } else {
         $("#langsList").fadeOut();
+        
     }
     
+})
+// $("body").click((e) => {
+//     e.stopPropagation();
+//     if ($(e.target).hasClass('.menu-item-has-children') || $(e.target).hasClass('btn_text')) {
+//         return false;  
+//     } else {
+//         $(".menu-item .sub-menu").fadeOut();
+        
+//     }
+    
+// })
+
+$(".menu-item-has-children a").each((i, el) => {
+$(el).on("click", () => {
+    //$(".sub-menu").css("display", "none")
+    $(el).next().fadeToggle(); 
+ })
 })
 
 
