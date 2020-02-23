@@ -78,17 +78,51 @@ $( document ).ready(function() {
        
     }
 
+    // ///change navbar background to gray when scroll in homepage and in all other pages  ////
+$(window).scroll(function() {    
+    checkMenuScrollTop();
+});
+checkMenuScrollTop();
+
+function checkMenuScrollTop() {
+    var scroll = $(window).scrollTop();
+    var dir = $("html").attr("dir");
+    
+    if ($("body").hasClass("homePage")) { // homepage only
+        if (scroll > 550) {
+            $(".navbar").addClass("navGray");
+            checkNavLogo()
+            
+        } else {
+            $(".navbar").removeClass("navGray");
+            checkNavLogo()
+           
+        }
+    }  else { //other pages
+        if(dir == "rtl") {
+            $(".navbar__logo img").attr('src', "img/icons/logoAr.png");
+        }
+    }
+}
+
 
 // change lang selct chevron color and logo img depend on navbar 
-    var logoImg = $(".navbar").find(".navbar__logo img");
-    var langArrow = $(".navbar").find(".lang_selected_arrow")
-    if ($(".navbar").hasClass("navGray")) {
-        $(logoImg).attr("src", $(this).attr("src1"));
-        $(langArrow).attr("src", $(this).attr("src1"));
-    }else {
-        $(logoImg).attr("src", $(this).attr("src2"));
-        $(langArrow).attr("src", $(this).attr("src2"));
+var logoImg = $(".navbar").find(".navbar__logo img");
+var langArrow = $(".navbar").find(".lang_selected_arrow");
+    function checkNavLogo() {
+        if ($(".navbar").hasClass("navGray")) {
+            console.log("navGray")
+            $(logoImg).attr("src", $(logoImg).attr("src1"));
+            $(langArrow).attr("src", $(langArrow).attr("src1"));
+        }else {
+            console.log("normal nav")
+            console.log($(logoImg).attr("src2"))
+            $(logoImg).attr("src", $(logoImg).attr("src2"));
+            $(langArrow).attr("src", $(langArrow).attr("src2"));
+        }
     }
+
+    checkNavLogo();
     
 
 
@@ -126,38 +160,7 @@ $(el).on("click", () => {
 
 
 
-// ///change navbar background to gray when scroll in homepage and in all other pages  ////
-$(window).scroll(function() {    
-    checkMenuScrollTop();
-});
-checkMenuScrollTop();
 
-function checkMenuScrollTop() {
-    var scroll = $(window).scrollTop();
-    var dir = $("html").attr("dir");
-    
-    if ($("body").hasClass("homePage")) { // homepage only
-        if (scroll > 550) {
-            $(".navbar").addClass("navGray");
-            $(".navbar__logo img").attr('src', "img/home/logo.png");
-            $(".lang_selected_arrow").attr('src', "./img/home/down_b.png");
-            // if(dir == "rtl") {
-            //     $(".navbar__logo img").attr('src', "img/icons/logoAr.png");
-            // }
-        } else {
-            $(".navbar").removeClass("navGray");
-            $(".navbar__logo img").attr('src', "img/home/logo-w.png");
-            $(".lang_selected_arrow").attr('src', "./img/home/down_w.png");
-            // if(dir == "rtl") {
-            //     $(".navbar__logo img").attr('src', "img/icons/logoAr2.png");
-            // }
-        }
-    }  else { //other pages
-        if(dir == "rtl") {
-            $(".navbar__logo img").attr('src', "img/icons/logoAr.png");
-        }
-    }
-}
 
 // //////////////////////////
 

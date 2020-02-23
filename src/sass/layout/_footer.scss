@@ -228,7 +228,7 @@
   
     // Box hover
     &:hover + label:before {
-      background: #f35429;
+      background: #103255;
     }
     
     // Box focus
@@ -238,7 +238,7 @@
   
     // Box checked
     &:checked + label:before {
-      background: #f35429;
+      background: #103255;
     }
   
     // Checkmark. Could be replaced with an image
@@ -248,9 +248,9 @@
       left: 2px;
       top: 9px;
       background: white;
-      width: 1px;
+      width: 2px;
       font-weight: 900;
-      height: 1px;
+      height: 2px;
       box-shadow: 
         2px 0 0 white,
         4px 0 0 white,
