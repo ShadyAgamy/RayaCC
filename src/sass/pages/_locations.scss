@@ -6,7 +6,7 @@
         span {
             font-size: 20px;
             color : #0B63AC;
-            font-weight: bold;
+            font-weight: 800;
             text-transform: uppercase;
             cursor: pointer;
             position: relative;
@@ -92,11 +92,11 @@
     }
 
     .DIFFERENTIATORS_tabs .tab {
-        padding: 4rem 0rem 14rem 7rem;
+        padding: 10rem 0rem 14rem 7rem;
     }
     .DIFFERENTIATORS_tabs .tabcontents {
         background: #D0D0CF;
-            height: 82%;
+        height: calc(100% - 110px);
     }
     .DIFFERENTIATORS_tabs .tab .tablinks.active {
         background-color: #D0D0CF;
@@ -123,7 +123,7 @@
     }
 
     .DIFFERENTIATORS_loc_link {
-        height: 18%;
+        height: 110px;
         width: 80%;
         background: #0B63AC;
         clip-path: polygon(0 0, 100% 0%, 94% 100%, 0 100%);
@@ -146,4 +146,17 @@
     }
 
     
+}
+
+
+.DIFFERENTIATORS.loc {
+    .tab {
+        min-width: 48rem;
+        max-width: 50rem;
+        align-self: flex-start;
+        button {
+            text-align: left;
+        }
+    }
+
 }

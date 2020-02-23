@@ -110,13 +110,10 @@ function checkMenuScrollTop() {
 var logoImg = $(".navbar").find(".navbar__logo img");
 var langArrow = $(".navbar").find(".lang_selected_arrow");
     function checkNavLogo() {
-        if ($(".navbar").hasClass("navGray")) {
-            console.log("navGray")
+        if ($(".navbar").hasClass("navGray")) {   
             $(logoImg).attr("src", $(logoImg).attr("src1"));
             $(langArrow).attr("src", $(langArrow).attr("src1"));
         }else {
-            console.log("normal nav")
-            console.log($(logoImg).attr("src2"))
             $(logoImg).attr("src", $(logoImg).attr("src2"));
             $(langArrow).attr("src", $(langArrow).attr("src2"));
         }
@@ -139,21 +136,21 @@ $("body").click((e) => {
     }
     
 })
-// $("body").click((e) => {
-//     e.stopPropagation();
-//     if ($(e.target).hasClass('.menu-item-has-children') || $(e.target).hasClass('btn_text')) {
-//         return false;  
-//     } else {
-//         $(".menu-item .sub-menu").fadeOut();
+$("body").click((e) => {
+    e.stopPropagation();
+    if ($(e.target).hasClass('.menu-item-has-children') || $(e.target).hasClass('btn_text')) {
+        // return false;  
+    } else {
+        $(".menu-item .sub-menu").fadeOut();
         
-//     }
+    }
     
-// })
+})
 
 $(".menu-item-has-children a").each((i, el) => {
 $(el).on("click", () => {
-    //$(".sub-menu").css("display", "none")
-    $(el).next().fadeToggle(); 
+    $(".sub-menu").css("display", "none")
+    $(el).next().fadeIn(); 
  })
 })
 

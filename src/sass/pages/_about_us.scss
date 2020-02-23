@@ -1,6 +1,7 @@
 .header.about {
     min-height: 450px;
     max-height: 450px;
+    position: relative;
     .header_main{
         padding: 12rem 4.5rem 0 0;
         &_text {
@@ -29,9 +30,12 @@
         }
 
         .header_main_video_cont {
-            width: 30%;
+            width: 61%;
+            max-height: 410px;
             img {
-                width: 733px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
                 filter: brightness(0.8);
             }
         }
@@ -305,17 +309,18 @@
 
     &_tabs {
         display: flex;
-        max-height: 600px;
         min-height: 600px;
+
 
         .tab {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 4rem 0rem 4rem 7rem;
+            padding: 10rem 0rem 4rem 7rem;
             min-width: 42rem;
             max-width: 42rem;
+            align-self: flex-start;
 
             .tablinks{
                 width: 100%;
@@ -610,3 +615,40 @@
     }
 
 }
+
+
+ul.breadcrumb {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    padding: 10px 16px;
+    list-style: none;
+    z-index: 9999;
+  }
+  
+  /* Display list items side by side */
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 13px;
+    color: white;
+  }
+  
+  /* Add a slash symbol (/) before/behind each list item */
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: white;
+    opacity: .6;
+    content: "\2502";
+  }
+  
+  /* Add a color to all links inside the list */
+  ul.breadcrumb li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Add a color on mouse-over */
+  ul.breadcrumb li a:hover {
+    color: white;
+    text-decoration: underline;
+  }
