@@ -57,7 +57,8 @@
         position: absolute;
         content: "";
         left: -14px;
-        top: 8px;
+        top: 50%;
+        transform: translate(0px, -50%);
         width: 6px;
         height: 6px;
         background: #143B64;

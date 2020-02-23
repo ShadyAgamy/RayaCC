@@ -25,40 +25,26 @@
         @include displayFlex;
         margin-left: auto;
 
-        .btn_text {
-            font-size: 13px;
-            margin-right: 1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            padding: .8rem 1.6rem;
-            border-radius: 16px;
-            color: white;
-
-            img {
-                width:23px;
-            } 
+        .menu-item {
+            & > a {
+                font-size: 13px;
+                margin-right: 1rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                padding: .8rem 1.6rem;
+                border-radius: 16px;
+                color: white;
+    
+                img {
+                    width:23px;
+                } 
+            }
         }
+        
 
     }
 
     
-
-    &__donateBtn {
-      margin-right: 4rem;
-
-        &-btn {
-            background: transparent;
-            padding: .5rem 2rem;
-            color: white;
-            border: 1px solid #fff;
-            
-            @media all and (max-width: 400px) {
-                padding: .6rem 2.5rem;
-                margin-left: 2rem; 
-            }
-
-        }
-    }
 
     &__langBtn {
         margin-right: 5rem;
@@ -114,7 +100,6 @@
     }
 
     .menu-item#langSelect {
-    align-self: flex-start;
     position: relative;
     & > div {
         display: flex;

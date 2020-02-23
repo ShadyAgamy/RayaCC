@@ -52,6 +52,16 @@
     margin: 11rem 20rem 4.5rem;
     .industry_sec_text {
         width: 80%;
+        & > p , ul, h2 , h3 , h4 , h5 ,h6 {
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            font-size: 14px;
+            color: #143B64;
+            text-transform: capitalize;
+            text-decoration: underline;
+        }
     }
     .social_links {
         display: flex;

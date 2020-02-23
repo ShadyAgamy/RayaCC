@@ -79,9 +79,17 @@ $( document ).ready(function() {
     }
 
 
-// change lang selct chevron color depend on navbar 
-    $(".navbar.navGray").find(".navbar__logo img").attr("src", "./img/home/logo.png");
-    $(".navbar.navGray").find(".lang_selected_arrow").attr("src", "./img/home/down_b.png");
+// change lang selct chevron color and logo img depend on navbar 
+    var logoImg = $(".navbar").find(".navbar__logo img");
+    var langArrow = $(".navbar").find(".lang_selected_arrow")
+    if ($(".navbar").hasClass("navGray")) {
+        $(logoImg).attr("src", $(this).attr("src1"));
+        $(langArrow).attr("src", $(this).attr("src1"));
+    }else {
+        $(logoImg).attr("src", $(this).attr("src2"));
+        $(langArrow).attr("src", $(this).attr("src2"));
+    }
+    
 
 
 $(".lang_selected").on("click", () => {

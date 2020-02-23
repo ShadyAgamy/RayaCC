@@ -202,7 +202,7 @@
             width: unset;
             height: unset;
             background: unset;
-            max-width: 70px;
+            max-width: 55px;
             opacity: 1;
             border-radius: unset;
             outline: none;
@@ -305,6 +305,8 @@
 
     &_tabs {
         display: flex;
+        max-height: 600px;
+        min-height: 600px;
 
         .tab {
             display: flex;
@@ -312,7 +314,8 @@
             align-items: center;
             justify-content: center;
             padding: 4rem 0rem 4rem 7rem;
-            width: 200rem;
+            min-width: 42rem;
+            max-width: 42rem;
 
             .tablinks{
                 width: 100%;
@@ -370,7 +373,7 @@
             justify-content: center;
             flex-wrap: wrap;
             padding: 20rem 9rem;
-            max-height: 600px;
+            max-height: 100%;
             min-width: 92rem;
 
 
@@ -397,7 +400,7 @@
 
 // mission and value 
 .header.about.mv {
-    margin-bottom: 15rem;
+   
     .header_main_text {
         width: 92rem;
         margin-left: 15rem;
@@ -412,6 +415,7 @@
 .v_m {
     display: flex;
     padding-left: 6rem;
+    margin-top: 15rem;
     &-vision {
         width: 43%;
         .main_left_heading {
