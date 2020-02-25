@@ -54,6 +54,7 @@
 
     .tab {
         background: #4184C5;
+        align-self: stretch;
 
 
         .tablinks {
@@ -76,12 +77,16 @@
 
     .tabcontents {
         background-color: white;
+        .tabcontent {
+            margin-top: -7rem; 
+        }
         .tabcontent h3 {
             color: #0B63AC;
             font-size: 46px;
             width: 30rem;
             text-transform: uppercase;
             line-height: .9;
+            font-weight: 800;
         }
 
         .tabcontent p {

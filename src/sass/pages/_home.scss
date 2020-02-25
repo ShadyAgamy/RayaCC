@@ -327,11 +327,14 @@
 // FOUNDATIONS FOR SUCCESS
 
 .ffs {
-    margin: 8rem 0 ;
+    margin: 29rem 0 22rem;
     display: flex;
     justify-content: space-between;
+    position: relative;
     &_text {
         width: 44%;
+        position: relative;
+        z-index: 10;
 
         .main_left_heading{
             max-width: 100%;
@@ -359,6 +362,9 @@
         align-items: center;
         flex-wrap: wrap;
         margin-left: 2rem;
+        position: relative;
+        z-index: 10;
+        background: white;
         &-tab {
             width: 50%;
             max-width: 290px;

@@ -1,16 +1,18 @@
 .news_listing {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 4.5rem;
     flex-wrap: wrap;
+    margin-bottom: 4rem;
     
     &_single {
-        width: 49%;
-       height: 185px;
+        width: 49.5%;
+        height: 185px;
         position: relative;
         margin-bottom: 1%;
         &:nth-of-type(odd) {
-            margin-right: 1%;
+            margin-right: .5%;
         }
         &_img {
             height: 100%;
@@ -68,6 +70,19 @@
 .more_news {
     .main_left_heading {
         margin-bottom: 5rem; 
+
+        .facts_heading {
+            font-size: 53px; 
+        }
     }
     padding-bottom: 8rem;
+}
+
+
+.header_main_text.news {
+    h1 {
+        font-size: 43px!important;
+        width: 55%;
+        margin-top: 2rem!important;
+    }
 }

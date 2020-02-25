@@ -4,10 +4,13 @@
     max-height: 101vh;
     overflow-y: visible;
     background-color: #0B63AC;
+    position: relative;
 
     &_main {
         padding: 16rem 4.5rem 0 0  ;
         display: flex;
+        position: relative;
+        z-index: 2;
 
         .main_slider {
             width: 50%;
