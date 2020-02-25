@@ -172,7 +172,9 @@ if ($(".solutionsTabs a.active"))  {
 
 
 
-
+$(".sys_msg_text a").on("click", () => {
+    $(".sys_msg").fadeOut();
+})
 
 
 
