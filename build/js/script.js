@@ -170,14 +170,75 @@ if ($(".solutionsTabs a.active"))  {
 
 
 
-
-
-$(".sys_msg_text a").on("click", () => {
-    $(".sys_msg").fadeOut();
+$('.careers_loc_tabs a ').each((i , ele) => {
+    $(ele).click(() => {
+        $('.careers_loc_tabs a ').removeClass("active");
+        $(ele).addClass("active");
+        $(".careers_loc_content").css("display", "none");
+        $(".careers_loc_content").each((i, el) => {
+            if($(el).hasClass($(ele).attr("data-target"))) {
+                $(el).fadeIn();
+            }
+        })
+    })
 })
 
 
 
+$(".careers_loc_content > .careers_loc_content_head").not(".careers_loc_content_head.careers_loc_content_body").each((i, el) => {
+    $(el).on("click", () => {
+        console.log($(el).closest(".careers_loc_content").find("careers_loc_content_body"));
+        $(el).closest(".careers_loc_content").find(".careers_loc_content_body").slideToggle().css("display", "flex");
+        $(el).find("img").toggleClass("open");
+    })     
+})
+
+
+// custom input file 
+document.querySelector("html").classList.add('js');
+
+var fileInputs  = document.querySelectorAll( ".input-file" ),  
+    buttons     = document.querySelectorAll( ".input-file-trigger" ),
+    the_returns = document.querySelectorAll(".file-return"),
+    fileInputArr = [...fileInputs],
+    buttonsArr = [...buttons],
+    the_returnsArr = [...the_returns];
+
+      
+    for (var i = 0; i < fileInputArr.length; i++) {
+        $(buttonsArr[i]).on( "keydown", function( event ) {  
+            if ( event.keyCode == 13 || event.keyCode == 32 ) {  
+                fileInputArr[i].focus();  
+            }  
+        });
+        buttonsArr[i].addEventListener( "click", function( event ) {  
+           fileInputArr[i].focus();
+           return false;
+        });  
+        fileInputArr[i].addEventListener( "change", function( event ) {  
+            the_returnsArr[i].innerHTML = fileInputArr[i].value;  
+        });  
+    }
+
+
+
+
+    // career apply now btn scroll to form 
+    $(".apply_now_btn a ").each((i, el) => {
+        $(el).on("click", (e) => {
+            e.preventDefault();
+         var jobName =   $(el).closest(".careers_loc_content").find(".careers_loc_content_head-title h3").text();
+         $('html, body').animate({
+            scrollTop: $(".application_form_form").offset().top
+        }, 800);
+        var select = $(".application_form_form").find(".custom_selectbox #Position");
+        var targetedOption = select.find(`option[value='${jobName}']`);
+        $(select).find("option").each((i,el) => {
+           $(el).removeAttr('selected')
+        })
+        $(targetedOption).attr('selected','selected')
+        })
+    })
 
 
     
