@@ -280,7 +280,7 @@
                 flex-direction: column;
                 margin-bottom: 4rem;
 
-                &:nth-of-type(odd) {
+                &:nth-of-type(odd),&.customMR {
                     margin-right: 3%;
                 }
                 label {
@@ -291,7 +291,7 @@
                     margin-bottom: .5rem;
                 }
 
-                input,select {
+                input,select,textarea {
                     background-color: #065495;
                     border: none;
                     height: 44px;
@@ -303,6 +303,11 @@
                     width: 100%;
                     cursor: pointer;
                    
+                }
+
+                textarea {
+                    height: 114px;
+                    resize: vertical;
                 }
 
                 select {

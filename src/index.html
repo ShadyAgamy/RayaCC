@@ -114,7 +114,7 @@
             
             <div class="header_main">
                <div class="main_slider">
-                    <div class="swiper-container" data-pagination-type='progress'>      
+                    <div class="swiper-container" >      
                         <div class="swiper-wrapper">   
                             <div class="swiper-slide"> 
                                 <div class="header__cont">    
@@ -141,7 +141,9 @@
             
                     </div>
                     <div class="main_slider_footer">
-                        <div class="swiper-pagination"></div>
+                        <div class="progress_cont">
+                            <div class="progress"></div>
+                        </div>
                         <div class="main__footer_toggler">
                                 <div class="swiper-button-prev_w"></div>
                                 <div class="swiper-button-next_w"></div>
@@ -534,27 +536,71 @@
         <script src="js/script.js"></script>
 
         <script>
+            var autoplay = 5000;
+            var previousid;
+            function move(parent) {      
+            var elem = $(parent).find(" .progress"); 
+           
+            // console.log(frame)
+            $(elem)[0].style.width = "0px";
+            var width = 1;
+            var autoplayTime = autoplay / 100;
+            
+            
+            
+            clearInterval(previousid);
+             previousid = setInterval(function(_id) { 
+                return function() {
+                    if (width >= 100) {
+                        clearInterval(_id);
+                    } else {
+                        width++; 
+                        $(elem)[0].style.width = width + '%'; 
+                    }
+            }}(previousid), autoplayTime);
+           
+        }
 
             var mySwiper = new Swiper ('header .main_slider .swiper-container', {
 
-                speed: 1000,
-                pagination: {
-                el: 'header .swiper-pagination',
-                type: 'progressbar',
-            },
+                speed: 700,
+                loop: true,
+                // pagination: {
+                // el: 'header .swiper-pagination',
+               
+                // },
+                paginationClickable: true,
+                watchSlidesProgress: true,
+                autoplay: {
+                    delay: 5000,
+                },
+                on: {
+                    // init: function () {
+                    //     move("header .main_slider ")
+                    // },
+                    slideChange : function () {
+                    console.log("slidechange");
+                   
+                    move("header .main_slider ")
+                }
+                },
+                // progress: function() {
+                    
+                // } ,
                 navigation: {
                 nextEl: 'header .swiper-button-next_w',
                 prevEl: 'header .swiper-button-prev_w',
                 }
             
             })
+            // mySwiper.on(' slideChange', );
 
             var mySwiper_2 = new Swiper ('.industries_swiper.swiper-container', {
                 slidesPerView: 'auto',
-                spaceBetween: 15, 
+                spaceBetween: 15,  
                 pagination: {
                 el: '.industries .swiper-pagination',
-                type: 'progressbar',
+                
             },
                 navigation: {
                 nextEl: '.industries .swiper-button-next_w',

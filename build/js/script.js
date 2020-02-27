@@ -106,6 +106,12 @@ function checkMenuScrollTop() {
 }
 
 
+// system msg alert popup
+var sysCloseIcon = $(".sys_msg_text a");
+sysCloseIcon.on("click", () => {
+    sysCloseIcon.closest(".sys_msg").fadeOut()
+})
+
 // change lang selct chevron color and logo img depend on navbar 
 var logoImg = $(".navbar").find(".navbar__logo img");
 var langArrow = $(".navbar").find(".lang_selected_arrow");
@@ -227,16 +233,19 @@ var fileInputs  = document.querySelectorAll( ".input-file" ),
     $(".apply_now_btn a ").each((i, el) => {
         $(el).on("click", (e) => {
             e.preventDefault();
-         var jobName =   $(el).closest(".careers_loc_content").find(".careers_loc_content_head-title h3").text();
+         var jobName =   $(el).closest(".careers_loc_content").find(".careers_loc_content_head-title h3").text().toLowerCase();
          $('html, body').animate({
             scrollTop: $(".application_form_form").offset().top
         }, 800);
         var select = $(".application_form_form").find(".custom_selectbox #Position");
-        var targetedOption = select.find(`option[value='${jobName}']`);
-        $(select).find("option").each((i,el) => {
-           $(el).removeAttr('selected')
+        //var targetedOption = select.find(`option[value='${jobName}']`);
+        $(select).find("option").each( (i , el) => {
+            $(el).removeAttr('selected')
+            if ($(el).val().toLowerCase() == jobName) {
+                $(el).attr('selected','selected');
+            }
         })
-        $(targetedOption).attr('selected','selected')
+
         })
     })
 

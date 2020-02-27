@@ -113,10 +113,12 @@
           
         </div>
 
-        <section class="contact_cont">
-            <form action="" class="application_form_form">
+        <section class="contact_cont contactPage">
+            <form action="" class="application_form_form contact">
                 <h2>CONTACT SALES</h2>
+               
                 <div class="custom_input_group">
+                    <h3 class="contact_sec_head">Personal Info</h3>
                     <div class="custom_input">
                         <label for="name">FIrst Name</label>
                         <input type="text" id="name">
@@ -158,62 +160,153 @@
                         </div>   
                     </div>
                    
+                </div>
+                <h3 class="contact_sec_head">Company Info</h3>
+                <div class="custom_input_group">
                     <div class="custom_input">
-                        <label for="Position">Position</label>
-                        <div class="custom_selectbox">
-                            <select name="" id="Position" value="">
-                                <option value="TECHNICAL SUPPORT AGENT">TECHNICAL SUPPORT AGENT</option>
-                                <option value="TECHNICAL SUPPORT AGENT (uae)">TECHNICAL SUPPORT AGENT (uae)</option>
-                                <option value="TECHNICAL SUPPORT AGENT (poland)">TECHNICAL SUPPORT AGENT (poland)</option>
-                                <option value="TECHNICAL SUPPORT AGENT (E)">TECHNICAL SUPPORT AGENT (E)</option>
-                                
-                                
-                            </select>
-                        </div>
+                        <label for="jobTitle">Job Title</label>
+                        <input type="text" id="jobTitle">
                     </div>
+                    <div class="custom_input">
+                        <label for="Company">Company</label>
+                        <input type="text" id="Company">
+                    </div>
+                    <div class="custom_input">
+                        <label for="companyWebsite">Company Website</label>
+                        <input type="text" id="companyWebsite">
+                    </div>
+                    <div class="custom_input">
+                        <label for="ccc">Current Contact Centre Is</label>
+                        <div class="custom_selectbox">
+                            <select name="" id="ccc">
+                                <option value="">none</option>
+                                <option value="">c2</option>
+                                <option value="">c3</option>
+                                <option value="">c4</option>
+                                <option value="">c5</option>
+                            </select>
+                        </div>   
+                    </div>
+                    <div class="custom_input">
+                        <label for="cPTOS">Company Planing to Outsource</label>
+                        <div class="custom_selectbox">
+                            <select name="" id="cPTOS">
+                                <option value="">select answer</option>
+                                <option value="">c2</option>
+                                <option value="">c3</option>
+                                <option value="">c4</option>
+                                <option value="">c5</option>
+                            </select>
+                        </div>   
+                    </div>
+                    <div class="custom_input">
+                        <label for="cTPS">Channels to be supported</label>
+                        <div class="custom_selectbox">
+                            <select name="" id="cTPS">
+                                <option value="">select channel</option>
+                                <option value="">c2</option>
+                                <option value="">c3</option>
+                                <option value="">c4</option>
+                                <option value="">c5</option>
+                            </select>
+                        </div>   
+                    </div>
+                    <div class="custom_input w-100">
+                        <label for="average">Average No. of contacts / transactions per month</label>
+                        <div class="custom_selectbox">
+                            <select name="" id="average">
+                                <option value="">select channel</option>
+                                <option value="">c2</option>
+                                <option value="">c3</option>
+                                <option value="">c4</option>
+                                <option value="">c5</option>
+                            </select>
+                        </div>   
+                    </div>
+                    <div class="custom_input customMR alignStart">
+                        <label for="region">Region to be supported</label>
+                        <div class="custom_selectbox mb-3">
+                            <select name="" id="region">
+                                <option value="">select channel</option>
+                                <option value="">c2</option>
+                                <option value="">c3</option>
+                                <option value="">c4</option>
+                                <option value="">c5</option>
+                            </select>
+                        </div> 
+                        <label for="langs">Languages to be supported</label>
+                        <div class="custom_selectbox">
+                            <select name="" id="langs">
+                                <option value="">select Language</option>
+                                <option value="">c2</option>
+                                <option value="">c3</option>
+                                <option value="">c4</option>
+                                <option value="">c5</option>
+                            </select>
+                        </div>    
+                    </div>
+                    <div class="custom_input alignStart">
+                        <label for="notes">Notes</label>
+                        <textarea name="" id="notes" cols="30" rows="10"></textarea>
+                    </div> 
+                </div>
                   
-                    <div class="custom_input">
-                        <label for="Language">Language</label>
-                        <div class="custom_selectbox">
-                            <select name="" id="Language">
-                                <option value="">c1</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
+                   
 
-                <div class="input_files_cont">
-                    <div class="input_file_cont">
-                        <div class="input-file-container">  
-                            <input class="input-file" id="cv-file" type="file">
-                            <label tabindex="0" for="cv-file" class="input-file-trigger">Attached CV</label>
-                            <span>PDF, DOC, DOCX, maximum 5MB</span>
-                        </div>
-                          <p class="file-return"></p>
-                    </div>
-                    <div class="input_file_cont">
-                        <div class="input-file-container">  
-                            <input class="input-file" id="audio-file" type="file">
-                            <label tabindex="0" for="audio-file" class="input-file-trigger">Add Audio Sample</label>
-                            <span>MP3 files maximum 10MB</span>
-                          </div>
-                          <p class="file-return"></p>
-                    </div>
-                </div>
-                
-
-                <div class="submit_form">
+                <div class="submit_form positionRight">
                     <div class="main_btn_white submitForm">
                         <input type="submit" value="">
                         SUBMIT APPLICATION <img src="./img/icons/right_b.png" alt="" />
                         <span></span>
                     </div>
                 </div>
+               
+                
+
+             
                 
                
                
                 
             </form>
+
+            <aside class="contactInfo">
+                <h2 class="contactInfo_head">Contact Info</h2>
+                <div class="contactInfo_sec">
+                    <h3>Headquarters</h3>
+                    <h5>ADDRESS</h5>
+                    <p>Raya Corporation Building, 26th of July Road, Touristic Zone, 12568, Cairo, Egypt</p>
+                    <h5>PHONE</h5>
+                    <p>+ 202 – 38276000</p>
+                    <h5>EMAIL</h5>
+                    <p>For Sales Inquiries : sales@rayacc.com</p>
+                    <p>For Careers: cv@rayacc.com</p>
+                    <img src="./img/contact/contact1.jpg" alt="">
+                </div>
+                <div class="contactInfo_sec">
+                    <h3>Raya Contact Center Gulf , FZ-LLC</h3>
+                    <h5>ADDRESS</h5>
+                    <p>Dubai Outsource zone , ACSS Building, Premise : 502, P.O Box : 345823, Dubai, UAE</p>
+                    <h5>PHONE</h5>
+                    <p>+971 455 20 853 / 879</p>
+                    <h5>EMAIL</h5>
+                    <p>For Sales Inquiries : sales@rayacc.com</p>
+                    <p>For Careers: Careers_uae@rayacc.com</p>
+                    <img src="./img/contact/contact2.jpg" alt="">
+                </div>
+                <div class="contactInfo_sec">
+                    <h3>Raya Contact Center Europe Sp. Z.O.O.</h3>
+                    <h5>ADDRESS</h5>
+                    <p>Millennium Plaza Al. Jerozolimskie 123a - 02-017 Warsaw- Poland</p>
+                    <h5>PHONE</h5>
+                    <p>Office: +48 226 47 87 87 (EXT 23001)</p>
+                    <p>Fax: +48 226 47 87 97</p>
+                    <h5>EMAIL</h5>
+                    <p>For Sales Inquiries Email : sales@rayacc.com</p>
+                    <p>For Careers Email: Careers_pl@rayacc.com</p>
+                    <img src="./img/contact/contact3.jpg" alt="">
+                </div>
+            </aside>
             
         </section>
     
@@ -225,9 +318,7 @@
 
           <!-- INQUIRY links -->
          <div class="inquiry_links">
-            <div class="inquiry_links_b">
-                <a href="">BUSINESS INQUIRY <img src="./img/icons/right_w.png" alt=""></a>
-            </div>
+           
             <div class="inquiry_links_hr ">
                <a class="" href="">HR INQUIRY <img src="./img/icons/right_w.png" alt=""></a>
            </div>

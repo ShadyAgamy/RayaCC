@@ -23,13 +23,28 @@
       align-items: center;
       width: 28rem;
 
-      .swiper-pagination {
+      .progress_cont {
           width: 10rem;
           height: 2px;
           position:static;
           background: #5A95C6;
           margin-right: 3rem;
+          position: relative;
 
+          .progress{
+            background: #A8C8E1;
+            
+            height: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 100;
+            width: 1px;
+            &.blue {
+                background: #93BADA;
+            }
+          }
           &.blue {
             background: #D4E3F2;  
             .swiper-pagination-progressbar-fill{
@@ -413,6 +428,7 @@
     &_b,&_hr {
         width: 50%;
         height: 100%;
+        flex-grow: 1;
         a {
             display: block;
             width: 100%;
