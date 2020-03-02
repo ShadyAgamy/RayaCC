@@ -73,6 +73,12 @@
     margin-left: 18rem;
     position: relative;
     z-index: 999;
+    @include respond(phone){
+        width: 200px;
+        height: 80px;
+        margin-left: 0rem;
+        margin-top: 5rem;
+    }
     a {
         &,
         &:link,
@@ -92,6 +98,10 @@
             font-size: 13px;
             font-weight: bold;
             padding: 2rem 4rem;
+            @include respond(phone){
+                padding: 2rem 2rem;
+                font-size: 10px;
+            }
 
             
 

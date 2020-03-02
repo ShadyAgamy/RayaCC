@@ -162,7 +162,10 @@
                     </div>
 
                     <div class="main_slider_footer">
-                        <div class="swiper-pagination blue"></div>
+                        <div class="progress_cont blue">
+                            <div class="progress"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
                         <div class="main__footer_toggler">
                                 <div class="swiper-button-prev_b"></div>
                                 <div class="swiper-button-next_b"></div>
@@ -421,25 +424,62 @@
                 evt.currentTarget.className += " active";
                 }
               $(document).ready(function() {
+                var autoplay = 5000;
+                var previousid;
+                function move(parent) {      
+                var elem = $(parent).find(" .progress"); 
+            
+                // console.log(frame)
+                $(elem)[0].style.width = "0px";
+                var width = 1;
+                var autoplayTime = autoplay / 100;
+                
+                
+                
+                clearInterval(previousid);
+                previousid = setInterval(function(_id) { 
+                    return function() {
+                        if (width >= 100) {
+                            clearInterval(_id);
+                        } else {
+                            width++; 
+                            $(elem)[0].style.width = width + '%'; 
+                        }
+                }}(previousid), autoplayTime);
+            
+            }
             var solution_slider = new Swiper ('.solutions_swiper.swiper-container', {
-                slidesPerView: 'auto',
+                slidesPerView: 1,
                 spaceBetween: 0, 
-                pagination: {
-                el: '.solutions .swiper-pagination',
-                type: 'progressbar',
-            },
+                speed: 700,
+                loop: true,
+                paginationClickable: true,
+                watchSlidesProgress: true,
+                autoplay: {
+                    delay: 5000,
+                },
+                on: {
+                    slideChange : function () {  
+                    move(".solutions")
+                }
+                },  
                 navigation: {
                 nextEl: '.solutions .swiper-button-next_b',
                 prevEl: '.solutions .swiper-button-prev_b',
+                },pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
                 },
-               
+              
                 
 
             })
 
             var quoteSwiper = new Swiper('.depend_text_swiper', {
-                slidesPerView: 'auto',
+                slidesPerView: 1,
                 spaceBetween: 0, 
+                speed: 700,
+                loop: true,
                
             });
 

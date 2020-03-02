@@ -268,94 +268,7 @@
             font-weight: bold;
         }
 
-        .custom_input_group {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-top: 3rem;
-
-            .custom_input {
-                width: 47%;
-                display: flex;
-                flex-direction: column;
-                margin-bottom: 4rem;
-
-                &:nth-of-type(odd),&.customMR {
-                    margin-right: 3%;
-                }
-                label {
-                    color: #FFFFFF;
-                    font-size: 13px;
-                    text-transform: capitalize;
-                    font-weight: bold;
-                    margin-bottom: .5rem;
-                }
-
-                input,select,textarea {
-                    background-color: #065495;
-                    border: none;
-                    height: 44px;
-                    padding: .8rem;
-                    border-radius: 0 22px 22px 22px;
-                    color: white;
-                    outline: none;
-                    padding-left: 1rem;
-                    width: 100%;
-                    cursor: pointer;
-                   
-                }
-
-                textarea {
-                    height: 114px;
-                    resize: vertical;
-                }
-
-                select {
-                    color: rgba(255,255,255,.6);
-                    font-size: 12px;
-                    -webkit-appearance: button;
-                    appearance: button;
-                    outline: none;
-                    position: relative;
-                    /* for Firefox */
-                    -moz-appearance: none;
-                    /* for Chrome */
-                    -webkit-appearance: none;  
-                    /* For IE10 */
-                    &::-ms-expand {
-                        display: none;
-                    }
-                    text-indent: 5px;
-                    option {
-                        padding: 30px;
-                        color: white;
-                        font-size: 14px;
-                    }
-                            
-                }
-                .custom_selectbox {
-                    position: relative;
-                    
-                    &:before {
-                        content: "";
-                        position: absolute;
-                        top: 35%;
-                        right: 25px;
-                        width: 14px;
-                        height: 22px;
-                        text-align: center;
-                        font-size: 28px;
-                        line-height: 45px;
-                        background-image: url(../img/icons/right_w.png);
-                        pointer-events: none;
-                        z-index: 99;
-                        background-repeat: no-repeat;
-                        transform: rotate(90deg);
-                        cursor: pointer;
-                    }
-                }
-            }
-        }
+      
     }
 
 }
@@ -464,6 +377,7 @@
           background: transparent;
           border: none;
           cursor: pointer;
+          color: transparent;
           -moz-appearance: none;
             /* for Chrome */
             -webkit-appearance: none;  
@@ -483,3 +397,93 @@
   .careers_loc_content > .careers_loc_content_head:first-of-type {
       cursor: pointer;
   }
+
+
+  .custom_input_group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+
+    .custom_input {
+        width: 47%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4rem;
+
+        &:nth-of-type(odd),&.customMR {
+            margin-right: 3%;
+        }
+        label {
+            color: #FFFFFF;
+            font-size: 13px;
+            text-transform: capitalize;
+            font-weight: bold;
+            margin-bottom: .5rem;
+        }
+
+        input,select,textarea {
+            background-color: #065495;
+            border: none;
+            height: 44px;
+            padding: .8rem;
+            border-radius: 0 22px 22px 22px;
+            color: white;
+            outline: none;
+            padding-left: 1rem;
+            width: 100%;
+            cursor: pointer;
+           
+        }
+
+        textarea {
+            height: 114px;
+            resize: vertical;
+        }
+
+        select {
+            color: rgba(255,255,255,.6);
+            font-size: 12px;
+            -webkit-appearance: button;
+            appearance: button;
+            outline: none;
+            position: relative;
+            /* for Firefox */
+            -moz-appearance: none;
+            /* for Chrome */
+            -webkit-appearance: none;  
+            /* For IE10 */
+            &::-ms-expand {
+                display: none;
+            }
+            text-indent: 5px;
+            option {
+                padding: 30px;
+                color: white;
+                font-size: 14px;
+            }
+                    
+        }
+        .custom_selectbox {
+            position: relative;
+            
+            &:before {
+                content: "";
+                position: absolute;
+                top: 35%;
+                right: 25px;
+                width: 14px;
+                height: 22px;
+                text-align: center;
+                font-size: 28px;
+                line-height: 45px;
+                background-image: url(../img/icons/right_w.png);
+                pointer-events: none;
+                z-index: 99;
+                background-repeat: no-repeat;
+                transform: rotate(90deg);
+                cursor: pointer;
+            }
+        }
+    }
+}

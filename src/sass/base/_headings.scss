@@ -4,6 +4,12 @@
     min-height: 50px;
     border-bottom: 1px solid #DFDFDE;
     display: flex;
+    @include respond(phone){
+        margin-left: 22%;
+        min-width: 70rem;
+        max-width: 70rem;
+        min-height: 45px;
+    }
     
     &  >h1,h2,h3,h4 {
         color: #A7A9AC;

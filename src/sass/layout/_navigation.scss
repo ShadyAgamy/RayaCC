@@ -16,6 +16,10 @@
 
     &__logo {
         width: 125px;
+        @include respond(phone){
+            width: 70px;
+        }
+
        img {
         width :100%;
        } 
@@ -24,6 +28,10 @@
     .nav {
         @include displayFlex;
         margin-left: auto;
+
+        @include respond(tab-land){
+            display: none;
+        }
 
         .menu-item {
             & > a {
@@ -124,6 +132,10 @@
 
     .menu-item#langSelect {
     position: relative;
+    
+    @include respond(tab-land){
+        display: none;
+    }
     & > div {
         display: flex;
         align-items: center;

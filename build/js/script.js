@@ -250,8 +250,30 @@ var fileInputs  = document.querySelectorAll( ".input-file" ),
     })
 
 
+    // var swiperFractionDiv = $(".swiper-pagination.swiper-pagination-fraction");
+    // var swiperSpanText =  swiperFractionDiv.find("span").text();
+
+    // swiperSpanText = ( "0" + swiperSpanText)
+
+
+$(".Languages_img img")
+
+function myFunction(checkMedia) {
+    if (checkMedia.matches) { // If media query matches
+        $(".Languages_img img").attr("src", $(".Languages_img img").attr("srcM"))
+    } else {
+        $(".Languages_img img").attr("src", $(".Languages_img img").attr("srcD"))
+    }
+  }
+  
+  var checkMedia = window.matchMedia("(max-width: 600px)")
+  myFunction(checkMedia)
+
+
+
+
     
-});
+}); //jquery end
 
 
 

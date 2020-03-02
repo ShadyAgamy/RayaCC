@@ -11,6 +11,16 @@
             margin-right: -68rem;
             position: relative;
             z-index: 999;
+            @include respond(tab-land){
+                width: 85%!important;
+                margin-left: 5rem!important;
+                margin-right: -41rem!important;
+            }
+            @include respond(phone){
+                width: 85%!important;
+                margin-left: 2rem!important;
+                margin-right: -22rem!important;
+            }
            
             h3 {
                 font-size: 35px;
@@ -18,6 +28,9 @@
                 margin-top: 5rem;
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 400;
+                @include respond(phone){
+                    font-size: 35px;
+                }
 
             }
             h1 {
@@ -26,12 +39,19 @@
                 font-family: 'Montserrat', sans-serif;
                 line-height: .9;
                 margin-top: 1rem;
+                @include respond(phone){
+                    font-size: 40px;
+                    margin-top: 2rem;
+                }
             }
         }
 
         .header_main_video_cont {
             width: 61%;
-            max-height: 410px;
+            max-height: 463px;
+            @include respond(tab-land){
+                width: 100%;
+            }
             img {
                 width: 100%;
                 height: 100%;
@@ -43,7 +63,10 @@
 }
 
 .about_cont {
-    margin-top: 24rem; 
+    margin-top: 24rem;
+    @include respond(tab-land){
+        margin-top: 14rem;
+    }
 }
 .wwa_sec_cont{
     position: relative;
@@ -52,6 +75,12 @@
     display: flex;
     padding-left: 5rem;
     justify-content: space-between;
+    @include respond(tab-land){
+       flex-direction: column;
+    }
+    @include respond(phone){
+        padding-left: 0;
+     }
     
 
 
@@ -59,6 +88,14 @@
         width: 38%;
         position: relative;
         z-index: 10;
+        @include respond(tab-land){
+            width: 80%;
+            margin-bottom: 12rem;
+         }
+         @include respond(phone){
+            width: 90%;
+            padding-left: 2.5rem;
+         }
 
     }
 
@@ -84,6 +121,9 @@
             p {
                 font-size: 48px;
                 font-weight: 900; 
+                @include respond(phone){
+                    font-size: 40px;
+                }
             }
 
             span {
@@ -91,26 +131,63 @@
                 margin-top: -1rem;
                 opacity: .9;
                 font-weight: 400;
+                @include respond(phone){
+                    font-size: 15px;
+                }
             }
         }
     }
 
+    &:nth-of-type(1) {
+        .wwa_sec_img {
+            @include respond(tab-land){
+                align-self: flex-end;
+                width: 75vw;
+
+                img {
+                    width: 100%;
+                }
+            }
+            @include respond(phone){
+                width: 68vw;
+            }
+           
+        } 
+    }
     &:nth-of-type(2) {
         margin-top: -7rem;
+         @include respond(tab-land) {
+            flex-direction: column-reverse;
+            margin-top: 8rem;
+         }
+        
         .wwa_sec_img  {
+            width: 375px;
+            height: 450px;
+            @include respond(phone) {
+                width: 211px;
+                height: auto;
+            }
             position: relative;
             & > img {
-                width: 375px; 
-                height: 450px;
+                width: 100%; 
+                height: 100%;
             }    
         }
 
         .wwa_sec_text {
             width: 65%;
             align-self: flex-end;
+            @include respond(tab-land) {
+                width: 100%; 
+                align-self: flex-start;
+            }
 
             p {
                 width: 90%;
+                @include respond(tab-land) {
+                    width: 100%;
+                }
 
             }
         }
@@ -129,16 +206,26 @@
         margin-top: 6rem;
         margin-bottom: 25rem;
         .wwa_sec_img  {
+            width: 435px;
+            @include respond(tab-land) {
+                align-self: flex-end;
+            }
             & > img {
-                width: 435px; 
+               width: 100%;
             }    
         }
 
         .wwa_sec_text {
             width: 65%;
+            @include respond(tab-land) {
+                width: 100%;
+            }
 
             p {
                 width: 90%;
+                @include respond(tab-land) {
+                    width: 100%;
+                }
 
             }
         }
@@ -149,6 +236,13 @@
             right: unset;
             top: unset;
             bottom: -2rem;
+            @include respond(tab-land) {
+                padding: 3rem 4rem;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60%;
+                min-width: 230px;
+            }
 
             a {
                 font-size: 13px;
@@ -174,12 +268,22 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 5rem;
+        @include respond(tab-land) {
+            flex-direction: column;;
+        }
 
         .main_left_heading {
             min-width: 59rem;
+            @include respond(phone) {
+                min-width: 51rem;
+                margin-left: -19%;
+            }
 
             h2 {
                 font-size: 65px;
+                @include respond(phone) {
+                    font-size: 38px;
+                }
             }
 
             
@@ -188,6 +292,12 @@
         p {
             max-width: 630px;
             margin: 2rem auto 0;
+            @include respond(tab-land) {
+                margin: 5rem auto 0;
+            }
+            @include respond(phone) {
+                padding: 0 2rem;
+            }
         }
 
     }
@@ -195,6 +305,9 @@
         width: 80%;
         margin: 8rem auto;
         padding: 9rem 0;
+        @include respond(tab-land) {
+            width: 95%;
+        }
     }
 
     .swiper-pagination_cert{
@@ -238,6 +351,10 @@
             max-height: 90%!important;
             margin: 0 auto;
             box-shadow: 0px 3px 16px #00000029;
+            @include respond(phone) {
+                padding: 6.5rem 2rem;
+                width: 90%;
+             }
             
             img {
                width: 116px;
@@ -255,6 +372,9 @@
         width: 10px;
         height: 21px;
         background-size: 10px 39px;
+        @include respond(phone) {
+           display: none;
+        }
     }
 
     .swiper-button-prev {
@@ -275,12 +395,26 @@
         margin-bottom: 5rem;
         .main_left_heading {
             min-width: 49rem;
+            @include respond(tab-land) {
+                min-width: 65%;
+            }
+            @include respond(phone) {
+                min-width: 85%;
+                margin-left: 0;
+            }
 
             h2 {
                 font-size: 65px;
+              
+                @include respond(phone) {
+                    font-size: 38px;
+                }
             }
 
             
+        }
+        @include respond(tab-land) {
+            margin-bottom: 0rem;
         }
     }
 
@@ -289,9 +423,20 @@
         justify-content: flex-end;
         margin-top: -14rem;
         margin-right: 15rem;
+        width: 100%;
+        height: 600px;
+        @include respond(tab-land) {
+            margin-top: 0rem;
+            margin-right: 0rem;
+        }
+        @include respond(tab-land) {
+            margin-top: 4rem;
+            height: auto;
+        }
         img {
-            width: 920px;
-            height: 610px;
+           width: 100%;
+           height: 100%;
+           object-fit: contain;
         }
     }
 }
@@ -304,9 +449,21 @@
         margin-bottom: 5rem;
         .main_left_heading {
             min-width: 68rem;
-
+            @include respond(tab-land) {
+                min-width: 74rem;
+            }
+            @include respond(phone) {
+                min-width: 95%;
+                margin-left: 0;
+            }
             h2 {
                 font-size: 65px;
+                @include respond(tab-land) {
+                    font-size: 56px;
+                }
+                @include respond(phone) {
+                    font-size: 35px;
+                }
             }
 
             
@@ -316,6 +473,11 @@
     &_tabs {
         display: flex;
         min-height: 600px;
+        @include respond(tab-land) {
+            flex-direction: column;
+            padding: 8rem 0px;
+            background: #0B63AC;
+         }
 
 
         .tab {
@@ -327,6 +489,10 @@
             min-width: 42rem;
             max-width: 42rem;
             align-self: flex-start;
+            @include respond(tab-land) {
+               display:none;
+            }
+            
 
             .tablinks{
                 width: 100%;
@@ -374,6 +540,53 @@
                 
             }
         }
+        .custom_selectbox{
+            position: relative; 
+            width: 90%;
+            margin: 0 auto;
+            display: none;
+            @include respond(tab-land) {
+                display:block;
+             }
+            &:before {
+                content: "";
+            position: absolute;
+            top: 35%;
+            right: 25px;
+            width: 14px;
+            height: 22px;
+            text-align: center;
+            font-size: 28px;
+            line-height: 45px;
+            background-image: url(../img/icons/right_b.png);
+            pointer-events: none;
+            z-index: 99;
+            background-repeat: no-repeat;
+            -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+            cursor: pointer;
+            }
+        }
+        #tab_mobile {
+            background-color: white;
+            border: none;
+            height: 52px;
+            padding: .8rem;
+            border-radius: 22px 22px 22px 22px;
+            color: #0B63AC;
+            font-size: 14px;
+            outline: none;
+            padding-left: 1rem;
+            width: 100%;
+            cursor: pointer;
+           
+            outline: none;
+            position: relative;
+            -webkit-appearance: none;
+            text-indent: 5px;
+            
+        }
 
         .tabcontents{
             background: #0B63AC;
@@ -387,6 +600,10 @@
             max-height: 100%;
             min-width: 92rem;
             position: relative;
+            @include respond(tab-land) {
+                padding: 11rem 5rem;
+                min-width: 100%;
+             }
 
 
             .tabcontent{
@@ -430,11 +647,31 @@
     display: flex;
     padding-left: 6rem;
     margin-top: 15rem;
+    @include respond(tab-land) {
+        flex-direction: column;
+        margin-top: 10rem;
+        padding-left: 4rem;
+     }
+     @include respond(phone) {
+        margin-top: 18rem;
+     }
     &-vision {
         width: 43%;
+        @include respond(tab-land) {
+            width: 75%;
+            margin-top: -4rem;
+            margin-bottom: 15rem;
+         }
+         @include respond(phone) {
+            margin-bottom: 10rem;
+        }
         .main_left_heading {
             max-width: 103%;
             margin-bottom: 2rem; 
+            @include respond(phone) {
+                min-width: 94vw;
+                margin-left: 0;
+            }
 
             h2 {
                 font-size: 40px;
@@ -454,10 +691,21 @@
         width: 74%;
         background: #0B63AC;
         min-height: 440px;
+        padding-bottom: 4rem;
+        @include respond(tab-land) {
+            width: 100%;
+         }
+         @include respond(phone) {
+           padding-bottom: 6rem;
+           overflow-x: hidden;
+         }
 
         .main_left_heading.main_right_heading {
             min-width: 276px;
             max-width: 280px;
+            @include respond(tab-land) {
+               margin-left: -17%;
+             }
             
             h2 {
                 color: white;
@@ -469,6 +717,9 @@
             display: flex;
             flex-direction: column;
             margin: 4rem 0 0 12rem;
+            @include respond(tab-land) {
+                margin: 4rem 0 0 6rem;
+              }
 
             li {
                 list-style: none;
@@ -494,6 +745,14 @@
     &.dream {
         margin-top: -9rem;
         padding-left: 20rem;
+        @include respond(tab-land) {
+            margin-top: 11rem;
+            padding: 0 5rem;
+            width: 100%;
+         }
+         @include respond(phone) {
+            padding: 0 0 0 5rem;
+         }
 
         .v_m-vision {
             position: relative;
@@ -511,6 +770,9 @@
         .dream-img{
             margin-top: 5rem;
             margin-left: 8rem;
+            @include respond(tab-land) {
+                margin-left: auto;
+             }
             img {
                 width: 376px;
             }
@@ -520,11 +782,22 @@
 
 
 .ffsTabs {
+    @include respond(tab-land) {
+        margin: 22rem 0 15rem;
+     }
    
     .ffs_tabs {
         flex-direction: column;
         align-items: unset;
         margin: 0 5rem 0 10rem;
+        @include respond(tab-land) {
+            margin: 6rem 6rem 0 6rem;
+            width: 86%;
+         }
+         @include respond(phone) {
+            margin: 6rem 2rem 0 2rem;
+            width: 97%;
+         }
         .tab {
             display: flex;
 
@@ -535,6 +808,13 @@
                 align-items: center;
                 justify-content: center;
                 min-height: unset;
+                @include respond(tab-land) {
+                    width: 21%;
+                    &:not(:last-of-type) {
+                        margin-right: 6%;
+                    }
+                    
+                 }
 
                 &.active {
                     box-shadow: 0px -10px 16px #00000023;
@@ -546,6 +826,9 @@
 
                 h3 {
                     font-size: 14px;
+                    @include respond(phone) {
+                      display: none;
+                     }
                 }
             }
         }
@@ -573,7 +856,14 @@
     }
 }
 
-
+.ffs_text .main_left_heading {
+    @include respond(tab-land) {
+        min-width: 80vw;
+     }
+     @include respond(phone) {
+        margin-left: 0rem;
+     }
+}
 
 .me_Kh {
     width: 100%;
@@ -583,6 +873,10 @@
     display: flex;
     justify-content: flex-end;
     overflow: hidden;
+    @include respond(tab-land){
+        background-position: -32rem 0rem;
+        height: 1100px;
+    } 
 
     .me_Kh_text {
         background: rgba(255,255,255,.5);
@@ -595,6 +889,9 @@
         z-index: 1;
         position: relative;
         transform: translate(13rem, 19px);  
+        @include respond(tab-land){
+            transform: translate(16rem, 59rem);
+        } 
 
         h2 {
             font-size: 42px;

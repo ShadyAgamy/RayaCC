@@ -10,6 +10,7 @@
         crossorigin="anonymous">
         <link rel="stylesheet" href="css/swiper.min.css">
         <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/intlTelInput.min.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
@@ -475,8 +476,8 @@
                             </div>
                         </div>
                         <div class="custom_input">
-                            <label for="Phone">Phone</label>
-                            <input type="tel" id="Phone">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone">
                         </div>
                         <div class="custom_input">
                             <label for="Language">Language</label>
@@ -675,6 +676,9 @@
         <script src="js/wow.min.js"></script>
         <script src="js/particles.min.js"></script>
         <script src="js/app.js"></script>
+        <script src="js/utils.js"></script>
+        <script src="js/intlTelInput.min.js"></script>
+        
         <script src="js/script.js"></script>
 
         <script>
@@ -693,14 +697,9 @@
                 },
             })
 
-            
+            var input = $("#phone");
+            window.intlTelInput(input);
            
-        
-
-            
-
-            
- 
             // WOW ANIMATION
               new WOW().init();
              

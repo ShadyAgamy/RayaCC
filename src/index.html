@@ -88,7 +88,7 @@
 
         <!-- Menu Pop up 
         ===============================================-->
-        <!-- <div id="Menupopup" class="popup">
+        <div id="Menupopup" class="popup">
             <div class="popup__container">
                 <div class="popup__menu-shape"></div>
                 <div class="popup__menu-cont">
@@ -103,7 +103,7 @@
                     <button class="navbar__donateBtn-btn btn" role="button">EN / AR</button>       
                 </div>   
             </div>       
-        </div>  -->
+        </div> 
 
 
     
@@ -143,7 +143,9 @@
                     <div class="main_slider_footer">
                         <div class="progress_cont">
                             <div class="progress"></div>
+                            <div class="swiper-pagination"></div>
                         </div>
+                        
                         <div class="main__footer_toggler">
                                 <div class="swiper-button-prev_w"></div>
                                 <div class="swiper-button-next_w"></div>
@@ -235,7 +237,10 @@
                         <h2 class="facts_heading ">INDUSTRIES</h2>
                     </div>
                     <div class="main_slider_footer">
-                        <div class="swiper-pagination"></div>
+                        <div class="progress_cont">
+                            <div class="progress"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
                         <div class="main__footer_toggler">
                                 <div class="swiper-button-prev_w"></div>
                                 <div class="swiper-button-next_w"></div>
@@ -351,7 +356,10 @@
                         </div>          
                     </div>
                     <div class="main_slider_footer">
-                        <div class="swiper-pagination blue"></div>
+                        <div class="progress_cont blue">
+                            <div class="progress"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
                         <div class="main__footer_toggler">
                                 <div class="swiper-button-prev_b"></div>
                                 <div class="swiper-button-next_b"></div>
@@ -477,8 +485,11 @@
                 
             </div>
             <div class="footer_info">
-                <img src="./img/home/logo-w.png" alt="">
-                <p>A world class Business Process Outsourcing Service Provider offering contact centre services, back office services, inside sales channel management and professional services Raya Contact Center with its Call Center services caters to clients, including global fortune 500 companies in Europe, Middle East & Africa in 25 different languages.</p>
+                <div>
+                    <img src="./img/home/logo-w.png" alt="">
+                    <p>A world class Business Process Outsourcing Service Provider offering contact centre services, back office services, inside sales channel management and professional services Raya Contact Center with its Call Center services caters to clients, including global fortune 500 companies in Europe, Middle East & Africa in 25 different languages.</p>
+                </div>
+                
                 <div class="newsletter">
                     <h5>OUR NEWS LETTER</h5>
                     <form action="">
@@ -495,6 +506,18 @@
                             <input type="text" id="name" name="name">
                             <label  for="email">Email</label>
                             <input type="email" id="email" name="email">
+                            <div class="custom_input_group">
+                                <div class="custom_input">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name">
+                                </div>
+                               
+                                <div class="custom_input">
+                                    <label for="Email">Email</label>
+                                    <input type="email" id="Email">
+                                </div>
+                              
+                            </div>
                             <button type="submit">SUBSCRIBE</button>
                         </div>
                         <div class="followUs">
@@ -538,6 +561,8 @@
         <script>
             var autoplay = 5000;
             var previousid;
+            var previousid2;
+            var previousid3;
             function move(parent) {      
             var elem = $(parent).find(" .progress"); 
            
@@ -560,66 +585,131 @@
             }}(previousid), autoplayTime);
            
         }
+        function move2(parent) {      
+            var elem = $(parent).find(" .progress"); 
+           
+            // console.log(frame)
+            $(elem)[0].style.width = "0px";
+            var width = 1;
+            var autoplayTime = autoplay / 100;
+            
+            
+            
+            clearInterval(previousid2);
+             previousid2 = setInterval(function(_id) { 
+                return function() {
+                    if (width >= 100) {
+                        clearInterval(_id);
+                    } else {
+                        width++; 
+                        $(elem)[0].style.width = width + '%'; 
+                    }
+            }}(previousid2), autoplayTime);
+           
+        }
+        function move3(parent) {      
+            var elem = $(parent).find(" .progress"); 
+           
+            // console.log(frame)
+            $(elem)[0].style.width = "0px";
+            var width = 1;
+            var autoplayTime = autoplay / 100;
+            
+            
+            
+            clearInterval(previousid3);
+             previousid3 = setInterval(function(_id) { 
+                return function() {
+                    if (width >= 100) {
+                        clearInterval(_id);
+                    } else {
+                        width++; 
+                        $(elem)[0].style.width = width + '%'; 
+                    }
+            }}(previousid3), autoplayTime);
+           
+        }
 
             var mySwiper = new Swiper ('header .main_slider .swiper-container', {
-
+                slidesPerView: 1,
                 speed: 700,
                 loop: true,
-                // pagination: {
-                // el: 'header .swiper-pagination',
-               
-                // },
                 paginationClickable: true,
                 watchSlidesProgress: true,
                 autoplay: {
                     delay: 5000,
                 },
                 on: {
-                    // init: function () {
-                    //     move("header .main_slider ")
-                    // },
-                    slideChange : function () {
-                    console.log("slidechange");
-                   
+                    slideChange : function () {                 
                     move("header .main_slider ")
                 }
-                },
-                // progress: function() {
-                    
-                // } ,
+                },  
                 navigation: {
                 nextEl: 'header .swiper-button-next_w',
                 prevEl: 'header .swiper-button-prev_w',
+                },pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                },
+                breakpoints: {
+                    640: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    }
+                    
                 }
             
             })
-            // mySwiper.on(' slideChange', );
+           
 
             var mySwiper_2 = new Swiper ('.industries_swiper.swiper-container', {
                 slidesPerView: 'auto',
                 spaceBetween: 15,  
-                pagination: {
-                el: '.industries .swiper-pagination',
-                
-            },
+                speed: 700,
+                loop: true,
+                paginationClickable: true,
+                watchSlidesProgress: true,
+                autoplay: {
+                    delay: 5000,
+                },
+                on: {
+                    slideChange : function () {  
+                    move2(".industries_content")
+                }
+                },  
                 navigation: {
                 nextEl: '.industries .swiper-button-next_w',
                 prevEl: '.industries .swiper-button-prev_w',
+                },pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
                 }
 
             })
 
             var mySwiper_3 = new Swiper ('.solutions_swiper.swiper-container', {
-                slidesPerView: 'auto',
+                slidesPerView: 1,
                 spaceBetween: 0, 
-                pagination: {
-                el: '.solutions .swiper-pagination',
-                type: 'progressbar',
-            },
+                speed: 700,
+                loop: true,
+                paginationClickable: true,
+                watchSlidesProgress: true,
+                autoplay: {
+                    delay: 5000,
+                },
+                on: {
+                    slideChange : function () {  
+                    move3(".solutions")
+                }
+                },  
                 navigation: {
                 nextEl: '.solutions .swiper-button-next_b',
                 prevEl: '.solutions .swiper-button-prev_b',
-                }
+                },pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                },
+              
 
             })
 

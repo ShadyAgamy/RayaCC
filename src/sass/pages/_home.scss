@@ -7,7 +7,11 @@
           text-transform: uppercase;
           font-weight: 800;
           line-height: 1;
-          font-family: 'Montserrat', sans-serif;
+          font-family: 'Montserrat', sans-serif;   
+        @include respond(phone){
+            font-size: 35px;      
+        }
+     
           
         }
         
@@ -28,7 +32,7 @@
           height: 2px;
           position:static;
           background: #5A95C6;
-          margin-right: 3rem;
+          margin-right: 5rem;
           position: relative;
 
           .progress{
@@ -41,20 +45,17 @@
             top: 0;
             z-index: 100;
             width: 1px;
-            &.blue {
-                background: #93BADA;
-            }
           }
           &.blue {
-            background: #D4E3F2;  
-            .swiper-pagination-progressbar-fill{
-                background: #93BADA;
+              background: #9FC1E2;
+            .progress {
+                background: #0B63AC;  
             }
+            
           }
+         
 
-          .swiper-pagination-progressbar-fill{
-              background: #A8C8E1;
-          }
+         
       }
 
     }
@@ -66,6 +67,9 @@
     align-items: center;
     justify-content: space-between;
     width: 4rem;
+    @include respond(phone){
+        width: 7rem;
+    }
   }
 
 .swiper-button-prev_w,
@@ -76,6 +80,12 @@
   background-repeat: no-repeat;
   height: 18px;
   cursor: pointer;
+
+  @include respond(phone){
+    width: 10px;
+    height: 23px;
+    background-size: contain;
+}
 
   &,&:focus {
       outline: none;
@@ -106,6 +116,12 @@
   margin-top: 6rem;
   padding: 0 14rem;
   margin-bottom: 15rem;
+  overflow-x: hidden;
+  @include respond(phone){
+    margin-top: 15rem;
+    padding: 0 5rem;
+    
+    }
 
   &_heading {
       font-size: 37px;
@@ -116,8 +132,32 @@
       display: flex;
       align-items: baseline;
       justify-content: space-evenly;
+      @include respond(tab-land){
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    @include respond(phone){
+        justify-content: center;
+        margin-top: 6rem;
+        
+    }
 
       .facts__counter {
+        @include respond(tab-land){
+            width: 33%;
+
+            &:nth-of-type(4),&:nth-of-type(5) {
+                flex-grow: 1;
+                @include respond(phone){
+                    flex-grow: 0;
+                    
+                }
+            }
+        }
+        @include respond(phone){
+            width: 49%;
+            
+        }
           &--content {
               display: flex;
               flex-direction: column;
@@ -164,16 +204,49 @@
   display: flex;
   align-items: center;
   margin-bottom: 24rem;
+  @include respond(tab-land){
+    flex-direction: column-reverse;
+    align-items: flex-start;
+}
+@include respond(phone){
+    flex-direction: column;
+    
+}
 
+.main_right_heading {
+    @include respond(tab-land){
+        margin-top: -23rem;
+        margin-left: -18rem;
+        position: relative;
+        z-index: 999;
+    }
+    @include respond(phone){
+        margin-top: -18rem;
+        
+    }
+}
   .facts_heading  {
       margin-top: 12rem;
       margin-right: -4rem; 
+      @include respond(phone){
+        font-size: 28px;
+    }
   }
 
   img {
       max-width: 925px;
       margin-left: -10rem;
       margin-top: 0rem;
+      @include respond(tab-land){
+            max-width: 100%;
+            margin-left: 0rem;
+            margin-top: 0rem;
+    }
+    @include respond(phone){
+        max-width: 112%;
+        margin-left: -6rem;
+        margin-top: 7rem;
+    }
   }
 }
 
@@ -187,6 +260,15 @@
         width: 80%;
         height: 100%;
         background:#143B64 ;
+        @include respond(tab-land){
+            width: 100%;
+            background:linear-gradient(to right,  white 0%,white 50%,#143B64 50%,#143B64 100%);
+            overflow-x: hidden;
+        }
+        @include respond(phone){
+            background:linear-gradient(to right, white 0%, white 30%, #143B64 30%, #143B64 100%);
+           
+        }
 
     }
 
@@ -197,15 +279,26 @@
         flex-direction: column;
         align-items: flex-end;  
         justify-content: space-between;
-
+        @include respond(tab-land){
+            margin-left: 0%;
+        }
         .main_left_heading {
             align-self: flex-start;
             max-width: 500px;
             min-width: 410px;
             margin-top: 3rem;
+            @include respond(phone){
+                max-width: 400px;
+                min-width: 300px;
+                margin-top: 3rem;
+                margin-left: 0;
+            }
 
             h2 {
                 font-size: 56px; 
+                @include respond(phone){
+                    font-size: 38px;
+                }
             }
         }
 
@@ -216,6 +309,12 @@
                 .swiper-slide{
                     width: 29%;
                     height: 244px;
+                    @include respond(tab-land){
+                        width: 48%;
+                    }
+                    @include respond(phone){
+                        width: 95%;
+                    }
                     .inds_slide{
                         width: 100%;
                         height: 100%;
@@ -245,6 +344,15 @@
         .main_btn_white {
             margin-top: 3rem;
             width: 340px;
+            @include respond(phone){
+                width:200px;
+            }
+        }
+    }
+
+    .main_slider_footer {
+        @include respond(phone){
+            width:13rem;
         }
     }
 }
@@ -256,17 +364,37 @@
     width: 100%;
     height: 600px;
     margin: 20rem 0;
+    @include respond(tab-land){
+        height: auto;
+        overflow-x: hidden;
+       
+    }
     &_content {
         width: 100%;
         height: 100%;
         display: flex;
         justify-content: space-between;
+        @include respond(tab-land){
+            flex-direction: column;
+            position: relative;
+            padding-top: 25rem;
+        }
+        @include respond(phone){
+            padding-top: 14rem;
+
+        }
+       
         &_tabs {
             width: 50%;
             display: flex;
             align-items: center;
             flex-wrap: wrap;
             margin-left: 3rem;
+            @include respond(tab-land){   
+                margin-left: 2rem;
+                justify-content: center;
+                width: 100%;
+            }
             &-tab {
                 width: 50%;
                 max-width: 290px;
@@ -277,12 +405,24 @@
                 padding: 4rem 2rem 6rem 4rem;
                 margin: 0 2rem 1rem;
                 cursor: pointer;
+                @include respond(phone){
+                    width: 40%;
+                    max-width: 286px;
+                    min-height: 195px;
+                    max-height: 279px;
+                    padding: 4rem 2rem 4rem 2rem;
+                    margin: 0 1.5rem 1rem;
+                }
 
                 &:hover {
                     @include tabboxshadow;
                 }
                 img {
                     width: 80px;
+                    @include respond(phone){
+                        width: 60px;
+                    }
+    
                 }
                 h3 {
                     color : #0B63AC;
@@ -291,6 +431,9 @@
                     line-height: 1;
                     width: 70%;
                     margin-top: 2rem;
+                    @include respond(phone){
+                        font-size: 18px;
+                    }
                 }
             }
         }
@@ -301,10 +444,33 @@
             flex-direction: column;   
             align-self: flex-end;
             margin-bottom: -9rem;
+            @include respond(tab-land){
+                width: 80%;
+                overflow: hidden;
+            }
+            @include respond(phone){
+                width: 100%;
+                
+            }
 
             .main_left_heading {
                 margin-bottom: 14rem;
                 max-width: 100%;
+                @include respond(tab-land){
+                    position: absolute;
+                    top: 0;
+                    right: 0%;
+                    min-width: 440px;
+                    max-width: 500px;
+                }
+                @include respond(phone){
+                    min-width: 370px;
+                    right: -11%;
+
+                    h2 {
+                        font-size: 38px!important;
+                    }
+                }
 
                 h2 {
                     font-size: 56px;
@@ -314,6 +480,17 @@
 
             .main_slider_footer {
                 margin: 3rem 0 0 4rem;
+                @include respond(phone){
+                    width: 100%;
+                    margin: 1rem auto;
+                }
+                .main__footer_toggler {
+                    @include respond(phone){
+                        width: 90%;
+                        margin: 2rem auto;
+                    }
+                   
+                }
             }
 
         }
@@ -323,6 +500,11 @@
         margin: 0 0;
         width: 100%;
         margin-left: 40px;
+        @include respond(phone){
+       
+            margin: 0;
+            
+        }
         .swiper-wrapper{
             width: 100%;
             //max-width: 570px;
@@ -332,6 +514,7 @@
                 img {
                     width: 100%;
                     height: 100%;;
+                    object-fit: cover;
                 }
             }
         }
@@ -346,20 +529,38 @@
     display: flex;
     justify-content: space-between;
     position: relative;
+    @include respond(tab-land){
+        flex-direction: column;
+       
+    
+    }
     &_text {
         width: 44%;
         position: relative;
         z-index: 10;
+        @include respond(tab-land){
+            width: 70%;
+        
+        }
+        @include respond(phone){
+            width: 90%;
+        }
 
         .main_left_heading{
             max-width: 100%;
             margin-bottom: 7rem;
+            @include respond(phone){
+               margin-left: -7rem;
+            }
             h2 {
                 font-size: 56px;
                 font-weight: 900;
                 width: 76%;
                 text-align: right;
                 line-height: 1;
+                @include respond(phone){
+                    font-size: 38px;
+                }
             }
         }
 
@@ -380,6 +581,13 @@
         position: relative;
         z-index: 10;
         background: white;
+        @include respond(tab-land){
+            justify-content: center;
+            margin-top: 10rem;
+            width: 100%;
+        
+        }
+
         &-tab {
             width: 50%;
             max-width: 290px;
@@ -403,6 +611,10 @@
                 border-left: 1px solid #D0D0CF;
                 border-top: 1px solid #D0D0CF;
                 margin: -1px 0 0 -1px;
+                @include respond(tab-land){
+                    margin: -2px 0 0 -2px;
+                
+                }
             }
 
             img {
@@ -415,6 +627,10 @@
                 line-height: 1;
                 width: 70%;
                 margin-top: .6rem;
+                @include respond(phone){
+                    font-size: 19px;
+                
+                }
             }
         }
     }
@@ -425,10 +641,19 @@
     display: flex;
     width: 100%;
     height: 60px;
+    @include respond(phone){
+        height: 140px;
+        flex-direction: column; 
+    
+    }
     &_b,&_hr {
         width: 50%;
         height: 100%;
         flex-grow: 1;
+        @include respond(phone){
+            width: 100%;
+        
+        }
         a {
             display: block;
             width: 100%;
@@ -461,3 +686,32 @@
     
 }
 
+.swiper-pagination.swiper-pagination-fraction {
+    color: transparent;
+}
+
+.swiper-pagination-current,
+.swiper-pagination-total {
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    top: 100%;
+
+}
+.swiper-pagination-current {
+    left: -15px;
+   
+}
+
+.swiper-pagination-total { 
+    right: -15px;
+  
+}
+
+
+.progress_cont.blue {
+    .swiper-pagination-current,
+    .swiper-pagination-total {
+        color : #4184C5;
+    }
+}

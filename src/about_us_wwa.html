@@ -235,7 +235,7 @@
                     </div>
                 </div>
                 <div class="Languages_img">
-                    <img src="./img/who-we-are/map1.png" alt="">
+                    <img src="" srcD="./img/who-we-are/map1.png" srcM="./img/who-we-are/map1s.png" alt="">
                 </div>
                 
             </section>
@@ -252,10 +252,21 @@
                         <button class="tablinks active" onclick="tabName(event, 'COMMITMENT TO QUALITY')">COMMITMENT TO QUALITY</button>
                         <button class="tablinks" onclick="tabName(event, 'COST-EFFICIENCY')">COST-EFFICIENCY</button>
                         <button class="tablinks" onclick="tabName(event, 'SOLID TRACK RECORD')">SOLID TRACK RECORD</button>
-                        <button class="tablinks" onclick="tabName(event, 'VALUE CHAIN GROWTH ')">VALUE CHAIN GROWTH </button>
+                        <button class="tablinks" onclick="tabName(event, 'VALUE CHAIN GROWTH')">VALUE CHAIN GROWTH </button>
                         <button class="tablinks" onclick="tabName(event, 'CULTURE & BRAND AWARENESS')">CULTURE & BRAND AWARENESS</button>
                         <button class="tablinks" onclick="tabName(event, 'NURTURING LONG-TERM PARTNERSHIP')">NURTURING LONG-TERM PARTNERSHIP</button>
                     </div>
+                    <div class="custom_selectbox">
+                        <select id="tab_mobile">
+                            <option value="COMMITMENT TO QUALITY">COMMITMENT TO QUALITY</option>
+                            <option  value="COST-EFFICIENCY">COST-EFFICIENCY</option>
+                            <option  value="SOLID TRACK RECORD">SOLID TRACK RECORD</option>
+                            <option  value="VALUE CHAIN GROWTH">VALUE CHAIN GROWTH</option>
+                            <option  value="CULTURE & BRAND AWARENESS">CULTURE & BRAND AWARENESS</option>
+                            <option  value="NURTURING LONG-TERM PARTNERSHIP">NURTURING LONG-TERM PARTNERSHIP</option>
+                        </select>
+                    </div>
+                    
                       <div id="particles-js-w-s" class="tabcontents">
                         <div id="COMMITMENT TO QUALITY" class="tabcontent openDefault" >
                             <h3>COMMITMENT TO QUALITY</h3>
@@ -271,7 +282,7 @@
                             <h3>SOLID TRACK RECORD</h3>
                             <p>Ray prides itself with its commitment to the highest global quality standards combined with a low risk solution. Our call centre operations are well supported through a robust continuous improvement approach using best practices in Innovation , 6-Sigma, problem solving, data analytics as well as world class standards such as COPC, PCI and ISO. Ray provides tangible </p>
                           </div>
-                          <div id="VALUE CHAIN GROWTH " class="tabcontent">
+                          <div id="VALUE CHAIN GROWTH" class="tabcontent">
                             <h3>VALUE CHAIN GROWTH </h3>
                             <p> as well as world class standards such as COPC, PCI and ISO. Ray provides tangible value to our clients by sharing improvements, insights, analytics and recommendations on improvement projects supported by illustrated savings and additional derived revenues.</p>
                           </div>
@@ -299,10 +310,12 @@
             <div class="inquiry_links_b">
                 <a href="">BUSINESS INQUIRY <img src="./img/icons/right_w.png" alt=""></a>
             </div>
-            <div class="inquiry_links_hr ">
-               <a class="" href="">HR INQUIRY <img src="./img/icons/right_w.png" alt=""></a>
+            <div class="inquiry_links_hr">
+               <a href="">HR INQUIRY <img src="./img/icons/right_w.png" alt=""></a>
            </div>
         </div>
+
+
 
 
         <!-- footer -->
@@ -378,8 +391,11 @@
                
            </div>
            <div class="footer_info">
-               <img src="./img/home/logo-w.png" alt="">
-               <p>A world class Business Process Outsourcing Service Provider offering contact centre services, back office services, inside sales channel management and professional services Raya Contact Center with its Call Center services caters to clients, including global fortune 500 companies in Europe, Middle East & Africa in 25 different languages.</p>
+               <div>
+                   <img src="./img/home/logo-w.png" alt="">
+                   <p>A world class Business Process Outsourcing Service Provider offering contact centre services, back office services, inside sales channel management and professional services Raya Contact Center with its Call Center services caters to clients, including global fortune 500 companies in Europe, Middle East & Africa in 25 different languages.</p>
+               </div>
+               
                <div class="newsletter">
                    <h5>OUR NEWS LETTER</h5>
                    <form action="">
@@ -396,6 +412,18 @@
                            <input type="text" id="name" name="name">
                            <label  for="email">Email</label>
                            <input type="email" id="email" name="email">
+                           <div class="custom_input_group">
+                               <div class="custom_input">
+                                   <label for="name">Name</label>
+                                   <input type="text" id="name">
+                               </div>
+                              
+                               <div class="custom_input">
+                                   <label for="Email">Email</label>
+                                   <input type="email" id="Email">
+                               </div>
+                             
+                           </div>
                            <button type="submit">SUBSCRIBE</button>
                        </div>
                        <div class="followUs">
@@ -415,6 +443,7 @@
                   <a href="https://road9media.com/" target="_blank">ROAD9 MEDIA</a> </p>
            </div>
        </footer>
+
 
 
        <div class="sys_msg">
@@ -488,8 +517,13 @@
                 document.getElementById(TabContent).style.display = "block";
                 evt.currentTarget.className += " active";
                 }
-        
-
+                console.log($("#tab_mobile"))
+                $("#tab_mobile").on("change", () => {
+                    console.log("changed")
+                    console.log("value: " + $("#tab_mobile").val())
+                    tabName(event, $("#tab_mobile").val());
+                } )
+                
             
 
             
