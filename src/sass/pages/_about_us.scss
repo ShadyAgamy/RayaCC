@@ -757,6 +757,9 @@
         .v_m-vision {
             position: relative;
             z-index: -1;
+            @include respond(phone) {
+                overflow-x: hidden;
+             }
 
             .v_m-mission_content {
                 margin: 6rem 0 0 3rem;
@@ -877,6 +880,9 @@
         background-position: -32rem 0rem;
         height: 1100px;
     } 
+    @include respond(tab-land){
+       display: block;
+    } 
 
     .me_Kh_text {
         background: rgba(255,255,255,.5);
@@ -892,6 +898,12 @@
         @include respond(tab-land){
             transform: translate(16rem, 59rem);
         } 
+        @include respond(phone){
+            width: 90rem;
+            height: 111rem;
+            transform: translate(-9rem, 76rem);
+            padding: 14rem 0rem 0 16rem;
+        } 
 
         h2 {
             font-size: 42px;
@@ -900,6 +912,10 @@
             width: 60%;
             position: relative;
             font-weight: 800;
+            @include respond(phone){
+                font-size: 28px;
+                width: 70vw;
+            } 
             &:before, &:after {
                 content: "";
                 position: absolute;
