@@ -1,0 +1,114 @@
+.header.investors_header {
+    min-height: 380px;
+    max-height: 380px;
+    overflow: hidden;
+    .header_main {
+        padding-right: 0;
+    }
+}
+.investorsBCContain {
+    background-color: #F8F8F8;
+    .investorsBCWrap {
+        display: flex;
+        align-items: center;
+    }
+    .investorsMenuKeyWrap {
+        margin-right: 32px;
+        height: 60px;
+        width: 287px;
+        display: flex;
+        align-items: center;
+        border-bottom-right-radius: 30px;
+        background-color: #0a63ac;
+        color: #fff;
+        padding-left: 4.5rem;
+        strong {
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+        .investorsMenuKey {
+            cursor: pointer;
+        }
+    }
+    ul.breadcrumb {
+        position: static;
+        li {
+            color: #A7A9AC;
+            a {
+                color: #A7A9AC;
+            }
+        }
+        li+li:before {
+            color: #A7A9AC;
+        }
+    }
+}
+.investorsData {
+    background-color: #F8F8F8;
+    padding: 10rem 4.5rem;
+    .investorsDataWrap {
+        display: flex;
+    }
+    
+    .investorsDataLeft {
+        width: calc(100% - 309px);
+        margin-right: 32px;
+    }
+    .investorsDataRight {
+        width: 277px;
+    }
+    .innerDataWrap {
+        margin-top: 32px;
+        .investorsDataLeft {
+            margin-right: 0;
+            margin-left: 32px;
+        }
+    }
+    .facts.factsWrap {
+        margin: 0;
+        padding: 32px;
+        background-color: #fff;
+        .cont {
+            margin: 0;
+            .facts__counter--content {
+                align-items: flex-start;
+                
+            }
+            .facts__counter--number {
+                font-size: 36px;
+                color: #0B63AC;
+                text-align: left;
+            }
+            .facts__counter--subject {
+                color: #58595B;
+                font-weight: 300;
+                font-size: 13px;
+                text-align: left;
+                margin-top: 2px;
+            }
+        }
+        .facts__counter {
+            width: calc(100% / 5);
+        }
+    }
+    .irCalendarWrap {
+        padding: 32px 16px;
+        background-color: #fff;
+    }
+}
+.investorsSubTitle {
+    color: #58595B;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+.investorContainItem {
+    background-color: #fff;
+    padding: 32px;
+    p {
+        color: #58595B;
+        font-size: 14px;
+        line-height: 1.7;
+        font-weight: 300;
+    }
+}
