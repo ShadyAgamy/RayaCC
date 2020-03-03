@@ -4,6 +4,9 @@
     padding: 0 4.5rem;
     position: relative;
     z-index: 9999;
+    @include respond(tab-land) {
+        display: none;
+     }
 
     a {
         width: 65px;
@@ -26,8 +29,21 @@
 .wwa_sec.cem {
     margin-top: 8rem;
     align-items: center;
+    overflow-x: hidden;
+    @include respond(tab-land) {
+        flex-direction: column;
+        margin-top: 20rem;
+     }
     .wwa_sec_text {
         align-self: unset;
+        @include respond(tab-land) {
+            width: 80%;
+            align-self: flex-start;
+         }
+         @include respond(phone) {
+            width: 95%;
+            margin-bottom: 8rem;
+         }
         h2 {
             font-size: 23px;
             color: #0B63AC;
@@ -42,15 +58,40 @@
     }
 
     .wwa_sec_img {
+        @include respond(tab-land) {
+            align-self: flex-end;
+            overflow: hidden;
+            width: 435px;
+         }
+         @include respond(phone) {
+            width: 70%;
+         }
         img {
             width: 435px;
             height: auto;
+            @include respond(tab-land) {
+                align-self: flex-end;
+                width: 100%;
+             }
         }
     }
 }
 
 .DIFFERENTIATORS.cx_manage{
     margin-top: 11rem;
+
+    .DIFFERENTIATORS_tabs {
+        background-color: white;
+    }
+
+    .DIFFERENTIATORS_tabs .custom_selectbox:before {
+        background-image: url("../img/icons/right_w.png");
+    }
+    .DIFFERENTIATORS_tabs #tab_mobile {
+        background-color: #0B63AC;
+        color: white;
+
+    }
 
     .tab {
         background: #4184C5;

@@ -48,9 +48,11 @@
 
         .header_main_video_cont {
             width: 61%;
-            max-height: 463px;
+            max-height: 410px;
+            background-size: cover;
             @include respond(tab-land){
                 width: 100%;
+                background-position: -26rem;
             }
             img {
                 width: 100%;
@@ -653,7 +655,7 @@
         padding-left: 4rem;
      }
      @include respond(phone) {
-        margin-top: 18rem;
+        margin-top: 15rem;
      }
     &-vision {
         width: 43%;
@@ -664,6 +666,7 @@
          }
          @include respond(phone) {
             margin-bottom: 10rem;
+            margin-top: 0rem;
         }
         .main_left_heading {
             max-width: 103%;
@@ -752,6 +755,7 @@
          }
          @include respond(phone) {
             padding: 0 0 0 5rem;
+            overflow-x: hidden;
          }
 
         .v_m-vision {
@@ -968,28 +972,30 @@ ul.breadcrumb {
     z-index: 9999;
   }
   
-  /* Display list items side by side */
   ul.breadcrumb li {
-    display: inline;
+    display: inline-block;
     font-size: 13px;
     color: white;
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 21rem;
   }
   
-  /* Add a slash symbol (/) before/behind each list item */
   ul.breadcrumb li+li:before {
     padding: 8px;
     color: white;
     opacity: .6;
     content: "\2502";
   }
-  
-  /* Add a color to all links inside the list */
+
   ul.breadcrumb li a {
     color: white;
     text-decoration: none;
+    text-transform: capitalize;
   }
   
-  /* Add a color on mouse-over */
   ul.breadcrumb li a:hover {
     color: white;
     text-decoration: underline;
