@@ -17,7 +17,7 @@
 
         
     </head>
-    <body class="overflowHidden">
+    <body class="">
 
         <!-- NavBar 
         ===================================-->
@@ -407,65 +407,45 @@
 
         <script>
             
-            function ffsTb(evt, item) {
-                // Declare all variables
-                var i, tabcontent, tablinks;
+            $(document).ready(function() {
 
-                // Get all elements with class="tabcontent" and hide them
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
+                // management swiper handling
+
+                function getSlidesLength() {
+                    var swiperSlide = $('.managementDataSwiperCont .swiper-slide').length;
+                    var zeroNumb = '';
+                    if(swiperSlide < 10) {
+                        zeroNumb = 0
+                    }
+                    $('.paginationNumb.max').html(zeroNumb + "" + swiperSlide);
+
                 }
+                getSlidesLength()
+                var managementSwiper = new Swiper('.managementImgSwiper .swiper-container', {
+                    slidesPerView: 'auto',
+                    loop: true,
+                    grabCursor: true,
+                });
+                var managementDataSwiper = new Swiper('.managementDataSwiper .swiper-container', {
+                    loop: true,
+                    slidesPerView: 'auto',
+                    grabCursor: true,
+                    pagination: {
+                        el: '.managementDataSwiper .swiper-pagination',
+                        type: 'progressbar',
+                    },
+                    navigation: {
+                        nextEl: '.managementDataSwiper .swiper-button-next_w',
+                        prevEl: '.managementDataSwiper .swiper-button-prev_w',
+                    },
+                    
+                });
 
-                // Get all elements with class="tablinks" and remove the class "active"
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-
-                // Show the current tab, and add an "active" class to the button that opened the tab
-                document.getElementById(item).style.display = "block";
-                evt.currentTarget.className += " active";
-                }
-
-
-            // WOW ANIMATION
-              new WOW().init();
+                managementSwiper.controller.control = managementDataSwiper;
+                managementDataSwiper.controller.control = managementSwiper;
+                });
             
-            // management swiper handling
-
-            function getSlidesLength() {
-                var swiperSlide = $('.managementDataSwiperCont .swiper-slide').length;
-                var zeroNumb = '';
-                if(swiperSlide < 10) {
-                    zeroNumb = 0
-                }
-                $('.paginationNumb.max').html(zeroNumb + "" + swiperSlide);
-
-            }
-            getSlidesLength()
-            var managementSwiper = new Swiper('.managementImgSwiper .swiper-container', {
-                slidesPerView: 'auto',
-                loop: true,
-                grabCursor: true,
-            });
-            var managementDataSwiper = new Swiper('.managementDataSwiper .swiper-container', {
-                loop: true,
-                slidesPerView: 'auto',
-                grabCursor: true,
-                pagination: {
-                    el: '.managementDataSwiper .swiper-pagination',
-                    type: 'progressbar',
-                },
-                navigation: {
-                    nextEl: '.managementDataSwiper .swiper-button-next_w',
-                    prevEl: '.managementDataSwiper .swiper-button-prev_w',
-                },
-                
-            });
-
-            managementSwiper.controller.control = managementDataSwiper;
-            managementDataSwiper.controller.control = managementSwiper;
+            
         </script>
     </body>
 
