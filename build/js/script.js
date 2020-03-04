@@ -38,7 +38,12 @@ $( document ).ready(function() {
     })
 
 
+    // Investors Menu Handling
+    $('.investorsMenuKey').on('click', function() {
+        $('.investorsMenuContain').toggleClass('open');
+        $('.menuOverLay').fadeToggle('fast');
 
+    });
     // COUNTER FUNCTION in homepage facts SECTION
    
     window.addEventListener("scroll", counter);
