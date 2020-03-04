@@ -962,6 +962,117 @@
 
 }
 
+.managementContain {
+    background-color: #0B63AC;
+    padding-bottom: 96px;
+    
+    .managementImgSwiper {
+        position: relative;
+        top: -32px;
+        height: 480px;
+        .swiper-container {
+            padding-left: 140px;
+            padding-top: 32px;
+        }
+        .swiper-slide {
+            width: 280px;
+            height: 310px;
+            z-index: 1;
+            opacity: .7;
+            transition: all .3s ease-in-out;
+            .manageImg {
+                width: 100%;
+                height: 100%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .swiper-slide-active {
+            width: 330px;
+            height: 480px;
+            z-index: 2;
+            margin-top: -32px;
+            opacity: 1;
+        }
+    }
+    
+    
+    .managementDataSwiper {
+        color: #fff;
+        display: flex;
+        padding-left: 140px;
+        padding-right: 4.5rem;
+        position: relative;
+        z-index: 3;
+        top: -118px;
+        h2 {
+            color: white;
+            border-bottom: 2px solid white;
+        }
+        .main_right_heading {
+            max-width: max-content;
+        }
+        .swiper-container {
+            width: 100%;
+        }
+        .managementDataSwiperArrows {
+            width: 330px;
+            padding-top: 118px;
+        }
+        .managementDataSwiperCont {
+            width: calc(100% - 330px);
+        }
+        .swiper-slide {
+            width: 100%;
+        }
+        .swiperActionsWrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .main__footer_toggler {
+            margin-left: 16px;
+        }
+        .customPaginationWrap {
+            display: flex;
+            align-items: center;
+        }
+        .paginationNumb {
+            font-size: 12px;
+            
+        }
+        .swiper-pagination {
+            width: 160px;
+            height: 2px;
+            background-color: rgba(255,255,255,.5);
+            position: relative;
+            margin-left: 6px;
+            margin-right: 6px;
+            .swiper-pagination-progressbar-fill {
+                background-color: #fff;
+            }
+        }
+        .manageBody {
+            padding-left: 32px;
+            padding-top: 8px;
+            .manageSubStitle {
+                font-size: 23px;
+                text-transform: capitalize;
+                margin-bottom: 32px;
+
+            }
+            p {
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 1.7;
+            }
+        }
+    }
+}
+
 
 ul.breadcrumb {
     position: absolute;
