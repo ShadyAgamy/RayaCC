@@ -130,62 +130,6 @@
         }
     }
 
-    .menu-item#langSelect {
-    position: relative;
-    
-    @include respond(tab-land){
-        display: none;
-    }
-    & > div {
-        display: flex;
-        align-items: center;
-        position: relative;
-        z-index: 99999;
-        cursor: pointer;
-
-        span {
-            font-size: 13px;
-            color: #fff;
-            text-transform: capitalize;
-            margin: 1rem;
-        }
-
-        img {
-            width: 12px;
-        }
-    }
-
-    #langsList {
-        position: absolute;
-        top: 100%;
-        left: -3rem;
-        background: #FFFFFF;
-        display: flex;
-        flex-direction: column;
-        min-width: 100px;
-        border: none;
-        display: none;
-
-
-        li {
-            a {
-                color: #58595B;
-                font-size: 13px;
-                padding: 1.5rem 1.2rem;
-                text-transform: capitalize;
-                display: block;
-                font-weight: 300;
-            }
-
-            width: 100%;
-            &:not(:last-of-type) {
-                border-bottom: 1px solid #EFEFEF;
-            }
-            
-        }
-    }
-   }
-
     &.navGray {
         background-color: #EAEAEA;
         position: fixed;
@@ -257,5 +201,77 @@
 }
 
 
+.menu-item#langSelect {
+    position: relative;
+
+    @include respond(tab-land){
+        display: none;
+    }
+
+    &.langSelectMobile {
+        @include respond(tab-land){
+            display: block;
+        } 
+    }
+    
+    
+    & > div {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 99999;
+        cursor: pointer;
+
+        span {
+            font-size: 13px;
+            color: #fff;
+            text-transform: capitalize;
+            margin: 1rem;
+        }
+
+        img {
+            width: 12px;
+        }
+    }
+
+    #langsList {
+        position: absolute;
+        top: 100%;
+        left: -3rem;
+        background: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        min-width: 100px;
+        border: none;
+        display: none;
 
 
+        li {
+            a {
+                color: #58595B;
+                font-size: 13px;
+                padding: 1.5rem 1.2rem;
+                text-transform: capitalize;
+                display: block;
+                font-weight: 300;
+            }
+
+            width: 100%;
+            &:not(:last-of-type) {
+                border-bottom: 1px solid #EFEFEF;
+            }
+            
+        }
+    }
+   }
+
+   .navbar.navGray {
+    .navbar__menu-link {
+        span {
+            background: #0B63AC;
+            &:after, &:before {
+                background: #0B63AC;
+            }
+        }
+    }
+   }

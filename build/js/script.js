@@ -39,6 +39,24 @@ $( document ).ready(function() {
 
 
 
+    // menu open sub menu 
+
+    // open
+    $(".popup__menu-cont .menu-item menu-item-has-children").each((i, el) => {
+        $(el).on("click", () => {
+            $(el).find(".sub-menu").css("display","block")
+        })
+    })
+
+    // close
+    var closeDropDown = $(".popup__menu-cont .menu-item menu-item-has-children .sub-menu .closeD a")
+    closeDropDown.each((i, el) => {
+        $(el).on("click", () => {
+            $(el).closest(".sub-menu").css("display","none")
+        })
+    })
+
+
     // COUNTER FUNCTION in homepage facts SECTION
    
     window.addEventListener("scroll", counter);
@@ -130,6 +148,7 @@ var langArrow = $(".navbar").find(".lang_selected_arrow");
 
 
 $(".lang_selected").on("click", () => {
+    
    $("#langsList").fadeToggle(); 
 })
 $("body").click((e) => {
@@ -188,6 +207,16 @@ $('.careers_loc_tabs a ').each((i , ele) => {
         })
     })
 })
+
+$("#careers_loc_tabs_select").on("change", () => {
+    console.log($("#careers_loc_tabs_select").val());
+    $(".careers_loc_content").css("display", "none");
+    $(".careers_loc_content").each((i, el) => {
+        if($(el).hasClass($("#careers_loc_tabs_select").val())) {
+            $(el).fadeIn();
+        }
+    })
+} )
 
 
 

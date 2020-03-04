@@ -176,6 +176,9 @@
 
 .careers.applyNow {
     padding: 8rem 4.5rem 2rem;
+    @include respond(phone) {
+        padding: 0rem 1.5rem 4rem;
+    }     
  & > h2 {
      width: 100%;
  }
@@ -183,11 +186,65 @@
 
 .careers_loc {
     padding: 0 4.5rem;
+    @include respond(phone) {
+        padding: 0 1.5rem;
+        
+    }   
+
+    .custom_selectbox {
+        position: relative;
+        margin: -20px auto 10rem;
+        display: none;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 35%;
+            right: 25px;
+            width: 14px;
+            height: 22px;
+            text-align: center;
+            font-size: 28px;
+            line-height: 45px;
+            background-image: url(../img/icons/right_b.png);
+            pointer-events: none;
+            z-index: 99;
+            background-repeat: no-repeat;
+            -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+            cursor: pointer;
+        }
+        @include respond(phone) {
+            display: block;
+        }
+    }
+    
+    #careers_loc_tabs_select {
+        background-color: white;
+        border: 1px solid #A7A9AC;
+        height: 52px;
+        padding: .8rem;
+        color: #0B63AC;
+        font-size: 14px;
+        outline: none;
+        padding-left: 1rem;
+        width: 100%;
+        cursor: pointer;
+        outline: none;
+        position: relative;
+        -webkit-appearance: none;
+        text-indent: 5px;
+    }
 }
 .careers_loc_tabs {
     display: flex;
     align-items: center;
     margin-bottom: 3rem;
+    @include respond(phone) {
+       display: none;
+        
+    }   
 
     & > a {
         color: #0B63AC;
@@ -303,6 +360,12 @@
         align-items: center;
         justify-content: center;
         color: white;
+        @include respond(tab-land){
+            width: 70%;
+        }
+        @include respond(phone){
+            width: 90%;
+        }
         img {
             width: 6px;
             margin-left: 1rem;
@@ -312,12 +375,24 @@
 
 .application_form {
     display: flex;
+    @include respond(tab-land){
+        flex-direction: column;
+    }
     &_video {
         width: 45%;
         margin-right: -3rem;
         padding-top: 10rem;
         position: relative;
         z-index: 1;
+        @include respond(tab-land){
+            width: 80%;
+            margin-right: 0rem;
+            align-self: center;
+        }
+        @include respond(tab-land){
+            width: 95%;
+           
+        }
     }
 
     &_form {
@@ -325,7 +400,19 @@
         min-height: 750px;
         padding: 10rem 3rem 4rem 9rem;
         width: 55%;
-            flex-grow: 1;
+        flex-grow: 1;
+        @include respond(tab-land){
+            justify-self: center;
+            margin: 0 auto;
+            margin-top: -5rem;
+            padding: 14rem 3rem 4rem 9rem;
+            width: 95%;
+        }
+        @include respond(phone){
+            width: 100%;
+            padding: 14rem 3rem 25rem 4rem;
+           
+        }
 
         h2 {
             font-size: 40px;
@@ -343,6 +430,9 @@
     width: 50%;
     display: flex;
     flex-direction: column;
+    @include respond(tab-land) {
+       width: 100%;
+     }
 }
 
 .input_file_cont {
@@ -414,6 +504,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    width: 90%;
   }
   .main_btn_white.submitForm {
         position: relative;
@@ -428,6 +519,9 @@
         margin-left: 0;
         font-size: 13px;
         font-weight: 800;
+        @include respond(phone) {
+            width: 100%; 
+         }
 
         img {
             margin-left: 5rem;
@@ -476,6 +570,9 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 4rem;
+        @include respond(phone) {
+            width: 100%;
+         }
 
         &:nth-of-type(odd),&.customMR {
             margin-right: 3%;
@@ -557,10 +654,10 @@
 
 .solutionsTabs.Locations.car {
     display: flex;
-    margin-top: 3rem;
-    padding: 6rem 4.5rem 8rem 0;
+   
     @include respond(tab-land) {
         margin-top: 9rem;
+        padding: 6rem 4.5rem 8rem 0;
      }
 
     a {
@@ -570,3 +667,4 @@
          }
     }
 }
+

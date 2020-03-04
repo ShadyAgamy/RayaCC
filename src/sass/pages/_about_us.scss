@@ -54,6 +54,9 @@
                 width: 100%;
                 background-position: -26rem;
             }
+            @include respond(phone){
+                background-position: -42rem;
+            }
             img {
                 width: 100%;
                 height: 100%;

@@ -10,19 +10,7 @@
         cursor: pointer;
         padding: 1rem 2rem;
         color: white;
-        
-       
-       
     
-        // &:hover{
-        //     transform: translateY(-1px);  
-        // }
-    
-        // &:active,
-        // &:focus{
-        //     outline: none;
-        //     transform: translateY(-1px);
-        // }  
     }
 
 }
@@ -167,15 +155,28 @@
         max-width: 30%;
         padding: 3rem 4rem;
         background-color: #0B63AC;
+        @include respond(phone) {
+            min-width :100%;
+            max-width: 100%;
+           
+        }
         span {
             font-size: 16px;
             color: white;
             font-weight: 100;
+            @include respond(phone) {
+               display: none;
+            }
         }
         .arrows {
             display: flex;
             align-items: center;
             margin-left: 2rem;
+            @include respond(phone) {
+                width: 100%;
+                justify-content: space-between;
+                margin-left: 0;
+            }
             a {
                 display: block;
                 &:first-of-type {

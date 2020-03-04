@@ -5,14 +5,25 @@
     padding: 0 4.5rem;
     flex-wrap: wrap;
     margin-bottom: 4rem;
+    @include respond(phone) {
+        padding: 0 1.5rem;
+       
+    }
     
     &_single {
         width: 49.5%;
         height: 185px;
         position: relative;
         margin-bottom: 1%;
+        @include respond(tab-land) {
+            width: 100%; 
+            margin-bottom: 16px;
+        }
         &:nth-of-type(odd) {
             margin-right: .5%;
+            @include respond(tab-land) {
+                margin-right: 0%;
+            }
         }
         &_img {
             height: 100%;
@@ -52,6 +63,12 @@
     display: flex;
     justify-content: space-between;
     margin: 11rem 20rem 4.5rem;
+    @include respond(tab-land) {
+        margin: 11rem 3rem 4.5rem;
+     }
+     @include respond(phone) {
+        flex-direction: column;
+     }
     .industry_sec_text {
         width: 80%;
        
@@ -60,6 +77,10 @@
         display: flex;
         align-items: center; 
         flex-direction: column;
+        @include respond(phone) {
+            flex-direction: row;
+            justify-content: space-around;
+         }
         a {
             margin-bottom: 1rem;
         }   
@@ -73,7 +94,15 @@
 
         .facts_heading {
             font-size: 53px; 
+            @include respond(phone) {
+                font-size: 38px; 
+             }
         }
+        @include respond(phone) {
+            min-width: 10rem;
+            margin-left: -24%;
+            max-width: 100%;
+         }
     }
     padding-bottom: 8rem;
 }
