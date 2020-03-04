@@ -44,6 +44,14 @@ $( document ).ready(function() {
         $('.menuOverLay').fadeToggle('fast');
 
     });
+    // Investors Tabs Handling
+    $('.investorsTabsKey').on('click', function() {
+        var relatedData = $(this).attr('related-data');
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+        $('.investorsTabItem').hide();
+        $('.' + relatedData).fadeIn('fast');
+    });
     // COUNTER FUNCTION in homepage facts SECTION
    
     window.addEventListener("scroll", counter);
