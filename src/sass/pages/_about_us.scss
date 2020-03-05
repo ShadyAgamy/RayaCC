@@ -1111,3 +1111,57 @@ ul.breadcrumb {
     color: white;
     text-decoration: underline;
   }
+
+
+
+@media (max-width: 992px) {
+    .managementContain .managementImgSwiper .swiper-container,
+    .managementContain .managementDataSwiper {
+        padding-left: 32px;
+    }
+    .managementContain .managementDataSwiper h2 {
+        font-size: 28px;
+    }
+    .managementContain .managementDataSwiper .manageBody .manageSubStitle {
+        font-size: 18px;
+    }
+}
+@media (max-width: 768px) {
+    .managementContain .managementImgSwiper .swiper-container {
+        padding-left: 48px;
+    }
+    .managementContain .managementDataSwiper .customPaginationWrap {
+        display: none;
+    }
+    .managementContain .managementDataSwiper {
+        padding-left: 0;
+        padding-right: 1.5rem;
+    }
+    .managementContain .managementDataSwiper .manageBody {
+        padding-left: 1.5rem;
+    }
+    .managementContain .managementImgSwiper .swiper-slide-active,
+    .managementContain .managementDataSwiper .main__footer_toggler {
+        width: calc(100% - 48px);
+    }
+    .managementContain .managementDataSwiper .main__footer_toggler {
+        margin: 0;
+        margin-top: 16px;
+        margin-bottom: 32px;
+        padding-left: 48px;
+        
+    }
+    .managementContain .managementDataSwiper .main_right_heading {
+        margin-left: 0;
+    }
+    .managementContain .managementDataSwiper .swiperActionsWrap {
+        margin-right: -1.5rem;
+    }
+    .managementContain .managementDataSwiper {
+        flex-wrap: wrap;
+    }
+    .managementContain .managementDataSwiper .managementDataSwiperArrows,
+    .managementContain .managementDataSwiper .managementDataSwiperCont {
+        width: 100%;
+    }
+}
