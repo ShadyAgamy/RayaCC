@@ -120,7 +120,7 @@
   overflow-x: hidden;
   @include respond(phone){
     margin-top: 15rem;
-    padding: 0 5rem;
+    padding: 0 2rem;
     
     }
 
@@ -244,9 +244,10 @@
             margin-top: 0rem;
     }
     @include respond(phone){
-        max-width: 112%;
-        margin-left: -6rem;
+        max-width: 100%;
+        margin-left: 0rem;
         margin-top: 7rem;
+        width: 100%;
     }
   }
 }
@@ -368,6 +369,7 @@
     @include respond(tab-land){
         height: auto;
         overflow-x: hidden;
+        margin: 10rem 0 5rem;
        
     }
     &_content {
@@ -381,7 +383,7 @@
             padding-top: 25rem;
         }
         @include respond(phone){
-            padding-top: 14rem;
+            padding-top: 8rem;
 
         }
        
@@ -448,6 +450,7 @@
             @include respond(tab-land){
                 width: 80%;
                 overflow: hidden;
+                margin-bottom: 4rem;
             }
             @include respond(phone){
                 width: 100%;
@@ -487,7 +490,7 @@
                 }
                 .main__footer_toggler {
                     @include respond(phone){
-                        width: 90%;
+                        width: 80%;
                         margin: 2rem auto;
                     }
                    
@@ -530,8 +533,10 @@
     display: flex;
     justify-content: space-between;
     position: relative;
+    padding: 0px 2rem;
     @include respond(tab-land){
         flex-direction: column;
+        margin: 8rem 0 22rem;
        
     
     }
@@ -570,6 +575,9 @@
             font-size: 15px;
             padding: 0 0 0 7rem;
             line-height: 1.7;
+            @include respond(phone){
+                padding: 0 0 0 3rem;
+            }
         }
     }
 
@@ -582,10 +590,13 @@
         position: relative;
         z-index: 10;
         background: white;
+        overflow-x: hidden;
         @include respond(tab-land){
             justify-content: center;
             margin-top: 10rem;
             width: 100%;
+            padding: 0px 2rem;
+            margin-left: 0;
         
         }
 

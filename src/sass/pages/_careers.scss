@@ -113,7 +113,7 @@
             transform: translate(50%, 0);
             @include respond(phone) {
                 top: 17%;
-                right: 58%;
+                right: 56%;
                
             }
 
@@ -144,8 +144,15 @@
        padding-bottom: 10rem;
        margin-bottom: 10rem;
      }
+     @include respond(phone) {
+        padding-bottom: 0rem;
+        margin-bottom: 0rem;
+    }
      .main_slider_footer {
         margin: 3rem 0 0 7rem; 
+        @include respond(phone) {
+            margin: 2rem 0 0 0rem;
+        }
      }
    .careers {
        width: 50%;
@@ -160,6 +167,9 @@
 
         li {
             width: 43%;
+            @include respond(phone) {
+                width: 95%;
+            }
         }
        }
    }
@@ -170,6 +180,15 @@
         width: 78%;
         max-width: 75rem;
       }     
+      @include respond(phone) {
+        width: 100%;
+      }    
+      
+      .swiper-slide {
+        @include respond(phone) {
+            height: 247px!important;
+          }   
+      }
    }
 }
 

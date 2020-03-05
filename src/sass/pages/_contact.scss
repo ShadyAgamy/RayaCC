@@ -34,12 +34,20 @@
     padding-bottom: 18rem;
     width: 50%;
     flex-grow: 0;
+    @include respond(tab-land) {
+        width: 100%;
+        margin-top: 2rem;
+    }
 }
 
 
 .contactInfo {
     width: 40%;
     margin-top: -15rem;
+    @include respond(tab-land) {
+        width: 100%;
+        margin-top: -1rem;
+    }
     &_head{
         color: #0B63AC;
         font-size: 40px;
@@ -74,6 +82,10 @@
         img {
             width: 100%;
             margin-top: 2rem;
+            @include respond(tab-land) {
+                max-width: 436px;
+                height: 180px;
+            }
             
         }
     }
@@ -83,4 +95,12 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 10rem;
+    @include respond(tab-land) {
+        flex-direction: column-reverse;
+        padding: 0 2.5rem;
+    }
+    @include respond(phone) {
+        flex-direction: column-reverse;
+        padding: 0 2.5rem;
+    }
 }

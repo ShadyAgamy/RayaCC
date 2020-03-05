@@ -30,7 +30,7 @@
                     <a  class="btn_text" >ABOUT US</a>
                     <ul class="sub-menu">
                         <li><a href="./about_us_wwa.html">Who we are </a></li>
-                        <li><a href="">management</a></li>
+                        <li><a href="./about_us_manag.html">management</a></li>
                         <li><a href="./about_us_m_v.html">mission & value</a></li>
                     </ul>
                 </li>
@@ -101,7 +101,7 @@
                                 <li class="closeD"><a ><img src="./img/icons/left_w.png" alt="back icon">Back </a></li>
                                 <li><a >ABOUT US</a></li>
                                 <li><a href="./about_us_wwa.html">Who we are </a></li>
-                                <li><a href="">management</a></li>
+                                <li><a href="./about_us_manag.html">management</a></li>
                                 <li><a href="./about_us_m_v.html">mission & value</a></li>
                             </ul>
                         </li>
@@ -476,6 +476,7 @@
 
                 var autoplay = 5000;
                 var previousid;
+                var previousid2;
                 function move(parent) {      
                     var elem = $(parent).find(" .progress"); 
                 
@@ -498,6 +499,28 @@
                     }}(previousid), autoplayTime);
                         
                 }
+                function move2(parent) {      
+                    var elem = $(parent).find(" .progress"); 
+                
+                    // console.log(frame)
+                    $(elem)[0].style.width = "0px";
+                    var width = 1;
+                    var autoplayTime = autoplay / 100;
+                    
+                    
+                    
+                    clearInterval(previousid2);
+                    previousid2 = setInterval(function(_id) { 
+                        return function() {
+                            if (width >= 100) {
+                                clearInterval(_id);
+                            } else {
+                                width++; 
+                                $(elem)[0].style.width = width + '%'; 
+                            }
+                    }}(previousid2), autoplayTime);
+                        
+                }
                 var solution_slider = new Swiper ('.w_w_w_us .solutions_swiper.swiper-container', {
                     slidesPerView: 1,
                     spaceBetween: 0,  
@@ -517,7 +540,7 @@
                         nextEl: '.w_w_w_us  .swiper-button-next_b',
                         prevEl: '.w_w_w_us  .swiper-button-prev_b',
                     },pagination: {
-                        el: '.swiper-pagination',
+                        el: '.w_w_w_us .swiper-pagination',
                         type: 'fraction',
                     }
                 
@@ -534,14 +557,14 @@
                     },
                     on: {
                         slideChange : function () {  
-                        move(".d_g_w_u")
+                        move2(".d_g_w_u")
                     }
                     },  
                     navigation: {
                         nextEl: '.d_g_w_u  .swiper-button-next_b',
                         prevEl: '.d_g_w_u  .swiper-button-prev_b',
                     },pagination: {
-                        el: '.swiper-pagination',
+                        el: '.d_g_w_u .swiper-pagination',
                         type: 'fraction',
                     }
                 

@@ -163,7 +163,9 @@ $("body").click((e) => {
 })
 $("body").click((e) => {
     e.stopPropagation();
-    if ($(e.target).hasClass('.menu-item-has-children') || $(e.target).hasClass('btn_text')) {
+    if ($(e.target).hasClass('.nav') ||
+        $(e.target).hasClass('.menu-item-has-children') ||
+        $(e.target).is('.menu-item-has-children a')) {
         // return false;  
     } else {
         $(".menu-item .sub-menu").fadeOut();
@@ -267,7 +269,6 @@ var fileInputs  = document.querySelectorAll( ".input-file" ),
             scrollTop: $(".application_form_form").offset().top
         }, 800);
         var select = $(".application_form_form").find(".custom_selectbox #Position");
-        //var targetedOption = select.find(`option[value='${jobName}']`);
         $(select).find("option").each( (i , el) => {
             $(el).removeAttr('selected')
             if ($(el).val().toLowerCase() == jobName) {
