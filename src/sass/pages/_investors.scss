@@ -27,6 +27,12 @@
         background-color: #0a63ac;
         color: #fff;
         padding-left: 4.5rem;
+        &.sticky {
+            position: fixed;
+            left: 0;
+            top: 64px;
+            z-index: 999;
+        }
         strong {
             font-size: 25px;
             text-transform: uppercase;
@@ -328,12 +334,18 @@
     &.overview {
         display: block;
     }
+    &.services {
+        .investorContainItem {
+            background-color: #F8F8F8;
+        }
+    }
 }
 .missionAndVisson {
     margin-top: 32px;
     margin-bottom: 32px;
 }
 .investorContainItem {
+    position: relative;
     &.mision {
         margin-bottom: 32px;
         background-color: #0B63AC;
@@ -395,6 +407,7 @@
         .historyTxt {
             color: #58595B;
             font-size: 14px;
+            line-height: 1.4;
         }
         .historyImg {
             width: 71px;
@@ -483,10 +496,13 @@
     }
 }
 .serviceEvoSwiper {
+    position: relative;
+    padding: 0 32px;
     .swiper-slide {
         align-self: flex-end;
         opacity: 0.5;
         transition: all 0.2s ease-in-out;
+        padding-bottom: 3px;
     }
     .swiper-slide-next {
         opacity: 0.7;
@@ -497,6 +513,18 @@
             strong {
                 color: #0B63AC;
             }
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            margin-left: -8px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid  #fff;
+            border-right: 8px solid #fff;
+            border-bottom: 8px solid #0B63AC;
         }
     }
     .servicesYear {
@@ -513,6 +541,20 @@
             color: #58595B;
             font-size: 20px;
         }
+    }
+    .swiper-button-next_b,
+    .swiper-button-prev_b {
+        background-size: contain;
+        width: 22px;
+        height: 22px;
+        top: 100%;
+        margin-top: -36px;
+    }
+    .swiper-button-next_b {
+        right: 0;
+    }
+    .swiper-button-prev_b {
+        left: 0;
     }
 }
 .serviceEvoItemsWrap {
@@ -540,5 +582,73 @@
         &.darkblue {
             background-color: #143B64;
         }
+    }
+}
+.mainServicesWrap {
+    display: flex;
+    flex-wrap: wrap;
+    .mainServicesItem {
+        padding: 32px 16px;
+        margin-right: 16px;
+        color: #fff;
+        width: calc(25% - 12px);
+        margin-bottom: 16px;
+        &:nth-child(4n + 0) {
+            margin-right: 0;
+        }
+        h3 {
+            font-size: 19px;
+            margin: 16px 0;
+            max-width: 140px;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+        ul {
+            list-style-type: circle;
+        }
+        li {
+            font-size: 13px;
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+        &.darkblue {
+            background-color: #143B64;
+        }
+        &.lightblue {
+            background-color: #4184C5;
+        }
+        &.blue {
+            background-color: #0B63AC;
+        }
+        &.dark {
+            background-color: #58595B;
+        }
+    }
+}
+.mainIndustries {
+    .mainServicesWrap {
+        .mainServicesItem {
+            color: #58595B;
+            h3 {
+                font-size: 15px;
+            }
+        }
+    }
+    .mainServiceIcon {
+        min-height: 51px;
+        display: flex;
+        align-items: center;
+    }
+}
+.languagesIconsWarp {
+    display: flex;
+    flex-wrap: wrap;
+    .languagesIcons {
+        img {
+            width: 28px;
+        }
+        margin-right: 4px;
+        margin-bottom: 4px;
     }
 }

@@ -52,6 +52,19 @@ $( document ).ready(function() {
         $('.investorsTabItem').hide();
         $('.' + relatedData).fadeIn('fast');
     });
+    // Investors menu sticky on scroll
+    if($('.investorsData').length) {
+        $(window).on('scroll', function() {
+            var scrollNumb = $(window).scrollTop();
+            var dataPosition = $('.investorsData').position().top;
+            if(scrollNumb > dataPosition) {
+                $('.investorsBCContain .investorsMenuKeyWrap').addClass('sticky')
+            } else {
+                $('.investorsBCContain .investorsMenuKeyWrap').removeClass('sticky')
+            }
+        });
+    }
+    
     // COUNTER FUNCTION in homepage facts SECTION
    
     window.addEventListener("scroll", counter);
