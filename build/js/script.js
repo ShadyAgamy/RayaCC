@@ -43,7 +43,6 @@ $( document ).ready(function() {
         $('.investorsMenuContain').toggleClass('open');
         $('.menuOverLay').fadeToggle('fast');
 
-<<<<<<< HEAD
     // menu open sub menu 
 
     // open
@@ -62,7 +61,6 @@ $( document ).ready(function() {
     })
 
 
-=======
     });
     // Investors Tabs Handling
     $('.investorsTabsKey').on('click', function() {
@@ -85,7 +83,6 @@ $( document ).ready(function() {
         });
     }
     
->>>>>>> mouhab
     // COUNTER FUNCTION in homepage facts SECTION
    
     window.addEventListener("scroll", counter);
