@@ -38,7 +38,12 @@ $( document ).ready(function() {
     })
 
 
+    // Investors Menu Handling
+    $('.investorsMenuKey').on('click', function() {
+        $('.investorsMenuContain').toggleClass('open');
+        $('.menuOverLay').fadeToggle('fast');
 
+<<<<<<< HEAD
     // menu open sub menu 
 
     // open
@@ -57,6 +62,30 @@ $( document ).ready(function() {
     })
 
 
+=======
+    });
+    // Investors Tabs Handling
+    $('.investorsTabsKey').on('click', function() {
+        var relatedData = $(this).attr('related-data');
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+        $('.investorsTabItem').hide();
+        $('.' + relatedData).fadeIn('fast');
+    });
+    // Investors menu sticky on scroll
+    if($('.investorsData').length) {
+        $(window).on('scroll', function() {
+            var scrollNumb = $(window).scrollTop();
+            var dataPosition = $('.investorsData').position().top;
+            if(scrollNumb > dataPosition) {
+                $('.investorsBCContain .investorsMenuKeyWrap').addClass('sticky')
+            } else {
+                $('.investorsBCContain .investorsMenuKeyWrap').removeClass('sticky')
+            }
+        });
+    }
+    
+>>>>>>> mouhab
     // COUNTER FUNCTION in homepage facts SECTION
    
     window.addEventListener("scroll", counter);
