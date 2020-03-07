@@ -652,3 +652,54 @@
         margin-bottom: 4px;
     }
 }
+@media (max-width: 1024px) {
+    .investorsData .facts.factsWrap .cont {
+        flex-wrap: wrap;
+    }
+    .investorsData .facts.factsWrap .facts__counter {
+        width: auto;
+        padding: 16px;
+    }
+}
+@media (max-width: 868px) {
+    .investorsBCContain .investorsBCWrap,
+    .investorsData .investorsDataWrap {
+        flex-wrap: wrap;
+    }
+    .investorsBCContain ul.breadcrumb,
+    .investorsData .investorsDataRight {
+        width: 100%;
+        margin-top: 32px;
+    }
+    .investorsData .investorsDataLeft,
+    .mainServicesWrap .mainServicesItem {
+        width: 100%;
+        margin-right: 0;
+    }
+    .mainIndustries .mainServicesWrap .mainServicesItem {
+        width: 48%;
+        margin-right: 2%;
+        &:nth-child(2n + 0) {
+            margin-right: 0;
+        }
+    }
+    .investorsData .innerDataWrap .investorsDataLeft {
+        margin-left: 0;
+    }
+    .innerDataWrap .investorsDataRight {
+        order: 2;
+    }
+}
+@media (max-width: 768px) {
+    .investorsData {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .investorsTabItem.services .investorContainItem {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .investorsData .facts.factsWrap .cont {
+        justify-content: flex-start;
+    }
+}
