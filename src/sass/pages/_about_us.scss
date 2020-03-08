@@ -4,6 +4,7 @@
     position: relative;
     .header_main{
         padding: 12rem 4.5rem 0 0;
+        overflow: hidden;
         &_text {
             width: 75%;
             color: white;
@@ -662,6 +663,7 @@
      }
     &-vision {
         width: 43%;
+        overflow: hidden;
         @include respond(tab-land) {
             width: 75%;
             margin-top: -4rem;
@@ -698,6 +700,7 @@
         background: #0B63AC;
         min-height: 440px;
         padding-bottom: 4rem;
+        overflow: hidden;
         @include respond(tab-land) {
             width: 100%;
          }

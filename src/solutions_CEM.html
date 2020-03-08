@@ -85,7 +85,7 @@
             </span>
         </nav>
 
-        <!-- Menu Pop up 
+       <!-- Menu Pop up 
         ===============================================-->
         <div id="Menupopup" class="popup">
             <div class="popup__container">
@@ -94,22 +94,20 @@
                 </h6>     
                 <div class="popup__menu-cont">                            
                     <ul class="menu-item_cont">
-                        <li class="menu-item "><a href="./index.html" class=" btn__text">HOME</a></li>
-                        <li class="menu-item menu-item-has-children">
-                            <a  class="btn__text" >ABOUT US</a>
-                            <ul class="sub-menu">
-                                <li class="closeD"><a ><img src="./img/icons/left_w.png" alt="back icon">Back </a></li>
-                                <li><a >ABOUT US</a></li>
+                        <li class="menu-item "><a href="./index.html" class=" ">HOME</a></li>
+                        <li class="menu-item menu-item-has-children" >
+                            <a class="" >ABOUT US</a>
+                            <ul class="sub-menu" >
+                               
                                 <li><a href="./about_us_wwa.html">Who we are </a></li>
                                 <li><a href="./about_us_manag.html">management</a></li>
                                 <li><a href="./about_us_m_v.html">mission & value</a></li>
                             </ul>
                         </li>
                         <li class="menu-item menu-item-has-children">
-                            <a  class="btn__text" >SOLUTIONS</a>
+                            <a  class="" >SOLUTIONS</a>
                             <ul class="sub-menu">
-                                <li class="closeD"><a ><img src="./img/icons/left_w.png" alt="back icon">Back </a></li>
-                                <li><a >SOLUTIONS</a></li>
+                              
                                 <li><a href="./solutions_CEM.html">cx experience management</a></li>
                                 <li><a href="">back office solutions</a></li>
                                 <li><a href="">center of excellence</a></li>
@@ -117,10 +115,9 @@
                             </ul>
                         </li>
                         <li class="menu-item menu-item-has-children">
-                            <a class="btn__text" >LOCATIONS</a>
+                            <a class="" >LOCATIONS</a>
                             <ul class="sub-menu">
-                                <li class="closeD"><a ><img src="./img/icons/left_w.png" alt="back icon">Back </a></li>
-                                <li><a >LOCATIONS</a></li>
+                              
                                 <li><a href="./locations_E.html">Egypt</a></li>
                                 <li><a href="">uae</a></li>
                                 <li><a href="">poland</a></li>
@@ -128,19 +125,19 @@
                             
                         </li>
                         <li class="menu-item">
-                            <a href="./industries_listing.html" class="btn__text" >INDUSTRY</a>
+                            <a href="./industries_listing.html" class="" >INDUSTRY</a>
                         </li>
                         <li class="menu-item">
-                            <a href="./careers_gwu.html" class="btn__text" >CAREERS</a>
+                            <a href="./careers_gwu.html" class="" >CAREERS</a>
                         </li>
                         <li class="menu-item">
-                            <a href="./news_listing.html" class="btn__text" >NEWS</a>
+                            <a href="./news_listing.html" class="" >NEWS</a>
                         </li>
                         <li class="menu-item">
-                            <a href="" class="btn__text" >INVESTOR RELATIONS</a>
+                            <a href="" class="" >INVESTOR RELATIONS</a>
                         </li>
                         <li class="menu-item">
-                            <a href="" class="btn__text" >CONTACT US</a>
+                            <a href="" class="" >CONTACT US</a>
                         </li>
                     </ul>
                     <div class="menu-item langSelect langSelectMobile"  >
@@ -155,6 +152,7 @@
                 </div>   
             </div>       
         </div> 
+
 
         <!-- Header 
         ===================================-->
@@ -351,13 +349,28 @@
            <div class="newsletter">
                <h5>OUR NEWS LETTER</h5>
                <form action="">
-                   <div class="ccb">
+                   <!-- <div class="ccb">
                        <input class="styled-checkbox" id="businessInterests" type="checkbox" value="">
                        <label for="businessInterests">Business Interests</label>
                    </div>
                    <div  class="ccb">
                        <input class="styled-checkbox" id="hrInterests" type="checkbox" value="value1">
                        <label for="hrInterests">HR Interests</label> 
+                   </div> -->
+                   <div class="ccb">
+                       <span class="wpcf7-form-control-wrap type">
+                           <span class="wpcf7-form-control wpcf7-checkbox styled-checkbox" id="hrInterests">
+                               <span class="wpcf7-list-item first">
+                                   <input  type="checkbox" name="type[]" value="Business Interests">
+                                   <span  class="wpcf7-list-item-label">Business Interests</span>
+                               </span>
+                               <span class="wpcf7-list-item last">
+                                   <input  type="checkbox" name="type[]" value="HR Interests">
+                                   <span  class="wpcf7-list-item-label">Business Interests</span>
+                               </span>
+                              
+                           </span>
+                       </span>
                    </div>
                    <div class="nameEmailSubmit">
                        <label  for="name">Name</label>
@@ -376,7 +389,7 @@
                            </div>
                          
                        </div>
-                       <button type="submit">SUBSCRIBE</button>
+                       <input value="SUBSCRIBE" type="submit"/>
                    </div>
                    <div class="followUs">
                        <h4>FOLLOW US</h4>
@@ -395,6 +408,7 @@
               <a href="https://road9media.com/" target="_blank">ROAD9 MEDIA</a> </p>
        </div>
    </footer>
+
 
 
 

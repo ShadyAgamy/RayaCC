@@ -103,7 +103,7 @@ $( document ).ready(function() {
         if( $('#facts').offset() != undefined) {
             if(pageYOffset > ( $('#facts').offset().top - 350 )){  
                 countersArr.forEach(function( number, i ){
-                    var id = setInterval(count,50);
+                    var id = setInterval(count,85);
                     var start = 0;
                     var finalVal =  $(countersArr[i]).parent(".facts__counter--number").attr("num");
                     function count(){
@@ -121,6 +121,8 @@ $( document ).ready(function() {
         }
        
     }
+    counter();
+
 
     // ///change navbar background to gray when scroll in homepage and in all other pages  ////
 $(window).scroll(function() {    

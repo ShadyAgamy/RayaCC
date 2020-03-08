@@ -117,7 +117,7 @@
   margin-top: 6rem;
   padding: 0 14rem;
   margin-bottom: 15rem;
-  overflow-x: hidden;
+  overflow: hidden;
   @include respond(phone){
     margin-top: 15rem;
     padding: 0 2rem;
@@ -133,6 +133,7 @@
       display: flex;
       align-items: baseline;
       justify-content: space-evenly;
+      overflow: hidden;
       @include respond(tab-land){
         flex-wrap: wrap;
         justify-content: space-between;
@@ -590,7 +591,7 @@
         position: relative;
         z-index: 10;
         background: white;
-        overflow-x: hidden;
+        overflow: hidden;
         @include respond(tab-land){
             justify-content: center;
             margin-top: 10rem;
