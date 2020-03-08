@@ -200,12 +200,6 @@ $("body").click((e) => {
     
 })
 
-$(".menu-item-has-children a").each((i, el) => {
-$(el).on("click", () => {
-    $(".sub-menu").css("display", "none")
-    $(el).next().fadeIn(); 
- })
-})
 
 
 
@@ -324,6 +318,26 @@ function myFunction(checkMedia) {
   
   var checkMedia = window.matchMedia("(max-width: 600px)")
   myFunction(checkMedia)
+
+
+    //   add title and back btn to menu after the page load 
+    var lisss = [` <li class='closeD'><a ><img src='./img/icons/left_w.png' alt='back icon'>Back </a></li>
+    <li>ABOUT US</li>`, ` <li class="closeD"><a ><img src="./img/icons/left_w.png" alt="back icon">Back </a></li>
+    <li>SOLUTIONS</li>`, ` <li class="closeD"><a ><img src="./img/icons/left_w.png" alt="back icon">Back </a></li>
+    <li>LOCATIONS</li>` ]
+    $(".popup__menu-cont .menu-item-has-children:nth-of-type(1) .sub-menu").prepend("<h1>Helooooo</h1>")
+    
+    $(".popup__menu-cont .menu-item-has-children .sub-menu").each( (i, el) => {
+        $(el).prepend(lisss[i])
+    })
+  
+  
+    $(" .menu-item-has-children a").each((i, el) => {
+      $(el).on("click", () => {
+          $(".sub-menu").css("display", "none");
+          $(el).next().css("display", "block"); 
+       })
+    })
 
 
 

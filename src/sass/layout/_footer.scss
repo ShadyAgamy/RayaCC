@@ -124,11 +124,20 @@
                 flex-wrap: wrap;
                 
                 .ccb {
-                   width: 39%; 
-                   margin-bottom: 2rem;   
-                   @include respond(tab-land){
-                    width: 50%;
-                    } 
+                    width: 100%;
+                    .wpcf7-form-control {
+
+                        .wpcf7-list-item {
+                            width: 42%; 
+                            margin-bottom: 2rem;   
+                        }
+                        display: flex;
+                       
+                    }
+                   
+                //    @include respond(tab-land){
+                //     width: 50%;
+                //     } 
                 }
 
                 .nameEmailSubmit {
@@ -179,7 +188,7 @@
                     }
                        
 
-                    & > input,& > button {
+                    &  input, & input[type = "submit"] {
                         background-color: #103255;
                         border: none;
                         width: 39%;
@@ -190,7 +199,7 @@
                         padding-left: 1rem;
                     }
 
-                    & >  button {
+                    & input[type = "submit"] {
                         width: 24%;
                         font-size: 12px;
                         font-weight: bold;
@@ -212,6 +221,7 @@
 
                              input {
                                  background: #103255;
+                                 width: 100%;
                              }
 
                              label {
@@ -293,20 +303,21 @@
 }
 
 
-.styled-checkbox {
+.styled-checkbox .wpcf7-list-item input[type="checkbox"] {
     position: absolute;
     opacity: 0;
+    z-index: 99999;
+    cursor: pointer;
   
-    & + label {
+    & + .wpcf7-list-item-label {
       position: relative;
-      cursor: pointer;
       padding: 0;
       color: white;
       font-size: 14px;
     }
   
     // Box.
-    & + label:before {
+    & + .wpcf7-list-item-label:before {
       content: '';
       margin-right: 10px;
       display: inline-block;
@@ -319,22 +330,21 @@
     }
   
     // Box hover
-    &:hover + label:before {
+    &:hover + .wpcf7-list-item-label:before {
       background: #103255;
     }
     
     // Box focus
-    &:focus + label:before {
+    &:focus + .wpcf7-list-item-label:before {
       box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
     }
   
     // Box checked
-    &:checked + label:before {
+    &:checked + .wpcf7-list-item-label:before {
       background: #103255;
     }
   
-    // Checkmark. Could be replaced with an image
-    &:checked + label:after {
+    &:checked + .wpcf7-list-item-label:after {
       content: '';
       position: absolute;
       left: 2px;
@@ -354,3 +364,9 @@
     }
   }
 
+
+  .ajax-loader {
+    position: absolute;
+    top: 0;
+    left: 50px;
+  }
