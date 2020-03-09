@@ -88,7 +88,7 @@
 
         <!-- Menu Pop up 
         ===============================================-->
-        <div id="Menupopup" class="popup">
+        <div id="Menupopup" class="popup" backSrc="./img/icons/left_w.png">
             <div class="popup__container">
                 <h6 id="menu-close" class="">
                     <a><img src="img/icons/close.png" alt="Close Icon"></a>
@@ -567,23 +567,28 @@
                             </span>
                         </div>
                         <div class="nameEmailSubmit">
-                            <label  for="name">Name</label>
-                            <input type="text" id="name" name="name">
-                            <label  for="email">Email</label>
-                            <input type="email" id="email" name="email">
+                            <div class="desktop">
+                                <label  for="name">Name</label>
+                                <span><input type="text" id="name" name="name"></span>
+                                <label  for="email">Email</label>
+                                <span><input type="email" id="email" name="email"></span>
+                                <input value="SUBSCRIBE" type="submit"/>
+                            </div>
+                            
                             <div class="custom_input_group">
                                 <div class="custom_input">
                                     <label for="name">Name</label>
-                                    <input type="text" id="name">
+                                    <span><input type="text" id="name"></span>
                                 </div>
                                
                                 <div class="custom_input">
                                     <label for="Email">Email</label>
-                                    <input type="email" id="Email">
+                                    <span><input type="email" id="Email"></span>
                                 </div>
+                                <input value="SUBSCRIBE" type="submit"/>
                               
                             </div>
-                            <input value="SUBSCRIBE" type="submit"/>
+                            
                         </div>
                         <div class="followUs">
                             <h4>FOLLOW US</h4>

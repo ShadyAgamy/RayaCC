@@ -323,17 +323,35 @@ function myFunction(checkMedia) {
 
 
     //   add title and back btn to menu after the page load 
-    var lisss = [` <li class='closeD'><a ><img src='./img/icons/left_w.png' alt='back icon'>Back </a></li>
-    <li>ABOUT US</li>`, ` <li class="closeD"><a ><img src="./img/icons/left_w.png" alt="back icon">Back </a></li>
-    <li>SOLUTIONS</li>`, ` <li class="closeD"><a ><img src="./img/icons/left_w.png" alt="back icon">Back </a></li>
-    <li>LOCATIONS</li>` ]
-    $(".popup__menu-cont .menu-item-has-children:nth-of-type(1) .sub-menu").prepend("<h1>Helooooo</h1>")
+    var backSrc =  $("#Menupopup").attr("backSrc");
+    $("#Menupopup .menu-item_cont > .menu-item ").each( (i,el) => {
+        if ($(el).hasClass("menu-item-has-children")) {
+            $(el).children("a").on("click", (e) => {
+                
+                e.stopPropagation();  
+                $(el).children("a").next().css("display", "block"); 
+                var liName = $(el).children("a").text();
+                if ( $(el).children("a").next().find("li").first().hasClass("closeD")) {
+
+                } else {
+                    $(el).find(".sub-menu").prepend(`<li>${liName}</li>`)
+                    $(el).find(".sub-menu").prepend(` <li class='closeD'><a onclick='$(this).closest(".sub-menu").css("display","none")'><img src='${backSrc}' alt='back icon'>Back </a></li>`)  
+                }
+                   
+            })
+        } 
+    } )
+  
     
-    $(".popup__menu-cont .menu-item-has-children .sub-menu").each( (i, el) => {
-        $(el).prepend(lisss[i])
-    })
+        // close
+        var closeDropDown = $(".popup__menu-cont .menu-item menu-item-has-children .sub-menu .closeD a");
+        closeDropDown.each((i, el) => {
+            $(el).on("click", () => {
+                $(el).closest(".sub-menu").css("display","none")
+            })
+        })
   
-  
+
     $(" .menu-item-has-children a").each((i, el) => {
       $(el).on("click", () => {
           $(".sub-menu").css("display", "none");
