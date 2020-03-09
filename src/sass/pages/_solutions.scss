@@ -58,9 +58,9 @@
     }
 
     .wwa_sec_img {
+        overflow: hidden;
         @include respond(tab-land) {
             align-self: flex-end;
-            overflow: hidden;
             width: 435px;
          }
          @include respond(phone) {

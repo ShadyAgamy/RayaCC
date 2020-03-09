@@ -200,12 +200,18 @@ $("body").click((e) => {
     
 })
 
-$(".menu-item-has-children a").each((i, el) => {
-$(el).on("click", () => {
-    $(".sub-menu").css("display", "none")
-    $(el).next().fadeIn(); 
- })
-})
+// $(".nav > .menu-item-has-children ").each((i, el) => {
+// $(el).hover(function () {
+//     $(el).find(".sub-menu").fadeIn(); 
+        
+//     }, function () {
+//         setTimeout( function(){ 
+//             $(el).find(".sub-menu").fadeOut(200);
+//           }  , 1000 );
+        
+//     }
+// );
+// })
 
 
 
@@ -326,6 +332,16 @@ function myFunction(checkMedia) {
   myFunction(checkMedia)
 
 
+  $(".main_btn_white").hover(function () {
+          $(this).find("span").width("1%");
+          $(this).find("span").animate({
+              width : "24%"
+          },1000)
+          
+      }, function () {
+          
+      }
+  );
 
 
     

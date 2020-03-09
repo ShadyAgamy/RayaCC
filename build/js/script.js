@@ -103,7 +103,7 @@ $( document ).ready(function() {
         if( $('#facts').offset() != undefined) {
             if(pageYOffset > ( $('#facts').offset().top - 350 )){  
                 countersArr.forEach(function( number, i ){
-                    var id = setInterval(count,85);
+                    var id = setInterval(count,50);
                     var start = 0;
                     var finalVal =  $(countersArr[i]).parent(".facts__counter--number").attr("num");
                     function count(){
@@ -121,8 +121,6 @@ $( document ).ready(function() {
         }
        
     }
-    counter();
-
 
     // ///change navbar background to gray when scroll in homepage and in all other pages  ////
 $(window).scroll(function() {    
@@ -202,6 +200,18 @@ $("body").click((e) => {
     
 })
 
+// $(".nav > .menu-item-has-children ").each((i, el) => {
+// $(el).hover(function () {
+//     $(el).find(".sub-menu").fadeIn(); 
+        
+//     }, function () {
+//         setTimeout( function(){ 
+//             $(el).find(".sub-menu").fadeOut(200);
+//           }  , 1000 );
+        
+//     }
+// );
+// })
 
 
 
@@ -322,44 +332,16 @@ function myFunction(checkMedia) {
   myFunction(checkMedia)
 
 
-    //   add title and back btn to menu after the page load 
-    var backSrc =  $("#Menupopup").attr("backSrc");
-    $("#Menupopup .menu-item_cont > .menu-item ").each( (i,el) => {
-        if ($(el).hasClass("menu-item-has-children")) {
-            $(el).children("a").on("click", (e) => {
-                
-                e.stopPropagation();  
-                $(el).children("a").next().css("display", "block"); 
-                var liName = $(el).children("a").text();
-                if ( $(el).children("a").next().find("li").first().hasClass("closeD")) {
-
-                } else {
-                    $(el).find(".sub-menu").prepend(`<li>${liName}</li>`)
-                    $(el).find(".sub-menu").prepend(` <li class='closeD'><a onclick='$(this).closest(".sub-menu").css("display","none")'><img src='${backSrc}' alt='back icon'>Back </a></li>`)  
-                }
-                   
-            })
-        } 
-    } )
-  
-    
-        // close
-        var closeDropDown = $(".popup__menu-cont .menu-item menu-item-has-children .sub-menu .closeD a");
-        closeDropDown.each((i, el) => {
-            $(el).on("click", () => {
-                $(el).closest(".sub-menu").css("display","none")
-            })
-        })
-  
-
-    $(" .menu-item-has-children a").each((i, el) => {
-      $(el).on("click", () => {
-          $(".sub-menu").css("display", "none");
-          $(el).next().css("display", "block"); 
-       })
-    })
-
-
+  $(".main_btn_white").hover(function () {
+          $(this).find("span").width("1%");
+          $(this).find("span").animate({
+              width : "24%"
+          },1000)
+          
+      }, function () {
+          
+      }
+  );
 
 
     

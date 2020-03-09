@@ -84,7 +84,7 @@
             display: flex;
             align-items: center;
             font-size: 13px;
-            font-weight: bold;
+            font-weight: 800;
             padding: 2rem 4rem;
             @include respond(phone){
                 padding: 2rem 2rem;
@@ -96,6 +96,7 @@
             img {
                 margin-left: 5rem;
                 width: 7px;
+                transition: all .8s ease ;
             }
     
         }
@@ -108,6 +109,7 @@
         position: absolute;
         bottom: 29%;
         left: 4rem;
+        overflow: visible!important;
         
 
         &:before,&:after{
@@ -133,6 +135,13 @@
             width: .5rem;
             height: .5rem;
             transform: translate(0px, 2px);
+            
+        }
+    }
+
+    &:hover {
+        img {
+            transform: translateX(10px);
             
         }
     }
@@ -188,4 +197,8 @@
             }
         }
     }
+}
+
+.main_btn_white.submitForm img{
+    transition: all .8s ease;  
 }

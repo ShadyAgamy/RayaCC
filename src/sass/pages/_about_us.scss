@@ -29,6 +29,7 @@
                 margin-top: 5rem;
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 400;
+                text-transform: uppercase;
                 @include respond(phone){
                     font-size: 35px;
                 }
@@ -40,6 +41,7 @@
                 font-family: 'Montserrat', sans-serif;
                 line-height: .9;
                 margin-top: 1rem;
+                text-transform: uppercase;
                 @include respond(phone){
                     font-size: 40px;
                     margin-top: 2rem;
@@ -352,9 +354,10 @@
             flex-direction: column;
             align-items: center;
             padding: 6.5rem 10rem;
-            width: 59%;
+            width: 80%;
             height: auto;
-            max-height: 90%!important;
+            min-height: 98%;
+            max-height: 98% !important;
             margin: 0 auto;
             box-shadow: 0px 3px 16px #00000029;
             @include respond(phone) {
