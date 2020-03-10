@@ -84,21 +84,13 @@ $( document ).ready(function() {
     }
     
     // COUNTER FUNCTION in homepage facts SECTION
-   
     window.addEventListener("scroll", counter);
     $(window).on('load', counter);
-
     var counters = $(".facts__counter--number .num");
     var countersArr = [];
     for(var i =0; i < counters.length; i++) {
         countersArr.push(counters[i]);
     }
-    // var finalVals = $(".facts__counter--number").attr("num");
-    // var finalValsArr = [];
-    // for(var i =0; i < finalVals.length; i++) {
-    //     finalValsArr.push(finalVals[i]);
-    // }
-
     function counter(){
         if( $('#facts').offset() != undefined) {
             if(pageYOffset > ( $('#facts').offset().top - 350 )){  
@@ -122,6 +114,7 @@ $( document ).ready(function() {
        
     }
 
+    
     // ///change navbar background to gray when scroll in homepage and in all other pages  ////
 $(window).scroll(function() {    
     checkMenuScrollTop();
@@ -156,6 +149,7 @@ sysCloseIcon.on("click", () => {
     sysCloseIcon.closest(".sys_msg").fadeOut()
 })
 
+
 // change lang selct chevron color and logo img depend on navbar 
 var logoImg = $(".navbar").find(".navbar__logo img");
 var langArrow = $(".navbar").find(".lang_selected_arrow");
@@ -168,13 +162,12 @@ var langArrow = $(".navbar").find(".lang_selected_arrow");
             $(langArrow).attr("src", $(langArrow).attr("src2"));
         }
     }
-
     checkNavLogo();
     
 
 
-$(".lang_selected").on("click", () => {
-    
+// show and hide languages select dropdown in desktop 
+$(".lang_selected").on("click", () => {  
    $("#langsList").fadeToggle(); 
 })
 $("body").click((e) => {
@@ -187,35 +180,6 @@ $("body").click((e) => {
     }
     
 })
-$("body").click((e) => {
-    e.stopPropagation();
-    if ($(e.target).hasClass('.nav') ||
-        $(e.target).hasClass('.menu-item-has-children') ||
-        $(e.target).is('.menu-item-has-children a')) {
-        // return false;  
-    } else {
-        $(".menu-item .sub-menu").fadeOut();
-        
-    }
-    
-})
-
-// $(".nav > .menu-item-has-children ").each((i, el) => {
-// $(el).hover(function () {
-//     $(el).find(".sub-menu").fadeIn(); 
-        
-//     }, function () {
-//         setTimeout( function(){ 
-//             $(el).find(".sub-menu").fadeOut(200);
-//           }  , 1000 );
-        
-//     }
-// );
-// })
-
-
-
-
 
 
 // //////////////////////////
@@ -226,7 +190,6 @@ if ($(".solutionsTabs a.active"))  {
     var imgNewSrc = $(img).attr("data-src");
     $(img).attr("src",imgNewSrc )
 }
-
 
 
 $('.careers_loc_tabs a ').each((i , ele) => {
@@ -265,27 +228,28 @@ $(".careers_loc_content > .careers_loc_content_head").not(".careers_loc_content_
 
 // custom input file 
 document.querySelector("html").classList.add('js');
-
 var fileInputs  = document.querySelectorAll( ".input-file" ),  
     buttons     = document.querySelectorAll( ".input-file-trigger" ),
     the_returns = document.querySelectorAll(".file-return"),
     fileInputArr = [...fileInputs],
     buttonsArr = [...buttons],
-    the_returnsArr = [...the_returns];
+    the_returnsArr = [...the_returns];   
 
-      
     for (var i = 0; i < fileInputArr.length; i++) {
+        console.log(fileInputArr[i])
         $(buttonsArr[i]).on( "keydown", function( event ) {  
             if ( event.keyCode == 13 || event.keyCode == 32 ) {  
                 fileInputArr[i].focus();  
             }  
         });
         buttonsArr[i].addEventListener( "click", function( event ) {  
+            console.log( buttonsArr[i])
            fileInputArr[i].focus();
            return false;
         });  
         fileInputArr[i].addEventListener( "change", function( event ) {  
-            the_returnsArr[i].innerHTML = fileInputArr[i].value;  
+            console.log($(this).parent().next())
+            $(this).parent().next().text($(this).val()); 
         });  
     }
 
@@ -332,6 +296,7 @@ function myFunction(checkMedia) {
   myFunction(checkMedia)
 
 
+//   animation on big white buttons
   $(".main_btn_white").hover(function () {
           $(this).find("span").width("1%");
           $(this).find("span").animate({
@@ -342,6 +307,29 @@ function myFunction(checkMedia) {
           
       }
   );
+
+      //   add title and back btn to menu after the page load
+      var backSrc =  $("#Menupopup").attr("backSrc");
+      $("#Menupopup .menu-item_cont > .menu-item ").each( (i,el) => {
+          if ($(el).hasClass("menu-item-has-children")) {
+              $(el).children("a").on("click", (e) => {
+                  e.stopPropagation();
+                  $(el).children("a").next().css("display", "block");
+                  var liName = $(el).children("a").text();
+                  if ( $(el).children("a").next().find("li").first().hasClass("closeD")) {
+                  } else {
+                      $(el).find(".sub-menu").prepend(`<li>${liName}</li>`)
+                      $(el).find(".sub-menu").prepend(` <li class='closeD'><a onclick='$(this).closest(".sub-menu").css("display","none")'><img src='${backSrc}' alt='back icon'>Back </a></li>`)
+                  }
+  
+              })
+          }
+      } )
+  
+  
+    
+  
+  
 
 
     

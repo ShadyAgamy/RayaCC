@@ -191,15 +191,7 @@
                             <div class="swiper-slide">
                                 <img src="./img/locations/Cairo/MP3.jpg" alt="">
                             </div>  
-                            <div class="swiper-slide">
-                                <img src="./img/home/9T5A8983.jpg" alt="">
-                            </div> 
-                            <div class="swiper-slide">
-                                <img src="./img/locations/Cairo/MP3.jpg" alt="">
-                            </div>   
-                            <div class="swiper-slide">
-                                <img src="./img/home/9T5A8983.jpg" alt="">
-                            </div>     
+                          
                         </div>          
                     </div>
                     <div class="depend_text_swiper swiper-container">      
@@ -210,24 +202,8 @@
                                 </div>
                                 
                             </div>  
-                            <div class="swiper-slide">
-                                <div>
-                                    <h5>Maadi Park 2</h5>
-                                </div>
-                                
-                            </div>   
-                            <div class="swiper-slide">
-                                <div>
-                                    <h5>Maadi Park 3</h5>
-                                </div>
-                                
-                            </div>   
-                            <div class="swiper-slide">
-                                <div>
-                                    <h5>Maadi Park 4</h5>
-                                </div>
-                                
-                            </div>   
+                            
+                            
                         </div>          
                     </div>
 
@@ -549,7 +525,7 @@
                 slidesPerView: 1,
                 spaceBetween: 0, 
                 speed: 700,
-                loop: true,
+                loop: $(".solutions_swiper.swiper-container").find(".swiper-slide").length > 1 ? true : false,
                 paginationClickable: true,
                 watchSlidesProgress: true,
                 autoplay: {

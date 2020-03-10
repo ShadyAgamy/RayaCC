@@ -3,7 +3,7 @@
     <head>
         
         <title>RayaCC</title>
-        <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png"> -->
+        <link rel="shortcut icon" type="image/png" href="img/fivicon.ico">
         <meta charset=utf-8>
          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">  
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
@@ -30,7 +30,7 @@
                 <li class="menu-item menu-item-has-children">
                     <a  class="" >ABOUT US</a>
                     <ul class="sub-menu">
-                        <li class="menu-item"><a href="./about_us_wwa.html">Who we are </a></li>
+                        <li class="menu-item "><a href="./about_us_wwa.html">Who we are </a></li>
                         <li class="menu-item"><a href="./about_us_manag.html">management</a></li>
                         <li class="menu-item"><a href="./about_us_m_v.html">mission & value</a></li>
                     </ul>
@@ -299,16 +299,16 @@
                     <div class="industries_swiper swiper-container" data-pagination-type='progress'>      
                         <div class="swiper-wrapper">   
                             <div class="swiper-slide">
-                                <div class="inds_slide">
+                                <a href="" class="inds_slide">
                                     <img src="./img//industries/listing/ind_1.jpg" alt="">
                                     <h2>MEDIA & COMMUNICATION</h2>
-                                </div>        
+                                </a>        
                             </div>
                             <div class="swiper-slide">
-                                <div class="inds_slide">
+                                <a href="" class="inds_slide">
                                     <img src="./img//industries/listing/ind_2.jpg" alt="">
                                     <h2>TECHNOLOGY & CONSUMER ELECTRONICS</h2>
-                                </div>        
+                                </a>        
                             </div>
                             <div class="swiper-slide">
                                 <div class="inds_slide">
@@ -362,22 +362,22 @@
         <section class="solutions">
             <div class="solutions_content">
                 <div class="solutions_content_tabs">
-                    <div class="solutions_content_tabs-tab wow fadeInUp " data-wow-duration="1s" >
+                    <a href="" class="solutions_content_tabs-tab wow fadeInUp " data-wow-duration="1s" >
                         <img src="./img/home/tab1.png" alt="">
                         <h3>CUSTOMER EXPERIENCE MANAGEMENT</h3>
-                    </div>
-                    <div class="solutions_content_tabs-tab wow fadeInUp " data-wow-duration="1s" data-wow-delay=".4s" >
+                    </a>
+                    <a href="" class="solutions_content_tabs-tab wow fadeInUp " data-wow-duration="1s" data-wow-delay=".4s" >
                         <img src="./img/home/tab2.png" alt="">
                         <h3>BACK OFFICE SOLUTIONS</h3>
-                    </div>
-                    <div class="solutions_content_tabs-tab wow fadeInUp " data-wow-duration="1s" data-wow-delay=".8s" >
+                    </a>
+                    <a href="" class="solutions_content_tabs-tab wow fadeInUp " data-wow-duration="1s" data-wow-delay=".8s" >
                         <img src="./img/home/tab3.png" alt="">
                         <h3>CENTRE OF EXCELLENCE</h3>
-                    </div>
-                    <div class="solutions_content_tabs-tab wow fadeInUp " data-wow-duration="1s" data-wow-delay="1.2s">
+                    </a>
+                    <a href="" class="solutions_content_tabs-tab wow fadeInUp " data-wow-duration="1s" data-wow-delay="1.2s">
                         <img src="./img/home/tab4.png" alt="">
                         <h3>DIGITAL SOLUTIONS</h3>
-                    </div>
+                    </a>
                 </div>
                 <div class="solutions_content_slider">
                     <div class="main_left_heading  wow fadeInRight " data-wow-duration="1s" >
@@ -391,18 +391,8 @@
                             <div class="swiper-slide">
                                 <img src="./img/home/9T5A8983.jpg" alt="">
                             </div>  
-                            <div class="swiper-slide">
-                                <img src="./img/home/home1.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="./img/home/home1.jpg" alt="">
-                            </div>  
-                            <div class="swiper-slide">
-                                <img src="./img/home/9T5A8983.jpg" alt="">
-                            </div>  
-                            <div class="swiper-slide">
-                                <img src="./img/home/home1.jpg" alt="">
-                            </div>   
+                            
+                           
                         </div>          
                     </div>
                     <div class="main_slider_footer">
@@ -735,7 +725,7 @@
                 slidesPerView: 'auto',
                 spaceBetween: 15,  
                 speed: 700,
-                loop: true,
+                loop: $(".industries_swiper.swiper-container").find(".swiper-slide").length > 4 ? true : false,
                 paginationClickable: true,
                 watchSlidesProgress: true,
                 autoplay: {
@@ -760,7 +750,7 @@
                 slidesPerView: 1,
                 spaceBetween: 0, 
                 speed: 700,
-                loop: true,
+                loop: $(".solutions_swiper.swiper-container").find(".swiper-slide").length > 1 ? true : false,
                 paginationClickable: true,
                 watchSlidesProgress: true,
                 autoplay: {

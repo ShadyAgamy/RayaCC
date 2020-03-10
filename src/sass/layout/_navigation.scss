@@ -193,7 +193,7 @@
             &:not(:last-of-type) {
                 border-bottom: 1px solid #E8E8E8;
             }
-            &:hover {
+            &:hover,&.current-menu-item {
                 background: #C4C4C4;  
             }
 
@@ -213,6 +213,15 @@
 .menu-item#langSelect {
     position: relative;
 
+    &:before {
+        content: "";
+    position: absolute;
+    left: -7px;
+    top: 6px;
+    height: 28px;
+    width: 2px;
+    background-color: #337DB9;
+    }
     @include respond(tab-land){
         display: none;
     }
@@ -283,6 +292,11 @@
             }
         }
     }
+    .menu-item#langSelect {
+        &:before {
+            background-color: #D4D8DC;
+        }
+    }
    }
 
    .navbar > .nav {
@@ -291,6 +305,7 @@
    .nav >  .menu-item {
        height: 6rem;
    }
+   
    .nav >  .menu-item-has-children:hover {
        .sub-menu {
            display: block;
@@ -300,4 +315,8 @@
 
    .nav >  .menu-item-has-children .sub-menu:hover {
     display: block;
+   }
+
+   #Menupopup .menu-item.menu-item-has-children .sub-menu {
+       margin-top: 0!important;
    }

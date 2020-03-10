@@ -36,7 +36,7 @@ gulp.task('css', function () {
             .on('error', sass.logError)
         )
         .pipe(prefix("last 5 version"))
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('build/css'))
 });
 
