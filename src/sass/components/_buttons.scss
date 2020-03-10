@@ -141,7 +141,7 @@
 
     &:hover {
         img {
-            transform: translateX(10px);
+            transform: translateX(10px) rotate(180deg)!important;
             
         }
     }

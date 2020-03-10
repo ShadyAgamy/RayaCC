@@ -132,3 +132,14 @@
         text-decoration: underline;
     }
 }
+
+[dir="rtl"] {
+    .swiper-button-prev_w,
+    .swiper-button-next_w,
+    .swiper-button-prev_b,
+    .swiper-button-next_b,
+    .main_btn_white a img {
+        transform: rotate(180deg) translateX(0);
+    }
+
+}

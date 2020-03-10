@@ -1,0 +1,905 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+    <head>
+        
+        <title>RayaCC</title>
+        <link rel="shortcut icon" type="image/png" href="img/fivicon.ico">
+        <meta charset=utf-8>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="css/swiper.min.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" type="text/css" href="css/main-rtl.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900&display=swap" rel="stylesheet">
+
+
+        
+    </head>
+    <body class="overflowHidden homePage">
+
+        <!-- NavBar 
+        ===================================-->
+        <nav class="navbar">
+            <div  class="navbar__logo">
+                <img src="" src1="./img/home/logo.png" src2="./img/home/logo-w.png" alt="RayaCC Logo">
+            </div>
+            <ul class="nav">
+                <li class="menu-item menu-item-has-children">
+                    <a  class="" >ABOUT US</a>
+                    <ul class="sub-menu">
+                        <li class="menu-item "><a href="./about_us_wwa.html">Who we are </a></li>
+                        <li class="menu-item"><a href="./about_us_manag.html">management</a></li>
+                        <li class="menu-item"><a href="./about_us_m_v.html">mission & value</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-has-children">
+                    <a  class="" >SOLUTIONS</a>
+                    <ul class="sub-menu">
+                        <li class="menu-item"><a href="./solutions_CEM.html">cx experience management</a></li>
+                        <li class="menu-item"><a href="">back office solutions</a></li>
+                        <li class="menu-item"><a href="">center of excellence</a></li>
+                        <li class="menu-item"><a href="">digital solutions</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-has-children">
+                    <a class="" >LOCATIONS</a>
+                    <ul class="sub-menu">
+                        <li class="menu-item"><a href="./locations_E.html">Egypt</a></li>
+                        <li class="menu-item"><a href="">uae</a></li>
+                        <li class="menu-item"><a href="">poland</a></li>
+                    </ul>
+                    
+                </li>
+                <li class="menu-item">
+                    <a href="./industries_listing.html" class="" >INDUSTRY</a>
+                </li>
+                <li class="menu-item">
+                    <a href="./careers_gwu.html" class="" >CAREERS</a>
+                </li>
+                <li class="menu-item">
+                    <a href="./news_listing.html" class="" >NEWS</a>
+                </li>
+                <li class="menu-item">
+                    <a href="" class="" >INVESTOR RELATIONS</a>
+                </li>
+                <li class="menu-item">
+                    <a href="./contact_us.html" class="" >CONTACT US</a>
+                </li>
+               
+            </ul>
+            <div class="menu-item" id="langSelect" class="langSelect">
+                <div class="lang_selected">
+                    <span class="lang_selected_lang">english</span>
+                    <img class="lang_selected_arrow" src="./img/home/down_w.png" src2="./img/home/down_w.png" src1="./img/home/down_b.png" alt="">
+                </div>
+                
+                <ul id="langsList">
+                    <li><a href="">english</a></li>
+                    <li><a href="">arabic</a></li>
+                </ul>
+            </div>   
+            <span id="navbar__menu" class="navbar__menu">
+                <a href="" class="navbar__menu-link"><span></span></a> 
+            </span>
+        </nav>
+
+        <!-- Menu Pop up 
+        ===============================================-->
+        <div id="Menupopup" class="popup" backSrc="./img/icons/left_w.png">
+            <div class="popup__container">
+                <h6 id="menu-close" class="">
+                    <a><img src="img/icons/close.png" alt="Close Icon"></a>
+                </h6>     
+                <div class="popup__menu-cont">                            
+                    <ul class="menu-item_cont">
+                        <li class="menu-item "><a href="./index.html" class=" ">HOME</a></li>
+                        <li class="menu-item menu-item-has-children" >
+                            <a class="" >ABOUT US</a>
+                            <ul class="sub-menu" >
+                               
+                                <li class="menu-item "><a href="./about_us_wwa.html">Who we are </a></li>
+                                <li class="menu-item "><a href="./about_us_manag.html">management</a></li>
+                                <li class="menu-item "><a href="./about_us_m_v.html">mission & value</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a  class="" >SOLUTIONS</a>
+                            <ul class="sub-menu">
+                              
+                                <li><a href="./solutions_CEM.html">cx experience management</a></li>
+                                <li><a href="">back office solutions</a></li>
+                                <li><a href="">center of excellence</a></li>
+                                <li><a href="">digital solutions</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a class="" >LOCATIONS</a>
+                            <ul class="sub-menu">
+                              
+                                <li><a href="./locations_E.html">Egypt</a></li>
+                                <li><a href="">uae</a></li>
+                                <li><a href="">poland</a></li>
+                            </ul>
+                            
+                        </li>
+                        <li class="menu-item">
+                            <a href="./industries_listing.html" class="" >INDUSTRY</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="./careers_gwu.html" class="" >CAREERS</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="./news_listing.html" class="" >NEWS</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="" class="" >INVESTOR RELATIONS</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="" class="" >CONTACT US</a>
+                        </li>
+                    </ul>
+                    <div class="menu-item langSelect langSelectMobile"  >
+                        <div class="custom_selectbox">
+                            <select name="" id="">
+                                <option value="english">english</option>
+                                <option value="arabic">Arabic</option>
+                            </select>
+                        </div>
+                       
+                    </div>   
+                </div>   
+            </div>       
+        </div> 
+
+
+    
+
+        <!-- Header 
+        ===================================-->
+        <header id="particles-js"  class="header"> 
+            
+            <div class="header_main">
+               <div class="main_slider">
+                    <div class="swiper-container" >      
+                        <div class="swiper-wrapper">   
+                            <div class="swiper-slide"> 
+                                <div class="header__cont">    
+                                    <div class="header__cont-text">
+                                        <h1>HUMAN CAPITAL WITH DIVERSIFIED CULTURE</h1>
+                                    </div>
+                                </div>                    
+                            </div>
+                            <div class="swiper-slide"> 
+                                <div class="header__cont">    
+                                    <div class="header__cont-text">
+                                        <h1>HUMAN CAPITAL WITH DIVERSIFIED CULTURE</h1>
+                                    </div>
+                                </div>                    
+                            </div>
+                            <div class="swiper-slide"> 
+                                <div class="header__cont">    
+                                    <div class="header__cont-text">
+                                        <h1>HUMAN CAPITAL WITH DIVERSIFIED CULTURE</h1>
+                                    </div>
+                                </div>                    
+                            </div>
+                        </div>          
+            
+                    </div>
+                    <div class="main_slider_footer">
+                        <div class="progress_cont">
+                            <div class="progress"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        
+                        <div class="main__footer_toggler">
+                                <div class="swiper-button-prev_w"></div>
+                                <div class="swiper-button-next_w"></div>
+                        </div>                
+                    </div>
+                    <div class="main_btn_white">
+                        <a href="">MORE ABOUT RCC <img src="./img/icons/right_b.png" alt=""></a>
+                        <span></span>
+                    </div>  
+               </div>
+               <div class="header_main_video_cont">
+                <video autoplay loop muted width="100%" height="100%" style="object-fit: cover;">
+                    <source src="./img/home/test.mp4" type="video/mp4">
+                    <source src="video/demo.webm" type="video/webm">
+                  <div style="border: 1px solid black ; padding: 8px ;">
+                  Sorry, your browser does not support the &lt;video&gt; tag used in this demo.
+                  </div>
+                  </video>
+               </div>
+               <div class="social_links">
+                   <ul>
+                       <li><a href="">Facebook</a></li>
+                       <li><a href="">LinkedIn</a></li>
+                       <li><a href="">Twitter</a></li>
+                       <li><a href="">YouTube</a></li>
+                   </ul>
+               </div>
+            </div>
+                
+        </header>
+
+
+
+        <!-- facts -->
+        <section class="facts" id="facts">
+            <div class="main_left_heading wow fadeInRight" data-wow-duration="1s" >
+                <h2 class="facts_heading wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">FACTS</h2>
+            </div>
+            <div class="cont wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                <div class="facts__counter ">
+                    <div class="facts__counter--content">
+                        <span class="facts__counter--number" num="16"><span class="num">0</span>M</span>
+                        <span class="facts__counter--subject">TRANSACTIONS PER MONTH</span>
+                    </div>   
+                </div>
+                <div class="facts__counter ">
+                    <div class="facts__counter--content">
+                        <span class="facts__counter--number" num="6.5"><span class="num">0</span>K</span>
+                        <span class="facts__counter--subject">ADVISORS</span>
+                    </div>   
+                </div>
+                <div class="facts__counter ">
+                    <div class="facts__counter--content">
+                        <span class="facts__counter--number" num="25"><span class="num">0</span></span>
+                        <span class="facts__counter--subject">LANGUAGES</span>
+                    </div>   
+                </div>
+                <div class="facts__counter ">
+                    <div class="facts__counter--content">
+                        <span class="facts__counter--number years" num="19">
+                            <span class="num">0</span>
+                            <p>years</p>
+                        </span>
+                        <span class="facts__counter--subject">EXPERIENCE IN EMEA</span>
+                    </div>   
+                </div>
+                <div class="facts__counter ">
+                    <div class="facts__counter--content">
+                        <span class="facts__counter--number" num="10"><span class="num">0</span></span>
+                        <span class="facts__counter--subject">EXPERIENCE IN EMEA</span>
+                    </div>   
+                </div>
+            </div>    
+        </section>
+        
+
+        <!-- Locations -->
+        <section class="locations">
+            <div class="main_left_heading main_right_heading wow fadeInLeft" data-wow-duration="1s" >
+                <h2 class="facts_heading wow fadeIn " data-wow-duration="1s" data-wow-delay="1s">LOCATIONS</h2>
+            </div>
+            <img src="./img/home/locations_en.png" alt="" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.3s">
+        </section>
+
+        <!-- INDUSTRIES section -->
+        <section class="industries">
+            <div class="industries_overlay">
+                <div class="industries_content">
+                    <div class="main_left_heading main_right_heading wow fadeInLeft " data-wow-duration="1s" >
+                        <h2 class="facts_heading wow fadeIn " data-wow-duration="1s" data-wow-delay="1s">INDUSTRIES</h2>
+                    </div>
+                    <div class="main_slider_footer">
+                        <div class="progress_cont">
+                            <div class="progress"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="main__footer_toggler">
+                                <div class="swiper-button-prev_w"></div>
+                                <div class="swiper-button-next_w"></div>
+                        </div>                
+                    </div>
+                    <div class="industries_swiper swiper-container" data-pagination-type='progress'>      
+                        <div class="swiper-wrapper">   
+                            <div class="swiper-slide">
+                                <a href="" class="inds_slide">
+                                    <img src="./img//industries/listing/ind_1.jpg" alt="">
+                                    <h2>MEDIA & COMMUNICATION</h2>
+                                </a>        
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="" class="inds_slide">
+                                    <img src="./img//industries/listing/ind_2.jpg" alt="">
+                                    <h2>TECHNOLOGY & CONSUMER ELECTRONICS</h2>
+                                </a>        
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="inds_slide">
+                                    <img src="./img//industries/listing/ind_3.jpg" alt="">
+                                    <h2>BANKING & INSURANCE</h2>
+                                </div>        
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="inds_slide">
+                                    <img src="./img//industries/listing/ind_4.jpg" alt="">
+                                    <h2>MEDIA & COMMUNICATION</h2>
+                                </div>        
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="inds_slide">
+                                    <img src="./img//industries/listing/ind_1.jpg" alt="">
+                                    <h2>MEDIA & COMMUNICATION</h2>
+                                </div>        
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="inds_slide">
+                                    <img src="./img//industries/listing/ind_2.jpg" alt="">
+                                    <h2>TECHNOLOGY & CONSUMER ELECTRONICS</h2>
+                                </div>        
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="inds_slide">
+                                    <img src="./img//industries/listing/ind_3.jpg" alt="">
+                                    <h2>BANKING & INSURANCE</h2>
+                                </div>        
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="inds_slide">
+                                    <img src="./img//industries/listing/ind_4.jpg" alt="">
+                                    <h2>MEDIA & COMMUNICATION</h2>
+                                </div>        
+                            </div>
+                        </div>          
+                    </div>
+                    <div class="main_btn_white">
+                        <a href="">VIEW ALL INDUSTRIES <img src="./img/icons/right_b.png" alt=""></a>
+                        <span></span>
+                    </div>  
+                    
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SOLUTIONS  -->
+        <section class="solutions">
+            <div class="solutions_content">
+                <div class="solutions_content_tabs">
+                    <a href="" class="solutions_content_tabs-tab wow fadeInUp " data-wow-duration="1s" >
+                        <img src="./img/home/tab1.png" alt="">
+                        <h3>CUSTOMER EXPERIENCE MANAGEMENT</h3>
+                    </a>
+                    <a href="" class="solutions_content_tabs-tab wow fadeInUp " data-wow-duration="1s" data-wow-delay=".4s" >
+                        <img src="./img/home/tab2.png" alt="">
+                        <h3>BACK OFFICE SOLUTIONS</h3>
+                    </a>
+                    <a href="" class="solutions_content_tabs-tab wow fadeInUp " data-wow-duration="1s" data-wow-delay=".8s" >
+                        <img src="./img/home/tab3.png" alt="">
+                        <h3>CENTRE OF EXCELLENCE</h3>
+                    </a>
+                    <a href="" class="solutions_content_tabs-tab wow fadeInUp " data-wow-duration="1s" data-wow-delay="1.2s">
+                        <img src="./img/home/tab4.png" alt="">
+                        <h3>DIGITAL SOLUTIONS</h3>
+                    </a>
+                </div>
+                <div class="solutions_content_slider">
+                    <div class="main_left_heading  wow fadeInRight " data-wow-duration="1s" >
+                        <h2 class="facts_heading wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">SOLUTIONS</h2>
+                    </div>
+                    <div class="solutions_swiper swiper-container" data-pagination-type='progress'>      
+                        <div class="swiper-wrapper">   
+                            <div class="swiper-slide">
+                                <img src="./img/home/home1.jpg" alt="">
+                            </div>  
+                            <div class="swiper-slide">
+                                <img src="./img/home/9T5A8983.jpg" alt="">
+                            </div>  
+                            
+                           
+                        </div>          
+                    </div>
+                    <div class="main_slider_footer">
+                        <div class="progress_cont blue">
+                            <div class="progress"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="main__footer_toggler">
+                                <div class="swiper-button-prev_b"></div>
+                                <div class="swiper-button-next_b"></div>
+                        </div>                
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+
+        <!-- FOUNDATIONS FOR SUCCESS -->
+        <section id="particles-js-blue" class="ffs">
+            <div class="ffs_text">
+                <div class="main_left_heading  main_right_heading wow fadeInLeft" data-wow-duration="1s">
+                    <h2 class="facts_heading wow fadeIn" data-wow-duration="1s" data-wow-delay=".8s">FOUNDATIONS FOR SUCCESS</h2>
+                </div>
+                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">Ray’s strong commitment to a deeply entrenched set of values has largely contributed to its success over the years. The very same values that management and personnel hold dear are those that are reflected on to customers who have come to rely on the high quality service and integrity that the Raya brand is now known for throughout the region. Our values are the pillars that build the strong foundation of our corporation.</p>
+            </div>
+            <div class="ffs_tabs">
+                <div class="ffs_tabs-tab " >
+                    <img src="./img/home/ffs1.png" alt="" class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+                    <h3 class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">RESPECT PEOPLE</h3>
+                </div>
+                <div class="ffs_tabs-tab ">
+                    <img src="./img/home/ffs2.png" alt="" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
+                    <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">CUSTOMER FOCUS</h3>
+                </div>
+                <div class="ffs_tabs-tab ">
+                    <img src="./img/home/ffs3.png" alt="" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                    <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">TEAM WORK</h3>
+                </div>
+                <div class="ffs_tabs-tab ">
+                    <img src="./img/home/ffs4.png" alt="" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.3s">
+                    <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.3s">SEEKING EXCELENCE</h3>
+                </div>
+            </div>
+        </section>
+
+         <!-- INQUIRY links -->
+         <div class="inquiry_links">
+             <div class="inquiry_links_b">
+                 <a href="">BUSINESS INQUIRY <img src="./img/icons/right_w.png" alt=""></a>
+             </div>
+             <div class="inquiry_links_hr">
+                <a href="">HR INQUIRY <img src="./img/icons/right_w.png" alt=""></a>
+            </div>
+         </div>
+
+
+
+
+         <!-- footer -->
+        <footer class="footer">
+            <div class="footer_links">
+                <div>  
+                    <ul>
+                        <li><a href="">ABOUT US</a></li>
+                        <li><a href=""> Who We Are</a></li>
+                        <li><a href=""> Mission & Values</a></li>
+                        <li><a href=""> CSR</a></li>
+                    </ul>
+                    <ul>   
+                        <li><a href="">SOLUTIONS</a></li>
+                        <li><a href=""> Contact Center</a></li>
+                        <li><a href=""> Back Office</a></li>
+                        <li><a href=""> Inside Sales</a></li>
+                        <li><a href=""> Professional Services</a></li>
+                    </ul>
+                    <ul>  
+                        <li><a href="">LOCATIONS</a></li>
+                        <li><a href=""> Egypt</a></li>
+                        <li><a href=""> Dubai, UAE</a></li>
+                        <li><a href=""> Warsaw, Poland</a></li>
+                    </ul>
+                </div>
+                <div>          
+                    <ul>
+                        <li><a href="">INDUSTRIES</a></li>
+                        <li><a href=""> Media & Communication</a></li>
+                        <li><a href=""> Technology & Consumer Electronics</a></li>
+                        <li><a href=""> Banking & Insurance</a></li>
+                        <li><a href=""> Automotive</a></li>
+                        <li><a href=""> Retail</a></li>
+                        <li><a href=""> White Goods</a></li>
+                        <li><a href=""> Health Care</a></li>
+                        <li><a href=""> Fast Food</a></li>
+                        <li><a href=""> Travel</a></li>
+                        <li><a href=""> E-Commerce</a></li>
+                        <li><a href=""> Government & Public Service</a></li>
+                        <li><a href=""> Real Estate</a></li>
+                    </ul>      
+                    <ul>  
+                        <li><a href="">CAREERS</a></li>
+                        <li><a href=""> Why Work With Us</a></li>
+                        <li><a href=""> Grow With Us</a></li>
+                        <li><a href=""> Apply Now</a></li>
+                    </ul>
+                </div>
+                <div>        
+                    <ul>  
+                        <li><a href="">NEWS</a></li>
+                    </ul>  
+                    <ul>          
+                        <li><a href="">INVESTOR RELATIONS</a></li>
+                        <li><a href=""> About Raya Contact Centre</a></li>
+                        <li><a href=""> Corporate Governance</a></li>
+                        <li><a href=""> Results Centre</a></li>
+                        <li><a href=""> Listing Information</a></li>
+                        <li><a href=""> Share & Corporate Information</a></li>
+                        <li><a href=""> Presentations</a></li>
+                        <li><a href=""> IR Calendar</a></li>
+                        <li><a href=""> Board & Shareholders Actions</a></li>
+                        <li><a href=""> News And Disclosures</a></li>
+                        <li><a href=""> Analyst Coverage</a></li>
+                        <li><a href=""> IR Contacts</a></li>
+                    </ul>   
+                    <ul>  
+                        <li><a href="">CONTACT US</a></li>
+                    </ul>     
+                    
+                </div>
+                
+            </div>
+            <div class="footer_info">
+                <div>
+                    <img src="./img/home/logo-w.png" alt="">
+                    <p>A world class Business Process Outsourcing Service Provider offering contact centre services, back office services, inside sales channel management and professional services Raya Contact Center with its Call Center services caters to clients, including global fortune 500 companies in Europe, Middle East & Africa in 25 different languages.</p>
+                </div>
+                
+                <div class="newsletter">
+                    <h5>OUR NEWS LETTER</h5>
+                    <form action="">
+                        <!-- <div class="ccb">
+                            <input class="styled-checkbox" id="businessInterests" type="checkbox" value="">
+                            <label for="businessInterests">Business Interests</label>
+                        </div>
+                        <div  class="ccb">
+                            <input class="styled-checkbox" id="hrInterests" type="checkbox" value="value1">
+                            <label for="hrInterests">HR Interests</label> 
+                        </div> -->
+                        <div class="ccb">
+                            <span class="wpcf7-form-control-wrap type">
+                                <span class="wpcf7-form-control wpcf7-checkbox styled-checkbox" id="hrInterests">
+                                    <span class="wpcf7-list-item first">
+                                        <input  type="checkbox" name="type[]" value="Business Interests">
+                                        <span  class="wpcf7-list-item-label">Business Interests</span>
+                                    </span>
+                                    <span class="wpcf7-list-item last">
+                                        <input  type="checkbox" name="type[]" value="HR Interests">
+                                        <span  class="wpcf7-list-item-label">Business Interests</span>
+                                    </span>
+                                   
+                                </span>
+                            </span>
+                        </div>
+                        <div class="nameEmailSubmit">
+                            <div class="desktop">
+                                <label  for="name">Name</label>
+                                <span><input type="text" id="name" name="name"></span>
+                                <label  for="email">Email</label>
+                                <span><input type="email" id="email" name="email"></span>
+                                <input value="SUBSCRIBE" type="submit"/>
+                            </div>
+                            
+                            <div class="custom_input_group">
+                                <div class="custom_input">
+                                    <label for="name">Name</label>
+                                    <span><input type="text" id="name"></span>
+                                </div>
+                               
+                                <div class="custom_input">
+                                    <label for="Email">Email</label>
+                                    <span><input type="email" id="Email"></span>
+                                </div>
+                                <input value="SUBSCRIBE" type="submit"/>
+                              
+                            </div>
+                            
+                        </div>
+                        <div class="followUs">
+                            <h4>FOLLOW US</h4>
+                            <a href="" target="_blank"><img src="./img/icons/facebook-logo.png" alt=""></a>
+                            <a href="" target="_blank"><img src="./img/icons/linkedin-letters.png" alt=""></a>
+                            <a href="" target="_blank"><img src="./img/icons/twitter.png" alt=""></a>
+                            <a href="" target="_blank"><img src="./img/icons/youtube.png" alt=""></a>
+                        </div>
+                        
+                        
+                    </form>
+                </div>
+            </div>
+            <div class="footer_foot">
+                <p>© 2020- RAYA CONTACT CENTER . ALL RIGHTS RESERVED. DESIGNED & DEVELOPED BY 
+                   <a href="https://road9media.com/" target="_blank">ROAD9 MEDIA</a> </p>
+            </div>
+        </footer>
+
+
+
+
+
+
+        <div id="loading">
+            <!-- <img src="img/preloader.gif" alt=""> -->
+        </div>  
+       
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/swiper.min.js"></script>
+        <script src="js/jquery.paroller.min.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/particles.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/script.js"></script>
+
+        <script>
+            var autoplay = 5000;
+            var previousid;
+            var previousid2;
+            var previousid3;
+            function move(parent) {      
+            var elem = $(parent).find(" .progress"); 
+           
+            $(elem)[0].style.width = "0px";
+            var width = 1;
+            var autoplayTime = autoplay / 100;
+            
+            
+            
+            clearInterval(previousid);
+             previousid = setInterval(function(_id) { 
+                return function() {
+                    if (width >= 100) {
+                        clearInterval(_id);
+                    } else {
+                        width++; 
+                        $(elem)[0].style.width = width + '%'; 
+                    }
+            }}(previousid), autoplayTime);
+           
+        }
+        function move2(parent) {      
+            var elem = $(parent).find(" .progress"); 
+           
+            // console.log(frame)
+            $(elem)[0].style.width = "0px";
+            var width = 1;
+            var autoplayTime = autoplay / 100;
+            
+            
+            
+            clearInterval(previousid2);
+             previousid2 = setInterval(function(_id) { 
+                return function() {
+                    if (width >= 100) {
+                        clearInterval(_id);
+                    } else {
+                        width++; 
+                        $(elem)[0].style.width = width + '%'; 
+                    }
+            }}(previousid2), autoplayTime);
+           
+        }
+        function move3(parent) {      
+            var elem = $(parent).find(" .progress"); 
+           
+            // console.log(frame)
+            $(elem)[0].style.width = "0px";
+            var width = 1;
+            var autoplayTime = autoplay / 100;
+            
+            
+            
+            clearInterval(previousid3);
+             previousid3 = setInterval(function(_id) { 
+                return function() {
+                    if (width >= 100) {
+                        clearInterval(_id);
+                    } else {
+                        width++; 
+                        $(elem)[0].style.width = width + '%'; 
+                    }
+            }}(previousid3), autoplayTime);
+           
+        }
+
+            var mySwiper = new Swiper ('header .main_slider .swiper-container', {
+                slidesPerView: 1,
+                speed: 700,
+                loop: true,
+                paginationClickable: true,
+                watchSlidesProgress: true,
+                autoplay: {
+                    delay: 5000,
+                },
+                on: {
+                    slideChange : function () {                 
+                    move("header .main_slider ")
+                }
+                },  
+                navigation: {
+                nextEl: 'header .swiper-button-next_w',
+                prevEl: 'header .swiper-button-prev_w',
+                },pagination: {
+                    el: 'header .swiper-pagination',
+                    type: 'fraction',
+                },
+                breakpoints: {
+                    640: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    }
+                    
+                }
+            
+            })
+           
+
+            var mySwiper_2 = new Swiper ('.industries_swiper.swiper-container', {
+                slidesPerView: 'auto',
+                spaceBetween: 15,  
+                speed: 700,
+                loop: $(".industries_swiper.swiper-container").find(".swiper-slide").length > 4 ? true : false,
+                paginationClickable: true,
+                watchSlidesProgress: true,
+                autoplay: {
+                    delay: 5000,
+                },
+                on: {
+                    slideChange : function () {  
+                    move2(".industries_content")
+                }
+                },  
+                navigation: {
+                nextEl: '.industries .swiper-button-next_w',
+                prevEl: '.industries .swiper-button-prev_w',
+                },pagination: {
+                    el: '.industries .swiper-pagination',
+                    type: 'fraction',
+                }
+
+            })
+
+            var mySwiper_3 = new Swiper ('.solutions_swiper.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 0, 
+                speed: 700,
+                loop: $(".solutions_swiper.swiper-container").find(".swiper-slide").length > 1 ? true : false,
+                paginationClickable: true,
+                watchSlidesProgress: true,
+                autoplay: {
+                    delay: 5000,
+                },
+                on: {
+                    slideChange : function () {  
+                    move3(".solutions")
+                }
+                },  
+                navigation: {
+                nextEl: '.solutions .swiper-button-next_b',
+                prevEl: '.solutions .swiper-button-prev_b',
+                },pagination: {
+                    el: '.solutions .swiper-pagination',
+                    type: 'fraction',
+                },
+              
+
+            })
+
+        
+            // WOW ANIMATION
+              new WOW().init();
+              
+              particlesJS('particles-js-blue',
+  
+                {
+                    "particles": {
+                    "number": {
+                        "value": 60,
+                        "density": {
+                        "enable": true,
+                        "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#F2F6FA"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                        },
+                        "polygon": {
+                        "nb_sides": 5
+                        },
+                        "image": {
+                        "src": "img/github.svg",
+                        "width": 2000,
+                        "height": 2000
+                        }
+                    },
+                    "opacity": {
+                        "value": 1,
+                        "random": false,
+                        "anim": {
+                        "enable": false,
+                        "speed": 5,
+                        "opacity_min": 0.1,
+                        "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 12,
+                        "random": true,
+                        "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#F2F6FA",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 4,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                        }
+                    }
+                    },
+                    "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                        },
+                        "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                        },
+                        "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                        },
+                        "repulse": {
+                        "distance": 200
+                        },
+                        "push": {
+                        "particles_nb": 4
+                        },
+                        "remove": {
+                        "particles_nb": 2
+                        }
+                    }
+                    },
+                    "retina_detect": true,
+                    "config_demo": {
+                    "hide_card": false,
+                    "background_color": "#b61924",
+                    "background_image": "",
+                    "background_position": "50% 50%",
+                    "background_repeat": "no-repeat",
+                    "background_size": "cover"
+                    }
+                }
+
+                );
+
+              
+
+        </script>
+    </body>
+
+</html>

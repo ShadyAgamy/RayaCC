@@ -4,6 +4,8 @@ var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 var imagemin = require('gulp-imagemin');
 var sourcemaps = require('gulp-sourcemaps');
+var rtlcss = require('gulp-rtlcss');
+var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 
 //Copy All HTML Files
@@ -36,8 +38,12 @@ gulp.task('css', function () {
             .on('error', sass.logError)
         )
         .pipe(prefix("last 5 version"))
-        .pipe(sourcemaps.write('.'))
+        
         .pipe(gulp.dest('build/css'))
+        .pipe(rtlcss()) // Convert to RTL.
+        .pipe(rename({ suffix: '-rtl'})) // Append "-rtl" to the filename.
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('build/css')) // Output RTL stylesheets.
 });
 
 
