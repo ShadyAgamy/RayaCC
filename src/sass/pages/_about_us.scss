@@ -20,7 +20,8 @@
             @include respond(phone){
                 width: 85%!important;
                 margin-left: 2rem!important;
-                margin-right: -22rem!important;
+                margin-right: -12rem!important;
+                padding: 15rem 4.5rem 0 0;
             }
            
             h3 {
@@ -31,7 +32,7 @@
                 font-weight: 400;
                 text-transform: uppercase;
                 @include respond(phone){
-                    font-size: 35px;
+                    font-size: 30px;
                 }
 
             }
@@ -43,7 +44,7 @@
                 margin-top: 1rem;
                 text-transform: uppercase;
                 @include respond(phone){
-                    font-size: 40px;
+                    font-size: 35px;
                     margin-top: 2rem;
                 }
             }
@@ -219,7 +220,7 @@
                 align-self: flex-end;
             }
             & > img {
-               width: 100%;
+               width: 98%;
             }    
         }
 
@@ -920,8 +921,9 @@
         background-position: -32rem 0rem;
         height: 1100px;
     } 
-    @include respond(tab-land){
+    @include respond(phone){
        display: block;
+       background-position: -42rem 0rem;
     } 
 
     .me_Kh_text {

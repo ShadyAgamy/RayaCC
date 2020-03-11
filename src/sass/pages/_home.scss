@@ -310,6 +310,9 @@
 
         .swiper-container {
             margin-left: 4rem;
+            @include respond(phone){
+                margin-left: 1rem;
+            }
             .swiper-wrapper{
 
                 .swiper-slide{
@@ -319,7 +322,8 @@
                         width: 48%;
                     }
                     @include respond(phone){
-                        width: 95%;
+                        width: 90%;
+
                     }
                     .inds_slide{
                         width: 100%;
@@ -459,6 +463,7 @@
             }
             @include respond(phone){
                 width: 100%;
+                margin-bottom: 0rem;
                 
             }
 
@@ -542,8 +547,9 @@
     @include respond(tab-land){
         flex-direction: column;
         margin: 8rem 0 22rem;
-       
-    
+    }
+    @include respond(phone){
+        margin: 0rem 0 22rem;
     }
     &_text {
         width: 44%;
@@ -566,7 +572,7 @@
             h2 {
                 font-size: 56px;
                 font-weight: 900;
-                width: 76%;
+                width: 73%;
                 text-align: right;
                 line-height: 1;
                 @include respond(phone){
