@@ -321,3 +321,15 @@
    #Menupopup .menu-item.menu-item-has-children .sub-menu {
        margin-top: 0!important;
    }
+
+   .navbar .sub-menu .menu-item {
+   
+   
+    &:hover, &.current-menu-item,&.current-menu-parent{
+        &::before {
+            visibility: hidden;
+           
+        }    
+    }
+}
+ 
