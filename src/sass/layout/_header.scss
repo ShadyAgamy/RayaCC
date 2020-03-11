@@ -83,7 +83,8 @@
                     a {
                         color: white;
                         font-weight: 300;
-                        font-size: 13px;               
+                        font-size: 13px;    
+                        white-space: nowrap;           
                     }
 
                     &:not(:nth-of-type(1)) {
