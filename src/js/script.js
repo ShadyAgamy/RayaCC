@@ -136,9 +136,9 @@ function checkMenuScrollTop() {
            
         }
     }  else { //other pages
-        if(dir == "rtl") {
-            $(".navbar__logo img").attr('src', "img/icons/logoAr.png");
-        }
+        // if(dir == "rtl") {
+        //     $(".navbar__logo img").attr('src', "img/icons/logoAr.png");
+        // }
     }
 }
 

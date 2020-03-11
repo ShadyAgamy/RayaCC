@@ -138,8 +138,44 @@
     .swiper-button-next_w,
     .swiper-button-prev_b,
     .swiper-button-next_b,
-    .main_btn_white a img {
+    .main_btn_white a img,
+    .inquiry_links_b img,
+    .inquiry_links_hr img,
+    .me_Kh .me_Kh_text h2:before,
+    .me_Kh .me_Kh_text h2:after,
+    .DIFFERENTIATORS.loc .DIFFERENTIATORS_loc_link a img,
+    .careers_loc_content_head-toggle img,
+    .apply_now_btn a img,
+    .main_btn_white.submitForm img,
+    .list_pagination_cont .arrows a img {
         transform: rotate(180deg) translateX(0);
     }
-
+    .locations img {
+        margin-left: 0;
+    }
+    .industries_content .swiper-container .swiper-wrapper .swiper-slide .inds_slide,
+    .indstries_listing .inds_slide:before {
+       background-image: url("../img/home/sub_ar.png"); 
+    }
+    .me_Kh {
+        justify-content: flex-start;
+    }
+    .me_Kh .me_Kh_text {
+        transform: translate(-13rem, 19px); 
+    }
+    .DIFFERENTIATORS.loc .DIFFERENTIATORS_loc_link {
+        clip-Path: polygon(0 0, 100% 0%, 100% 100%, 4% 100%);
+    }
+    .w_w_w_us_text {
+        margin-right: 0rem;
+    }
+    .careers_loc_content_head-toggle img.open {
+        transform: rotate(90deg) translateX(0);
+    }
+    .custom_input_group .custom_input .custom_selectbox:before {
+        transform: rotate(-90deg);
+    }
+    .custom_input_group .custom_input .custom_selectbox:before {
+        transform: rotate(-90deg);
+    }
 }

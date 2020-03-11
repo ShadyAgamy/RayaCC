@@ -136,9 +136,9 @@ function checkMenuScrollTop() {
            
         }
     }  else { //other pages
-        if(dir == "rtl") {
-            $(".navbar__logo img").attr('src', "img/icons/logoAr.png");
-        }
+        // if(dir == "rtl") {
+        //     $(".navbar__logo img").attr('src', "img/icons/logoAr.png");
+        // }
     }
 }
 
@@ -249,7 +249,7 @@ var fileInputs  = document.querySelectorAll( ".input-file" ),
         });  
         fileInputArr[i].addEventListener( "change", function( event ) {  
             console.log($(this).parent().next())
-            $(this).parent().parent().next().text($(this).val()); 
+            $(this).parent().parent().next().text($(this).val());
         });  
     }
 
