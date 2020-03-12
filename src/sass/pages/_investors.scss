@@ -334,6 +334,9 @@
     &.overview {
         display: block;
     }
+    &.bod {
+        display: block;
+    }
     &.services {
         .investorContainItem {
             background-color: #F8F8F8;
@@ -702,4 +705,146 @@
     .investorsData .facts.factsWrap .cont {
         justify-content: flex-start;
     }
+}
+
+
+.investorsTabItem_title {
+    color: #58595B;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-weight: 900;
+}
+
+.investorsTabItem_board {
+    display: flex;
+    flex-direction: column;
+
+    &_b {
+        width: 100%;
+        display: flex;
+        background: white;
+        min-height: 310px;
+        padding-bottom: 2rem;
+        margin-bottom: 1.5rem;
+        @include respond(tab-land){
+            flex-direction: column;  
+        }
+        
+        &-imgName {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            margin-right: 3rem;
+            @include respond(tab-land){
+                width: 100%;
+            }
+
+            img {
+                width: 180px;
+                height:180px;
+                border-radius:  0 0 20px 0;
+                margin-bottom: 1rem;
+                
+            }
+            h4 {
+                font-size: 14px;
+                color: #0B63AC;
+                text-transform: capitalize;
+                font-weight: 900;
+                padding: 0 1rem;
+            }
+            span {
+                font-size: 11px;
+                color: #58595B;
+                font-weight: 300;
+                padding: 0 1rem;
+                display: block;
+                &.title {
+                    color: #0B63AC;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        &-text {
+            width: 80%;
+            @include respond(tab-land){
+                width: 100%;
+            }
+
+            p{
+                font-size: 14px;
+                color: #58595B;
+                font-weight: 300;
+                line-height: 1.9;
+                padding-top: 2rem;
+                width: 95%;
+                
+            }
+        }
+    }
+}
+
+.investorsTabsContain.board .investorsTabsKey {
+    width: auto;
+    padding: 0 1rem;
+}
+
+.investorsTabItem_board_b.polices {
+    padding: 3rem 4rem;
+    flex-direction: column;
+
+    .file_cont {
+        display: flex;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        background-color: #EAEAEA;
+        margin-bottom: 1rem;
+
+        img {
+            width: 20px;
+            margin-right: 1rem;
+        }
+
+        p {
+            font-size: 15px;
+            color: #58595B;
+        }
+    }
+}
+
+
+.investorsTabItem_board_b.polices.analyst {
+    .file_cont {
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 10rem;
+        padding: 1.8rem 2rem;
+        span {
+            color : #58595B;
+            font-size: 15px;
+            @include respond(phone){
+                margin-bottom: .3rem;
+            }
+
+            &:nth-of-type(2) {
+                text-transform: capitalize;
+            }
+        }
+
+       
+        &:nth-of-type(even) {
+            background-color: white;  
+        }
+        @include respond(phone){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}
+.analyst.investorsTabItem {
+    display: block;
 }
