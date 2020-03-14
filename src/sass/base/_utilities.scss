@@ -178,4 +178,10 @@
     .custom_input_group .custom_input .custom_selectbox:before {
         transform: rotate(-90deg);
     }
+
+    .main_slider .header__cont-text h1,
+    .header.about .header_main_text h1,
+    .header.about .header_main_text h3 {
+        font-family: 'Cairo', sans-serif!important;
+    }
 }

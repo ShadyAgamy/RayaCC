@@ -2,7 +2,7 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-[rtl] {
+[dir=rtl] {
     *:not(i),*:not(i)::after,*:not(i)::before {
         font-family: 'Cairo', sans-serif!important;
     }
