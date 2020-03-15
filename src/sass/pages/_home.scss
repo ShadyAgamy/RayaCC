@@ -389,7 +389,7 @@
         @include respond(tab-land){
             flex-direction: column;
             position: relative;
-            padding-top: 25rem;
+            padding-top: 15rem;
         }
         @include respond(phone){
             padding-top: 8rem;
@@ -409,7 +409,7 @@
             }
             &-tab {
                 width: 50%;
-                max-width: 290px;
+                max-width: 43%;
                 min-height: 260px;
                 max-height: 290px;
                 display: flex;

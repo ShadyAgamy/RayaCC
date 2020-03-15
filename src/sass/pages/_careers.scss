@@ -63,7 +63,7 @@
     height: 700px;
     align-self: flex-start;
     position: relative;
-        margin-right: -10rem;
+    margin-right: -5rem;
     @include respond(tab-land) {
         align-self: flex-end;
         margin-right: 5rem;
@@ -109,7 +109,7 @@
         .w_w_w_us_text-cont {
             position: absolute;
             top: 20%;
-            right: 50%;
+            right: 52%;
             transform: translate(50%, 0);
             @include respond(phone) {
                 top: 17%;

@@ -119,14 +119,15 @@
     font-size: 25px;
     text-transform: uppercase;
     margin-bottom: 16px;
+    font-weight: 800;
 }
 .investorContainItem {
     background-color: #fff;
-    padding: 32px;
+    padding: 4rem 5rem 6rem;
     p {
         color: #58595B;
         font-size: 14px;
-        line-height: 1.7;
+        line-height: 2;
         font-weight: 300;
     }
 }
@@ -799,7 +800,7 @@
         align-items: center;
         padding: 1.5rem 2rem;
         background-color: #EAEAEA;
-        margin-bottom: 1rem;
+        margin-bottom: 1.6rem;
 
         img {
             width: 20px;
@@ -872,4 +873,8 @@
 .investorsData.DIFFERENTIATORS_tabs {
 display: block;
 min-width: unset;
+}
+
+.irCalendarWrap.investorContainItem .investorsSubTitle {
+    text-align: center;
 }
