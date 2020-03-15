@@ -21,7 +21,7 @@
                 width: 85%!important;
                 margin-left: 2rem!important;
                 margin-right: -12rem!important;
-                padding: 15rem 4.5rem 0 0;
+                padding: 8rem 4.5rem 0 0;
             }
            
             h3 {
@@ -32,7 +32,7 @@
                 font-weight: 400;
                 text-transform: uppercase;
                 @include respond(phone){
-                    font-size: 30px;
+                    font-size: 30px!important;
                 }
 
             }
@@ -44,7 +44,7 @@
                 margin-top: 1rem;
                 text-transform: uppercase;
                 @include respond(phone){
-                    font-size: 35px;
+                    font-size: 35px!important;
                     margin-top: 2rem;
                 }
             }
@@ -1067,11 +1067,11 @@
         .swiper-slide {
             width: 100%;
         }
-        .swiperActionsWrap {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
+        // .swiperActionsWrap {
+        //     position: relative;
+        //     display: flex;
+        //     align-items: center;
+        // }
         .main__footer_toggler {
             margin-left: 16px;
         }
@@ -1083,17 +1083,17 @@
             font-size: 12px;
             
         }
-        .swiper-pagination {
-            width: 160px;
-            height: 2px;
-            background-color: rgba(255,255,255,.5);
-            position: relative;
-            margin-left: 6px;
-            margin-right: 6px;
-            .swiper-pagination-progressbar-fill {
-                background-color: #fff;
-            }
-        }
+        // .swiper-pagination {
+        //     width: 160px;
+        //     height: 2px;
+        //     background-color: rgba(255,255,255,.5);
+        //     position: relative;
+        //     margin-left: 6px;
+        //     margin-right: 6px;
+        //     .swiper-pagination-progressbar-fill {
+        //         background-color: #fff;
+        //     }
+        // }
         .manageBody {
             padding-left: 32px;
             padding-top: 8px;
@@ -1112,6 +1112,14 @@
     }
 }
 
+.managementDataSwiper .main_slider_footer .progress_cont {
+    width: 15rem;
+    height: 2px;
+    position: static;
+    background: #5A95C6;
+    margin-right: 3rem;
+    position: relative;
+}
 
 ul.breadcrumb {
     position: absolute;

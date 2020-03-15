@@ -223,11 +223,10 @@
                 </div>
                 <div class="managementDataSwiper">
                     <div class="managementDataSwiperArrows">
-                        <div class="swiperActionsWrap">
-                            <div class="customPaginationWrap">
-                                <span class="paginationNumb min">01</span>
+                        <div class="swiperActionsWrap main_slider_footer">
+                            <div class="progress_cont">
+                                <div class="progress"></div>
                                 <div class="swiper-pagination"></div>
-                                <span class="paginationNumb max">02</span>
                             </div>
                             <div class="main__footer_toggler">
                                 <div class="swiper-button-prev_w"></div>
@@ -495,34 +494,57 @@
 
                 // management swiper handling
 
-                function getSlidesLength() {
-                    var swiperSlide = $('.managementDataSwiperCont .swiper-slide').length;
-                    var zeroNumb = '';
-                    if(swiperSlide < 10) {
-                        zeroNumb = 0
-                    }
-                    $('.paginationNumb.max').html(zeroNumb + "" + swiperSlide);
-
-                }
-                getSlidesLength()
-                var managementSwiper = new Swiper('.managementImgSwiper .swiper-container', {
-                    slidesPerView: 'auto',
-                    loop: true,
-                    grabCursor: true,
-                });
+                var autoplay = 5000;
+                var previousid;
+             
+                function move(parent) {      
+                var elem = $(parent).find(" .progress"); 
+            
+                $(elem)[0].style.width = "0px";
+                var width = 1;
+                var autoplayTime = autoplay / 100;
+                clearInterval(previousid);
+                previousid = setInterval(function(_id) { 
+                    return function() {
+                        if (width >= 100) {
+                            clearInterval(_id);
+                        } else {
+                            width++; 
+                            $(elem)[0].style.width = width + '%'; 
+                        }
+                }}(previousid), autoplayTime);
+            
+            }
+            
                 var managementDataSwiper = new Swiper('.managementDataSwiper .swiper-container', {
                     loop: true,
                     slidesPerView: 'auto',
                     grabCursor: true,
                     pagination: {
-                        el: '.managementDataSwiper .swiper-pagination',
-                        type: 'progressbar',
+                    el: '.managementDataSwiper .swiper-pagination',
+                    type: 'fraction',
+                    },
+                    paginationClickable: true,
+                    watchSlidesProgress: true,
+                    autoplay: {
+                        delay: 5000,
+                    },
+                    on: {
+                        slideChange : function () {                 
+                        move(".managementDataSwiper ")
+                        }
                     },
                     navigation: {
                         nextEl: '.managementDataSwiper .swiper-button-next_w',
                         prevEl: '.managementDataSwiper .swiper-button-prev_w',
                     },
                     
+                });
+
+                var managementSwiper = new Swiper('.managementImgSwiper .swiper-container', {
+                    slidesPerView: 'auto',
+                    loop: true,
+                    grabCursor: true,
                 });
 
                 managementSwiper.controller.control = managementDataSwiper;

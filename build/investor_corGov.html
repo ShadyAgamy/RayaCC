@@ -19,18 +19,19 @@
     </head>
     <body class="">
 
-        <!-- NavBar 
+         <!-- NavBar 
         ===================================-->
         <nav class="navbar navGray">
             <div  class="navbar__logo">
                 <a href="./index.html"><a href="./index.html"><img src="./img/home/logo.png" src1="./img/home/logo.png" src2="./img/home/logo-w.png" alt="RayaCC Logo"></a></a>
+                
             </div>
             <ul class="nav">
-                <li class="menu-item menu-item-has-children">
-                    <a  class="btn_text" >ABOUT US</a>
+                <li class="menu-item menu-item-has-children current-menu-parent">
+                    <a  class="btn_text  " >ABOUT US</a>
                     <ul class="sub-menu">
-                        <li><a href="./about_us_wwa.html">Who we are </a></li>
-                        <li><a href="">management</a></li>
+                        <li class="current-menu-item"><a href="./about_us_wwa.html">Who we are </a></li>
+                        <li><a href="./about_us_manag.html">management</a></li>
                         <li><a href="./about_us_m_v.html">mission & value</a></li>
                     </ul>
                 </li>
@@ -84,6 +85,77 @@
                 <a href="" class="navbar__menu-link"><span></span></a> 
             </span>
         </nav>
+
+               <!-- Menu Pop up 
+        ===============================================-->
+        <div id="Menupopup" class="popup">
+            <div class="popup__container">
+                <h6 id="menu-close" class="">
+                    <a><img src="img/icons/close.png" alt="Close Icon"></a>
+                </h6>     
+                <div class="popup__menu-cont">                            
+                    <ul class="menu-item_cont">
+                        <li class="menu-item "><a href="./index.html" class=" btn__text">HOME</a></li>
+                        <li class="menu-item menu-item-has-children">
+                            <a  class="btn__text" >ABOUT US</a>
+                            <ul class="sub-menu">
+                                <li class="closeD"><a ><img src="./img/icons/left_w.png" alt="back icon">Back </a></li>
+                                <li><a >ABOUT US</a></li>
+                                <li><a href="./about_us_wwa.html">Who we are </a></li>
+                                <li><a href="./about_us_manag.html">management</a></li>
+                                <li><a href="./about_us_m_v.html">mission & value</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a  class="btn__text" >SOLUTIONS</a>
+                            <ul class="sub-menu">
+                                <li class="closeD"><a ><img src="./img/icons/left_w.png" alt="back icon">Back </a></li>
+                                <li><a >SOLUTIONS</a></li>
+                                <li><a href="./solutions_CEM.html">cx experience management</a></li>
+                                <li><a href="">back office solutions</a></li>
+                                <li><a href="">center of excellence</a></li>
+                                <li><a href="">digital solutions</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a class="btn__text" >LOCATIONS</a>
+                            <ul class="sub-menu">
+                                <li class="closeD"><a ><img src="./img/icons/left_w.png" alt="back icon">Back </a></li>
+                                <li><a >LOCATIONS</a></li>
+                                <li><a href="./locations_E.html">Egypt</a></li>
+                                <li><a href="">uae</a></li>
+                                <li><a href="">poland</a></li>
+                            </ul>
+                            
+                        </li>
+                        <li class="menu-item">
+                            <a href="./industries_listing.html" class="btn__text" >INDUSTRY</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="./careers_gwu.html" class="btn__text" >CAREERS</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="./news_listing.html" class="btn__text" >NEWS</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="" class="btn__text" >INVESTOR RELATIONS</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="" class="btn__text" >CONTACT US</a>
+                        </li>
+                    </ul>
+                    <div class="menu-item langSelect langSelectMobile"  >
+                        <div class="custom_selectbox">
+                            <select name="" id="">
+                                <option value="english">english</option>
+                                <option value="arabic">Arabic</option>
+                            </select>
+                        </div>
+                       
+                    </div>   
+                </div>   
+            </div>       
+        </div> 
 
 
         <!-- Investors Menu
@@ -145,11 +217,11 @@
         <header id="particles-js" class="header about investors_header"> 
             <div class="header_main">
                 <div class="header_main_text">
-                    <h3>INVESTORS RELATIONS</h3>
-                    <h1>CORPORATE GOVERNANCE</h1>
+                    <h3  class="wow fadeInUp" data-wow-duration="1s">INVESTORS RELATIONS</h3>
+                    <h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">CORPORATE GOVERNANCE</h1>
                 </div>
              
-               <div class="header_main_video_cont">
+               <div class="header_main_video_cont wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".6s">
                     <img src="./img/mission-vision/head.jpg" alt="">
                </div>
               
@@ -180,8 +252,8 @@
         
          <!-- Investors Tabs & Data
         =============================-->
-        <section class="investorsData">
-            <section class="investorsTabsContain board">
+        <section class="investorsData DIFFERENTIATORS_tabs">
+            <section class="investorsTabsContain board wow fadeInUp" data-wow-duration="1s">
                 <div class="investorsTabsWrap">
                     <div class="investorsTabsKey active" related-data="bod">
                         <strong>BOARD OF DIRECTORS</strong>
@@ -200,8 +272,18 @@
                     </div>
                 </div>
             </section>
+            <div class="custom_selectbox">
+                <select id="tab_mobile">
+                    <option value="bod">BOARD OF DIRECTORS</option>
+                    <option  value="bc">BOARD COMMITTEES</option>
+                    <option  value="pol">POLICIES</option>
+                    <option  value="csr">CORPORATE SOCIAL RESPONSIBILITIES</option>
+                    <option  value="hse">HEALTH, SAFTY & ENVIRONMENT</option>
+                   
+                </select>
+            </div>
 
-            <div class="investorsDataContain">
+            <div class="investorsDataContain wow fadeInUp" data-wow-duration="1s">
                 <div class="investorsDataWrap">
                     <div class="investorsDataLeft">
                         <div class="bod investorsTabItem">
@@ -528,6 +610,16 @@
                         }
                     }
                 });
+
+                $("#tab_mobile").on("change", () => {
+                    var relatedData = $("#tab_mobile").val();
+                    $('.investorsTabItem').hide();
+                    $('.' + relatedData).fadeIn('fast');
+                    
+                } )
+
+               
+          
                 
             });
         </script>

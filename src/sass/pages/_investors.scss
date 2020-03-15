@@ -695,8 +695,7 @@
 }
 @media (max-width: 768px) {
     .investorsData {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        padding: 3rem 1.5rem;
     }
     .investorsTabItem.services .investorContainItem {
         padding-left: 0;
@@ -847,4 +846,30 @@
 }
 .analyst.investorsTabItem {
     display: block;
+}
+
+.investorsTabsContain {
+    @include respond(phone){
+        display: none;
+    }
+}
+
+.investorsData .custom_selectbox {
+    display: none;
+    @include respond(phone){
+        display: block;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        #tab_mobile {
+            border-radius: 0;
+            border: 1px solid #A7A9AC;
+            font-weight: bold;
+        }
+    }
+}
+
+.investorsData.DIFFERENTIATORS_tabs {
+display: block;
+min-width: unset;
 }
