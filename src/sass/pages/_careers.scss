@@ -674,11 +674,15 @@
 .solutionsTabs.Locations.car {
     display: flex;
    
-    @include respond(tab-land) {
+    // @include respond(tab-land) {
+    //     margin-top: 9rem;
+    //     padding: 6rem 4.5rem 8rem 0;
+    //  }
+
+     @media(max-width: 80em) {
         margin-top: 9rem;
         padding: 6rem 4.5rem 8rem 0;
      }
-
     a {
         padding:  2.5rem;
         @include respond(tab-land) {
@@ -687,3 +691,9 @@
     }
 }
 
+.solutionsTabs {
+    @media(max-width: 80em) {
+        margin-top: 9rem;
+        padding: 6rem 4.5rem 8rem 0;
+     }
+}
