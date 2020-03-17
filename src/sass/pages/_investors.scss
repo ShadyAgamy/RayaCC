@@ -129,6 +129,10 @@
         font-size: 14px;
         line-height: 2;
         font-weight: 300;
+
+        &:not(:last-of-type) {
+            padding-bottom: 4rem;
+        }
     }
 }
 .latestInvestorPres {
@@ -316,11 +320,12 @@
         font-size: 12px;
         text-transform: uppercase;
         height: 50px;
-        width: 128px;
+        min-width: 128px;
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        padding: 0 .7rem;
         
         &:not(:last-child) {
             margin-right: 16px;
@@ -332,7 +337,7 @@
 }
 .investorsTabItem {
     display: none;
-    &.overview {
+    &.overview, &.open {
         display: block;
     }
     &.bod {
@@ -745,6 +750,7 @@
                 height:180px;
                 border-radius:  0 0 20px 0;
                 margin-bottom: 1rem;
+                object-fit: cover;
                 
             }
             h4 {
@@ -801,6 +807,11 @@
         padding: 1.5rem 2rem;
         background-color: #EAEAEA;
         margin-bottom: 1.6rem;
+        transition: all .3s ease;
+
+        &:hover {
+            background: #D8D8D8;
+        }
 
         img {
             width: 20px;
@@ -878,3 +889,60 @@ min-width: unset;
 .irCalendarWrap.investorContainItem .investorsSubTitle {
     text-align: center;
 }
+
+
+// accordion style
+
+.accordion {
+    cursor: pointer;
+    padding: 18px 0;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+   
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
+  }
+
+  .polices .accordion {
+    display: flex;
+    align-items: center;
+    background: transparent;
+
+    .nubmer {
+        color: #4184C5;
+        font-size: 25px;
+        font-weight: bold;
+        margin-right: 1rem;
+    }
+    .line {
+        width: 80%;
+        height: 1px;
+        background-color: #DADAD9;
+        flex-grow: 1;
+        margin-right: 1.5rem;
+        margin-top: .3rem;
+    }
+
+    img {
+        transition: all 0.2s ease-out;
+
+        &.active {
+            transform: rotate(-90deg);
+        }
+    }
+ 
+
+  }
