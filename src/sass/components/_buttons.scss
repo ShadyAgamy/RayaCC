@@ -97,6 +97,7 @@
                 margin-left: 5rem;
                 width: 7px;
                 transition: all .8s ease ;
+                transform: translateX(0) rotate(0);
             }
     
         }
@@ -141,13 +142,21 @@
 
     &:hover {
         img {
-            transform: translateX(10px) rotate(180deg)!important;
+            transform: translateX(10px) rotate(0);
             
         }
     }
 }
 
-
+[dir="rtl"] {
+    .main_btn_white img {
+        transform: translateX(0) rotate(-180deg)!important;
+    }
+    .main_btn_white:hover img {
+        transform: translateX(10px) rotate(-180deg)!important;
+    }
+    
+} 
 
 .list_pagination {
     width: 100%;

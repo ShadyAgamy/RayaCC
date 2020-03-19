@@ -901,6 +901,7 @@ min-width: unset;
     border: none;
     outline: none;
     transition: 0.4s;
+
   }
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -910,10 +911,14 @@ min-width: unset;
   
   /* Style the accordion panel. Note: hidden by default */
   .panel {
-   
-    max-height: 0;
+   display: none;
+    // max-height: 0;
     overflow: hidden;
-    transition: all 0.2s ease-out;
+   
+
+    &:nth-of-type(1) {
+        display: block;
+    }
   }
 
   .polices .accordion {

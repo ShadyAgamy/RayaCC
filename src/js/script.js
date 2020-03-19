@@ -330,19 +330,54 @@ function myFunction(checkMedia) {
     
   
     //   accordion toggle
+    // var acc = document.getElementsByClassName("accordion");
+    // var accImg = $(".accordion img");
+    // var accPanel = $(".accordion + .panel");
+    // var i;
+   
+    
+    // for (i = 0; i < acc.length; i++) {
+        
+    // acc[i].addEventListener("click", function() {
+    //     for (var x = 0; x < acc.length; x++) {
+    //         console.log(this)
+    //         $(this).removeClass("active");
+    //         $(this).find("img").removeClass("active")
+    //         accPanel[x].style.maxHeight = "0";
+    //     }
+    //     this.classList.toggle("active");
+    //     $(this).find("img").toggleClass("active")
+    //     var panel = this.nextElementSibling;
+    //     if (panel.style.maxHeight !== "0") {
+    //     // panel.style.maxHeight = null;
+    //     } else {
+    //     panel.style.maxHeight = panel.scrollHeight + "px";
+    //     }
+    // });
+    // }
+
+
     var acc = document.getElementsByClassName("accordion");
     var i;
+    var last;
+
+    
 
     for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
+        // for (var x = 0; x < acc.length; x++) {
+            if (last) {
+                $(acc).eq(i).removeClass("active");
+                $(acc).eq(i).find("img").removeClass("active")
+                $(acc).eq(i).next().slideUp();
+            }
+            
+        // }
         this.classList.toggle("active");
         $(this).find("img").toggleClass("active")
         var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-        } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-        }
+        $(panel).slideToggle();
+        last=this;
     });
     }
   

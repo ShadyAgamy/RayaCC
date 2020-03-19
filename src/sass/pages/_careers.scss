@@ -175,6 +175,7 @@
    }
 
    .solutions_content_slider {
+       width: 50%;
     @include respond(tab-land) {
         flex-direction: column;
         width: 78%;
@@ -692,8 +693,5 @@
 }
 
 .solutionsTabs {
-    @media(max-width: 80em) {
-        margin-top: 9rem;
-        padding: 6rem 4.5rem 8rem 0;
-     }
+   
 }

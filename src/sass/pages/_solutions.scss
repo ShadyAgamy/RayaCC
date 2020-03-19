@@ -1,13 +1,17 @@
 .solutionsTabs {
     display: flex;
     align-items: center;
-    padding: 0 4.5rem;
+    padding: 0 2.5rem;
     position: relative;
     z-index: 9999;
-    @include respond(tab-land) {
+    margin-top: -2px;
+     @media(max-width: 80em) {
+        padding: 0rem 0 8rem 2.5rem;
+     }
+     @include respond(tab-land) {
         display: none;
      }
-
+     
     a {
         width: 65px;
         padding: 2rem 1rem 1.5rem;
@@ -115,6 +119,7 @@
 
     .tabcontents {
         background-color: white;
+        justify-content: center;
         .tabcontent {
             margin-top: -7rem; 
         }

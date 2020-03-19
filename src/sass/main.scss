@@ -135,3 +135,7 @@
   .tooltip:hover .tooltiptext {
     visibility: visible;
   }
+
+  .intl-tel-input .selected-flag .iti-flag {
+    z-index: 99999;
+  }
