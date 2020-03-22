@@ -33,16 +33,17 @@ gulp.task('imagemin', () =>
 
 gulp.task('css', function () {
     return gulp.src('src/sass/main.scss')
-        .pipe(sourcemaps.init())
+        
         .pipe(sass({outputStyle: 'compressed'})
             .on('error', sass.logError)
         )
         .pipe(prefix("last 5 version"))
-        .pipe(sourcemaps.write('.'))
+        
         .pipe(gulp.dest('build/css'))
         .pipe(rtlcss()) // Convert to RTL.
+        .pipe(sourcemaps.init())
         .pipe(rename({ suffix: '-rtl'})) // Append "-rtl" to the filename.
-        
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('build/css')) // Output RTL stylesheets.
 });
 

@@ -139,3 +139,10 @@
   .intl-tel-input .selected-flag .iti-flag {
     z-index: 99999;
   }
+
+  .simplebar-scrollbar {
+    width: 4px; 
+  }
+  .simplebar-scrollbar:before {
+    background: #b9b8b8!important;
+  }
