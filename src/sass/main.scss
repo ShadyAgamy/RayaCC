@@ -146,3 +146,47 @@
   .simplebar-scrollbar:before {
     background: #b9b8b8!important;
   }
+
+  // calender plugin override
+
+  .fc-button-primary {
+    &,&:hover,&:active,&:focus {
+      color: #0B63AC!important;
+      background-color: transparent!important;
+      border-color: transparent!important;
+      border: none!important;
+      box-shadow: unset!important;
+    }
+   
+  }
+
+  .fc-button.fc-button-primary  {
+    height: 2rem;
+    background-repeat: no-repeat;
+    & > span {
+      display: none;
+    }
+    
+
+    &.fc-prev-button {
+      background-image: url("../img/icons/left_b.png");
+    }
+
+    &.fc-next-button {
+      background-image: url("../img/icons/right_b.png");
+    }
+    
+  }
+
+  .fc-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .fc-today-button {
+    color: #0B63AC;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 0;
+  }

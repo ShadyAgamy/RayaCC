@@ -1,5 +1,0 @@
-body {direction:rtl;}
-
-*:not(i), *:not(i)::after, *:not(i)::before {
-    font-family: arabicFont;
-}

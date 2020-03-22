@@ -353,6 +353,7 @@
                             </div>
                             <div class="investorContainItem capacityEvo">
                                 <h2 class="investorsSubTitle">CAPACITY EVOLUTION</h2>
+                                <canvas id="myChart" data-json='{"2001":200,"2002":200,"2003":200,"2004":300,"2005":300,"2006":800,"2007":1150,"2008":1850,"2009":2150,"2010":2900,"2011":3250,"2012":3250,"2013":3450,"2014":3850,"2015":4470,"2016":4850,"2017":5715,"2018":6688,"2019":6909}'></canvas>
                             </div>
                             <div class="investorContainItem serviceEvo">
                                 <h2 class="investorsSubTitle">SERVICE EVOLUTION</h2>
@@ -1165,6 +1166,7 @@
         <script src="js/wow.min.js"></script>
         <script src="js/particles.min.js"></script>
         <script src="js/app.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js" integrity="sha256-TQq84xX6vkwR0Qs1qH5ADkP+MvH0W+9E7TdHJsoIQiM=" crossorigin="anonymous"></script>
         <script src="js/script.js"></script>
 
         <script>
@@ -1205,6 +1207,39 @@
                     }
                 });
                 
+            });
+            var data = JSON.parse($("#myChart").attr('data-json')) || {};
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: Object.keys(data),
+                datasets: [{
+                    label: 'No. of Workstations Evolution',
+                    data: Object.values(data), // Specify the data values array
+                    fill: false,
+                    lineTension: 0,
+                    showLine: true,
+                    borderColor: '#0B63AC', // Add custom color border (Line)
+                    backgroundColor: '#FFFFFF', // Add custom color background (Points and Fill)
+                    borderWidth: 1 // Specify bar border width
+                }]},
+            options: {
+                responsive: true, // Instruct chart js to respond nicely.
+                maintainAspectRatio: true, // Add to prevent default behaviour of full-width/height 
+				scales: {
+					xAxes: [{
+						gridLines: {
+							color: "transparent",
+						}
+					}],
+					yAxes: [{
+						gridLines: {
+							color: "transparent",
+						}
+					}]
+				}
+            }
             });
         </script>
     </body>
