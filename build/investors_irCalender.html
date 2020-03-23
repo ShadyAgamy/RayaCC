@@ -193,6 +193,29 @@
                 <div class="investorsDataWrap">
                     <div class="investorsDataLeft">
                         <div id='calendar'></div>
+                        <div id="eventContent" class="ev_cont" title="Event Details" style="display: none;">
+                            <div>
+                                <div id="closeEve">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                                <span id="startDate"></span>
+                                <h5 id="eventName"></h5>
+                                <div class="fromTo">
+                                    <img src="./img/icons/clock-blueoutline.png" alt="">
+                                    <span>form</span>
+                                    <div id="timeFrom"></div>
+                                    <span class="to">to</span>
+                                    <div id="timeTo"></div>
+                                </div>
+                                <div class="evDesc">
+                                    <img src="./img/icons/map-pin-blue-outline.jpg" alt="">
+                                    <p id="eventInfo"></p>
+                                </div>
+                                
+                               
+                            </div>
+                        </div>
+                       
 
                     </div>
                     <div class="investorsDataRight">
@@ -418,9 +441,7 @@
         <script src="js/particles.min.js"></script>
         <script src="js/app.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js" integrity="sha256-TQq84xX6vkwR0Qs1qH5ADkP+MvH0W+9E7TdHJsoIQiM=" crossorigin="anonymous"></script>
-        <!-- <script src="js/moment.js"></script>
-        <script src="js/fullcalendar.js"></script>
-        <script src="js/dayGrid.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js" integrity="sha256-AdQN98MVZs44Eq2yTwtoKufhnU+uZ7v2kXnD5vqzZVo=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.js" integrity="sha256-GBryZPfVv8G3K1Lu2QwcqQXAO4Szv4xlY4B/ftvyoMI=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/interaction/main.min.js" integrity="sha256-MUHmW5oHmLLsvmMWBO8gVtKYrjVwUSFau6pRXu8dtnA=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.js" integrity="sha256-FT1eN+60LmWX0J8P25UuTjEEE0ZYvpC07nnU6oFKFuI=" crossorigin="anonymous"></script>
@@ -440,6 +461,8 @@
     plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
     defaultView: 'dayGridMonth',
     defaultDate: '2020-03-22',
+    
+    editable: true,
     customButtons: {
             datePickerButton: {
                 themeIcon:'circle-triangle-s',
@@ -449,7 +472,7 @@
                 }
             }
         },
-        title : { year: 'numeric', month: 'long', day: 'numeric' },
+        title : { year: 'numeric', month: 'numeric', day: 'numeric' },
     header: {
       left: 'prev,next today, title',
       center: '',
@@ -458,7 +481,9 @@
     events: [
       {
         title: 'Lorem ipsum dol..',
-        start: '2020-03-01'
+        start: '2020-03-01',
+        startEditable : true
+        
       },
       {
         title: 'Long Event',
@@ -483,7 +508,8 @@
       {
         title: 'Meeting',
         start: '2020-03-12T10:30:00',
-        end: '2020-03-12T12:30:00'
+        end: '2020-03-12T12:30:00',
+        constraint: 'This is a cool event'
       },
       {
         title: 'Lunch',
@@ -498,7 +524,17 @@
         start: '2020-03-13T07:00:00'
       },
       
-    ]
+    ],
+    eventClick:  function(event, jsEvent, view) {
+        $("#eventContent").fadeIn(300).css("display", "flex")
+        $("#startDate").html(event.event.start.toLocaleDateString());
+        $("#eventName").html(event.event.title);
+        $("#timeFrom").html(moment(event.event.start).format('h:mm a'));
+        $("#timeTo").html(moment(event.event.end).format('h:mm a'));
+        $("#eventInfo").html(event.event.constraint);
+  
+    }
+    
   });
 
   calendar.render();

@@ -159,7 +159,17 @@
     }
    
   }
-
+  .fc-button-group {
+    margin-top: 1rem;
+  }
+  .fc-toolbar.fc-header-toolbar {
+    margin-bottom: 2em;
+  }
+  .fc-ltr .fc-dayGrid-view .fc-day-top .fc-day-number {
+    float: left;
+    font-size: 2rem;
+    color: #A7A9AC;
+  }
   .fc-button.fc-button-primary  {
     height: 2rem;
     background-repeat: no-repeat;
@@ -170,6 +180,7 @@
 
     &.fc-prev-button {
       background-image: url("../img/icons/left_b.png");
+      margin-right: .5rem;
     }
 
     &.fc-next-button {
@@ -189,4 +200,83 @@
     text-transform: capitalize;
     font-weight: bold;
     padding: 0;
+  }
+
+  .fc-event, .fc-event:hover {
+    background-color: transparent;
+    color: #58595B;
+    border: unset;
+
+  }
+  .ev_cont {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    & > div {
+        width : 50%;
+        min-height: 200px;
+        padding: 2rem;
+        background-color: white;
+        position: relative;
+
+        #closeEve {
+          position: absolute;
+          top: 2rem;
+          right: 2rem;
+            i {
+              font-size: 1.8rem;
+              color: #58595B;
+              cursor: pointer;
+            }
+        }
+
+        #startDate {
+          color: #58595B;
+          font-size: 14px;
+          font-weight: 700;
+          display: block;
+          margin-bottom: .3rem;
+        }
+
+        #eventName {
+          font-size: 19px;
+          color: #0B63AC;
+          margin-bottom: 1rem;
+        }
+
+        .fromTo {
+          display: flex;
+          align-items: center;
+          margin-bottom: 1rem;
+          span, div{
+            color : #58595B;
+            font-size: 15px;
+          }
+          .to {
+            margin: 0 .3rem;
+          }
+ 
+        }
+        img{
+          width: 14px;
+          margin-right: .3rem;
+        } 
+
+        #eventInfo {
+          color : #58595B;
+            font-size: 15px;
+        }
+
+        .evDesc {
+          display: flex;
+          align-items: center;
+        }
+    }
   }

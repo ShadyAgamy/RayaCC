@@ -10,6 +10,9 @@
         crossorigin="anonymous">
         <link rel="stylesheet" href="css/swiper.min.css">
         <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.css" integrity="sha256-Lfe6+s5LEek8iiZ31nXhcSez0nmOxP+3ssquHMR3Alo=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.css" integrity="sha256-AVsv7CEpB2Y1F7ZjQf0WI8SaEDCycSk4vnDRt0L2MNQ=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.css" integrity="sha256-DOWdbe6a1VwJwFpkimY6z5tW9mmrBNre2jZsAige5PE=" crossorigin="anonymous" />
          <link rel="stylesheet" type="text/css" href="css/main.css">
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
@@ -290,6 +293,7 @@
                         <div class="investorsDataRight">
                             <div class="irCalendarWrap investorContainItem">
                                 <h2 class="investorsSubTitle">IR Calendar</h2>
+                                <div id='calendar'></div>
                             </div>
                             <div class="latestInvestorPres investorContainItem">
                                 <div class="latestInvestorPresIn">
@@ -522,6 +526,11 @@
         <script src="js/wow.min.js"></script>
         <script src="js/particles.min.js"></script>
         <script src="js/app.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js" integrity="sha256-AdQN98MVZs44Eq2yTwtoKufhnU+uZ7v2kXnD5vqzZVo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.js" integrity="sha256-GBryZPfVv8G3K1Lu2QwcqQXAO4Szv4xlY4B/ftvyoMI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/interaction/main.min.js" integrity="sha256-MUHmW5oHmLLsvmMWBO8gVtKYrjVwUSFau6pRXu8dtnA=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.js" integrity="sha256-FT1eN+60LmWX0J8P25UuTjEEE0ZYvpC07nnU6oFKFuI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.js" integrity="sha256-L9T+qE3Ms6Rsuxl+KwLST6a3R/2o6m33zB5mR2KyPjU=" crossorigin="anonymous"></script>
         <script src="js/script.js"></script>
 
         <script>
@@ -550,7 +559,39 @@
 
             // WOW ANIMATION
               new WOW().init();
-            
+
+              // FullCalendar Latest
+// Script modified from the "theme.html" demo file
+
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
+    defaultView: 'dayGridMonth',
+    contentHeight: 300,
+    
+    editable: true,
+    customButtons: {
+            datePickerButton: {
+                themeIcon:'circle-triangle-s',
+                click: function () {
+                    $('#datepicker').datepicker("show");
+
+                }
+            }
+        },
+        title : { year: 'numeric', month: 'numeric', day: 'numeric' },
+    header: {
+      left: 'prev,next , title',
+      center: '',
+      right: ''
+    }
+    
+  });
+
+  calendar.render();
+});
             
         </script>
     </body>

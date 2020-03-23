@@ -977,5 +977,82 @@ min-width: unset;
 
 
 
-//   calender icons
+// calender style for homepage
+.irCalendarWrap.investorContainItem {
+    #calendar {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 10px;
+    }
+
+    .fc-toolbar {
+        font-size: .9em;
+        margin-bottom: 1em;
+        .fc-left {
+            width: 100%;
+            justify-content: space-between; 
+        }
+    }
+    .fc-toolbar h2 {
+        font-size: 14px;
+        white-space: normal !important;
+        color:#0B63AC;
+    }
+    .fc td, .fc th {
+        border-style: none !important;
+      }
+    
+    /* click +2 more for popup */
+    .fc-more-cell a {
+        display: block;
+        width: 85%;
+        margin: 1px auto 0 auto;
+        border-radius: 3px;
+        background: grey;
+        color: transparent;
+        overflow: hidden;
+        height: 4px;
+    }
+    .fc-more-popover {
+        width: 100px;
+    }
+    .fc-view-month .fc-event, .fc-view-agendaWeek .fc-event, .fc-content {
+        font-size: 0;
+        overflow: hidden;
+        height: 2px;
+    }
+    .fc-view-agendaWeek .fc-event-vert {
+        font-size: 0;
+        overflow: hidden;
+        width: 2px !important;
+    }
+    .fc-agenda-axis {
+        width: 20px !important;
+        font-size: .7em;
+    }
+    
+    .fc-button-content {
+        padding: 0;
+    }
+    .fc-ltr .fc-dayGrid-view .fc-day-top .fc-day-number {
+        font-size: 14px;
+        padding: 7px 8px;
+        color : #58595B;
+    }
+    .fc-day-top.fc-mon.fc-today {
+        span {
+            color: #0B63AC!important;
+            background-color: #D0D0CF;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+    } 
+    .fc-button.fc-button-primary.fc-prev-button {
+        margin-right: 1.5rem;
+    }
+    .fc-unthemed th {
+        color :#A7A9AC;
+    }
+}
+
 

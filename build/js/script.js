@@ -355,6 +355,16 @@ function myFunction(checkMedia) {
     }
   
 
+    $("#eventContent").click(function(){
+        $(this).fadeOut(300);
+    });
+   $("#eventContent > div").click(function(e) {
+        e.stopPropagation();
+   });
+
+   $("#closeEve").click(function(){
+    $("#eventContent").fadeOut(300);
+});
 
     
 }); //jquery end
