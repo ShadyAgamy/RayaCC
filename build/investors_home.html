@@ -218,11 +218,11 @@
         <header id="particles-js" class="header about investors_header"> 
             <div class="header_main">
                 <div class="header_main_text">
-                    <h3>INVESTORS RELATIONS</h3>
-                    <h1>HOME</h1>
+                    <h3 class="wow fadeInUp" data-wow-duration="1s">INVESTORS RELATIONS</h3>
+                    <h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">HOME</h1>
                 </div>
              
-               <div class="header_main_video_cont">
+               <div class="header_main_video_cont wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".6s">
                     <img src="./img/mission-vision/head.jpg" alt="">
                </div>
               
@@ -232,7 +232,7 @@
 
         <section class="investorsBCContain">
             <div class="investorsBCWrap">
-                <div class="investorsMenuKeyWrap">
+                <div class="investorsMenuKeyWrap ">
                     <div class="investorsMenuKey">
                         <div class="navbar__menu-link"><span></span></div>
                         <strong>MENU</strong>
@@ -252,8 +252,8 @@
             <div class="investorsDataWrap">
                 <div class="investorsDataLeft">
                     <div class="factsWrap facts" id="facts">
-                        <h2 class="investorsSubTitle">FACTS</h2>
-                        <div class="cont">
+                        <h2 class="investorsSubTitle wow fadeInUp" data-wow-duration="1s">FACTS</h2>
+                        <div class="cont wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                             <div class="facts__counter ">
                                 <div class="facts__counter--content">
                                     <span class="facts__counter--number" num="1"># <span class="num">0</span></span>
@@ -292,19 +292,19 @@
                     <div class="investorsDataWrap innerDataWrap">
                         <div class="investorsDataRight">
                             <div class="irCalendarWrap investorContainItem">
-                                <h2 class="investorsSubTitle">IR Calendar</h2>
-                                <div id='calendar'></div>
+                                <h2 class="investorsSubTitle wow fadeInUp" data-wow-duration="1s">IR Calendar</h2>
+                                <div id='calendar' class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s"></div>
                             </div>
-                            <div class="latestInvestorPres investorContainItem">
-                                <div class="latestInvestorPresIn">
+                            <div class="latestInvestorPres investorContainItem wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                                <div class="latestInvestorPresIn" >
                                     <a href="#" class="investorsSubTitle">Latest Invesotr Presentation</a>
                                 </div>
                             </div>
                         </div>
                         <div class="investorsDataLeft">
                             <div class="investorContainItem">
-                                <h2 class="investorsSubTitle">ABOUT RAYA CONTACT CENTRE</h2>
-                                <p>
+                                <h2 class="investorsSubTitle wow fadeInUp" data-wow-duration="1s">ABOUT RAYA CONTACT CENTRE</h2>
+                                <p class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                                     Raya Contact Centre (RCC) is a world-class business process outsourcing (BPO) and contact centre outsourcing (CCO) service provider offering contact centre, professional, back office and digital services to global clients, including Fortune 100 companies in the Middle East, Europe, Africa, & North America in over 25 different languages. Raya Contact Centre operated ten top-of-the-line facilities, spanning eight facilities in various locations around Egypt, one facility in Dubai, UAE, and one in Warsaw, Poland, with over 8,500+ seat capacity and 6,500+ employee. RCC serves a diversified clientele base of over 100+ clients operating in the EMEA region, focusing on high growth industries, namely telecom & media, technology & consumer electronics, travel & hospitality, banking, automotive, and retail industries. Raya Contact Centre is the number one BPO provider in Egypt boasting the largest market share by total FTEs (Full Time Equivalent), and aspires to be the leading BPO provider in the MENA region. Raya Contact Centre is the only listed BPO player on the Egyptian Stock Exchange, and is currently trading under the symbol “RACC.CA”
                                 </p>
                             </div>
@@ -531,6 +531,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/interaction/main.min.js" integrity="sha256-MUHmW5oHmLLsvmMWBO8gVtKYrjVwUSFau6pRXu8dtnA=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.js" integrity="sha256-FT1eN+60LmWX0J8P25UuTjEEE0ZYvpC07nnU6oFKFuI=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.js" integrity="sha256-L9T+qE3Ms6Rsuxl+KwLST6a3R/2o6m33zB5mR2KyPjU=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+        <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/tooltip-js@3.0.0/dist/tooltip.min.js"></script> -->
+        
         <script src="js/script.js"></script>
 
         <script>
@@ -560,8 +565,7 @@
             // WOW ANIMATION
               new WOW().init();
 
-              // FullCalendar Latest
-// Script modified from the "theme.html" demo file
+
 
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
@@ -586,7 +590,69 @@ document.addEventListener('DOMContentLoaded', function() {
       left: 'prev,next , title',
       center: '',
       right: ''
-    }
+    },
+    editable: true,
+        
+
+    events: [
+      {
+        title: 'Lorem ipsum dol..',
+        start: '2020-03-01',
+        startEditable : true
+        
+      },
+      {
+        title: 'Long Event',
+        start: '2020-03-07',
+        startEditable : true
+        
+      },
+      {
+        groupId: '999',
+        title: 'Repeating Event',
+        start: '2020-03-09T16:00:00',
+        startEditable : true
+      },
+      {
+        groupId: '999',
+        title: 'Repeating Event',
+        start: '2020-03-16T16:00:00'
+      },
+      {
+        title: 'Conference',
+        start: '2020-03-11',
+        end: '2020-03-13'
+      },
+      {
+        title: 'Meeting',
+        start: '2020-03-12T10:30:00',
+        end: '2020-03-12T12:30:00',
+        constraint: 'This is a cool event'
+      },
+      {
+        title: 'Lunch',
+        start: '2020-03-12T12:00:00'
+      },
+      {
+        title: 'Meeting',
+        start: '2020-03-12T14:30:00'
+      },
+      {
+        title: 'Birthday Party',
+        start: '2020-03-13T07:00:00'
+      },
+      
+    ],
+    eventClick:  function(event, jsEvent, view) {
+       console.log("view")
+  
+    },
+    eventMouseover: function (event, jsEvent, view) {
+            if (view.name !== 'agendaDay') {
+                $(jsEvent.target).attr('title', event.title);
+            }
+        },
+    
     
   });
 
@@ -597,3 +663,18 @@ document.addEventListener('DOMContentLoaded', function() {
     </body>
 
 </html>
+
+
+
+<!-- 
+        width: 111px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    height: 2rem;
+    font-size: 10px;
+ -->

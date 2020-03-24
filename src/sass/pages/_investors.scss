@@ -591,6 +591,9 @@
         &.darkblue {
             background-color: #143B64;
         }
+        &.green {
+            background-color: #00B050;
+        }
     }
 }
 .mainServicesWrap {
@@ -1039,7 +1042,7 @@ min-width: unset;
         padding: 7px 8px;
         color : #58595B;
     }
-    .fc-day-top.fc-mon.fc-today {
+    .fc-day-top.fc-today {
         span {
             color: #0B63AC!important;
             background-color: #D0D0CF;
@@ -1055,4 +1058,8 @@ min-width: unset;
     }
 }
 
-
+.financial.investorsTabItem{
+    .investorsTabItem_board_b.polices {
+        max-height: unset;
+    }
+}
