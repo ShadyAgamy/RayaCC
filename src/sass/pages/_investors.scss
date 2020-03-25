@@ -724,7 +724,11 @@
         padding-bottom: 2rem;
         margin-bottom: 1.5rem;
         min-height: 320px;
-        max-height: 320px;
+
+        &.fixedH {
+            max-height: 320px;
+        }
+        
         @include respond(tab-land){
             flex-direction: column;  
         }

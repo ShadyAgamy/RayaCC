@@ -286,7 +286,7 @@
 
 
   // test for calender plugins
-
+.irCalendarWrap.investorContainItem {
   .popper,
   .tooltip {
     position: absolute;
@@ -384,6 +384,8 @@
     margin-left: 0;
     margin-right: 0;
   }
+}
+  
   
  .irCalendarWrap.investorContainItem .fc-content {
     font-size: 0;
