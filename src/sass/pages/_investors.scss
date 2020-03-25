@@ -436,8 +436,8 @@
     .swiper-slide {
         height: auto;
         width: 200px;
-        margin-right: 20px;
-        margin-left: 20px;
+        margin-right: 14px;
+        margin-left: 19px;
         transition: all .3s ease-in-out;
         opacity: 0.2;
         &:after {
@@ -482,13 +482,13 @@
         opacity: 0.4;
     }
     .swiper-slide-active {
-        transform: scale(1.1);
-        margin-right: 31px;
-        margin-left: 33px;
+        transform: scale(1.2);
+        margin-right: 42px;
+        margin-left: 51px;
         opacity: 1;
     }
     .swiper-container {
-        padding: 16px 0;
+        padding: 32px 0;
         padding-right: 33px;
     }
     .swiper-button-next_w,
@@ -567,6 +567,12 @@
     }
 }
 .serviceEvoItemsWrap {
+    &:last-child {
+        .serviceEvoItem {
+            margin-bottom: 0;
+        }
+        
+    }
     .serviceEvoItem {
         color: #fff;
         border-radius: 12px;
@@ -576,24 +582,6 @@
         align-items: center;
         margin-bottom: 8px;
         font-size: 10px;
-        &:last-child {
-            margin-bottom: 0;
-        }
-        &.black {
-            background-color: #58595B;
-        }
-        &.lightblue {
-            background-color: #4184C5;
-        }
-        &.blue {
-            background-color: #0B63AC;
-        }
-        &.darkblue {
-            background-color: #143B64;
-        }
-        &.green {
-            background-color: #00B050;
-        }
     }
 }
 .mainServicesWrap {
@@ -1061,5 +1049,57 @@ min-width: unset;
 .financial.investorsTabItem{
     .investorsTabItem_board_b.polices {
         max-height: unset;
+    }
+}
+.serviceEvoItem {   
+    &.black {
+        background-color: #58595B;
+    }
+    &.lightblue {
+        background-color: #4184C5;
+    }
+    &.blue {
+        background-color: #0B63AC;
+    }
+    &.darkblue {
+        background-color: #143B64;
+    }
+    &.green {
+        background-color: #00B050;
+    }
+}
+.serviceEvo_keys {
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &_key {
+        display: flex;
+        align-items: center;
+        margin: 0 1rem 1.5rem 0;
+        .color {
+            width: 30px;
+            height: 15px;
+            border-radius: 12px;
+            margin-right: 1rem;
+
+        }
+
+        .name {
+            color: #58595B;
+            font-weight: normal;
+            font-size: 13px;
+            text-transform: capitalize;
+        }
+    }
+}
+
+
+.investors_header .header_main_video_cont {
+    background-position: center -13rem;
+    background-repeat: no-repeat;
+    @include respond(tab-land){
+        background-position: -52rem -12rem!important;
     }
 }

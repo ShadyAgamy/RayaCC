@@ -222,8 +222,8 @@
                     <h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">HOME</h1>
                 </div>
              
-               <div class="header_main_video_cont wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".6s">
-                    <img src="./img/mission-vision/head.jpg" alt="">
+               <div class="header_main_video_cont wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".6s" style="background-image: url('./img/mission-vision/irHome.jpg');">
+                   
                </div>
               
             </div>   
@@ -533,8 +533,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.js" integrity="sha256-L9T+qE3Ms6Rsuxl+KwLST6a3R/2o6m33zB5mR2KyPjU=" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
         <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/tooltip-js@3.0.0/dist/tooltip.min.js"></script> -->
         
         <script src="js/script.js"></script>
 
@@ -571,7 +569,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
-    plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
+    plugins: [  'dayGrid', ],
     defaultView: 'dayGridMonth',
     contentHeight: 300,
     
@@ -591,12 +589,19 @@ document.addEventListener('DOMContentLoaded', function() {
       center: '',
       right: ''
     },
-    editable: true,
-        
+    eventRender: function(info) {
+      var tooltip = new Tooltip(info.el, {
+        title: `${moment(info.event.start).format('h:mm a')} -  ${moment(info.event.end).format('h:mm a')} - ${info.event.title}`,
+        placement: 'top',
+        trigger: 'hover',
+        container: 'body'
+      });
+    },
 
+        
     events: [
-      {
-        title: 'Lorem ipsum dol..',
+      { 
+        title: 'lorem Repeating Event Repeating Event Repeating Event',
         start: '2020-03-01',
         startEditable : true
         
@@ -642,16 +647,9 @@ document.addEventListener('DOMContentLoaded', function() {
         start: '2020-03-13T07:00:00'
       },
       
-    ],
-    eventClick:  function(event, jsEvent, view) {
-       console.log("view")
-  
-    },
-    eventMouseover: function (event, jsEvent, view) {
-            if (view.name !== 'agendaDay') {
-                $(jsEvent.target).attr('title', event.title);
-            }
-        },
+    ]
+
+   
     
     
   });

@@ -79,23 +79,9 @@
     .inds_slide {
         width: 30%;
         min-height: 230px;
-        position: relative;
         margin-bottom: 2%;
         margin-right: 2%;
-        position: relative;
         
-
-        .shape {
-            position: absolute;
-             top: 0;
-             left: 0;
-             width: 100%;
-             height : 100%;
-             background-size: cover;
-            background-image:  url("https://raya.road9demos.com/wp-content/themes/road9/img/icons/sub_over.png");
-        }
-       
-       
          @include respond(tab-land) {
             margin-right: 4%;
             width: 46%;
@@ -129,3 +115,16 @@
     }
 }
 
+.inds_slide {
+    position: relative;
+    
+    .shape {
+        position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height : 100%;
+         background-size: cover;
+        background-image:  url("https://raya.road9demos.com/wp-content/themes/road9/img/icons/sub_over.png");
+    }
+}

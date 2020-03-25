@@ -650,13 +650,6 @@
                     }
                 });
 
-                $("#tab_mobile").on("change", () => {
-                    var relatedData = $("#tab_mobile").val();
-                    $('.investorsTabItem').hide();
-                    $('.' + relatedData).fadeIn('fast');
-                    
-                } )
-
                 var textDivs = $(".investorsTabItem_board_b-text");
                 console.log(textDivs)
                for (var i =0; i <= textDivs.length; i++ ) {

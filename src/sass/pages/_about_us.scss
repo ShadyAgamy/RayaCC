@@ -1160,6 +1160,10 @@ ul.breadcrumb {
     white-space: nowrap;
     overflow: hidden;
     max-width: 21rem;
+    @include respond(phone){
+        max-width: 15rem;
+        font-size: 12px;
+    }
   }
   
   ul.breadcrumb li+li:before {

@@ -366,6 +366,13 @@ function myFunction(checkMedia) {
     $("#eventContent").fadeOut(300);
 });
 
+
+$("#tab_mobile").on("change", () => {
+    var relatedData = $("#tab_mobile").val();
+    $('.investorsTabItem').hide();
+    $('.' + relatedData).fadeIn('fast');
+    
+} )
     
 }); //jquery end
 
