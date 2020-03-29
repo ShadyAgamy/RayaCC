@@ -558,11 +558,11 @@
                 autoplay: {
                     delay: 5000,
                 },
-                on: {
-                    slideChange : function () {  
-                    move(".solutions")
-                }
-                },  
+                // on: {
+                //     slideChange : function () {  
+                //     move(".solutions")
+                // }
+                // },  
                 navigation: {
                 nextEl: '.solutions .swiper-button-next_b',
                 prevEl: '.solutions .swiper-button-prev_b',
@@ -574,6 +574,10 @@
                 
 
             })
+
+            if($(".solutions_swiper .swiper-slide").length <= 1) {
+                $(".swiper-slide").parents(".swiper-container").siblings(".main_slider_footer").addClass( "v-hidden" );   
+            }
 
             var quoteSwiper = new Swiper('.depend_text_swiper', {
                 slidesPerView: 1,

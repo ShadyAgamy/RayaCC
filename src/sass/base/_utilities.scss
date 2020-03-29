@@ -133,6 +133,13 @@
     }
 }
 
+.d-none{
+    display: none;
+}
+.v-hidden {
+    visibility: hidden;
+}
+
 [dir="rtl"] {
     .swiper-button-prev_w,
     .swiper-button-next_w,

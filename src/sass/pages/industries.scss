@@ -78,9 +78,10 @@
      }
     .inds_slide {
         width: 30%;
-        min-height: 230px;
+        height: 230px;
         margin-bottom: 2%;
         margin-right: 2%;
+        overflow: hidden;
         
          @include respond(tab-land) {
             margin-right: 4%;
