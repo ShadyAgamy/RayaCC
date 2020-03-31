@@ -302,3 +302,7 @@
         width: 22px!important;
     }
 }
+
+button::-moz-focus-inner {
+    border: 0;
+  }
