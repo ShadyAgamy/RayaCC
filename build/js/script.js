@@ -167,19 +167,19 @@ var langArrow = $(".navbar").find(".lang_selected_arrow");
 
 
 // show and hide languages select dropdown in desktop 
-$(".lang_selected").on("click", () => {  
-   $("#langsList").fadeToggle(); 
-})
-$("body").click((e) => {
-    e.stopPropagation();
-    if ($(e.target).hasClass('lang_selected') || $(e.target).hasClass('langSelect') ||$(e.target).hasClass('lang_selected_lang') || $(e.target).hasClass('lang_selected_arrow')) {
-        return false;  
-    } else {
-        $("#langsList").fadeOut();
+// $(".lang_selected").on("click", () => {  
+//    $("#langsList").fadeToggle(); 
+// })
+// $("body").click((e) => {
+//     e.stopPropagation();
+//     if ($(e.target).hasClass('lang_selected') || $(e.target).hasClass('langSelect') ||$(e.target).hasClass('lang_selected_lang') || $(e.target).hasClass('lang_selected_arrow')) {
+//         return false;  
+//     } else {
+//         $("#langsList").fadeOut();
         
-    }
+//     }
     
-})
+// })
 
 
 // //////////////////////////

@@ -219,7 +219,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 999;
+    z-index: 9999;
     & > div {
         width : 50%;
         min-height: 200px;
@@ -282,6 +282,23 @@
     }
   }
 
+  .fc-event-container {
+    .fc-content {
+      display: flex;
+      flex-direction: column;
+      .fc-time {
+        font-size:10px;
+        color : #58595B;
+
+      }
+      .fc-title {
+        padding-top: 1px;
+        font-size:11px;
+        color : #58595B;
+      }
+    }
+  }
+
 
 
 
@@ -313,6 +330,7 @@
     border-style: solid;
     position: absolute;
     margin: 5px;
+    display: none;
   }
   
    .tooltip-arrow,

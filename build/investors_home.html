@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.css" integrity="sha256-AVsv7CEpB2Y1F7ZjQf0WI8SaEDCycSk4vnDRt0L2MNQ=" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.css" integrity="sha256-DOWdbe6a1VwJwFpkimY6z5tW9mmrBNre2jZsAige5PE=" crossorigin="anonymous" />
          <link rel="stylesheet" type="text/css" href="css/main.css">
-
+         <link rel="stylesheet" href="css/simplebar.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900&display=swap" rel="stylesheet">
 
@@ -161,7 +161,7 @@
 
         <!-- Investors Menu
         ========================-->
-        <div class="investorsMenuContain">
+        <div id="menuCustomScroll" class="investorsMenuContain">
             <div class="investorsMenuWrap">
                 <div class="investorsMenuKey">
                     <div class="navbar__menu-link"><span></span></div>
@@ -533,7 +533,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.js" integrity="sha256-L9T+qE3Ms6Rsuxl+KwLST6a3R/2o6m33zB5mR2KyPjU=" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
         <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
-        
+        <script src="js/simplebar.min.js"></script>
         <script src="js/script.js"></script>
 
         <script>
@@ -655,8 +655,12 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   calendar.render();
+  
 });
             
+    var box = document.getElementById('menuCustomScroll')
+    new SimpleBar(box)
+
         </script>
     </body>
 

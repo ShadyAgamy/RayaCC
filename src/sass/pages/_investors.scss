@@ -124,6 +124,10 @@
 .investorContainItem {
     background-color: #fff;
     padding: 32px;
+    color: #58595B;
+    font-size: 14px;
+    line-height: 2;
+    font-weight: 300;
     p {
         color: #58595B;
         font-size: 14px;
@@ -250,7 +254,7 @@
     }
 }
 .investorsMenuContain {
-    position: fixed;
+    position: fixed!important;
     top: 64px;
     left: 0;
     transition: all .4s ease-in-out;
@@ -259,7 +263,6 @@
     z-index: 9999;
     width: 100%;
     max-height: calc(100% - 64px);
-    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 32px;
     max-width: 287px;
@@ -295,6 +298,9 @@
                 font-weight: bold;
             }
         }
+    }
+    .simplebar-track.simplebar-vertical {
+        margin-bottom: 2rem;
     }
 }
 .menuOverLay {
@@ -739,7 +745,8 @@
             flex-direction: column;
             margin-right: 3rem;
             @include respond(tab-land){
-                width: 100%;
+                width: 50%;
+                max-width: 20rem;
             }
 
             img {
@@ -1105,5 +1112,25 @@ min-width: unset;
     background-repeat: no-repeat;
     @include respond(tab-land){
         background-position: -52rem -12rem!important;
+    }
+}
+
+.investorsTabItem_board_b.fixedH {
+    .investorsTabItem_board_b-text {
+        margin-top: 1rem;
+
+        p {
+            padding-top: 0rem;
+        }
+    }
+}
+
+@include respond(tab-land) {
+    .investorsTabItem_board_b.fixedH {
+        max-height: 570px;
+        
+        .investorsTabItem_board_b-text {
+            overflow: scroll;
+        }
     }
 }

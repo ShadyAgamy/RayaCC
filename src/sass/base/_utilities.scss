@@ -240,6 +240,65 @@
         font-size : 50px;
         
     }
+
+    .investoryHistorySwiper,.serviceEvoSwiper {
+        .swiper-button-next  {
+            left: unset;
+            right: -28px;
+        }
+       
+
+    }
+    .investoryHistorySwiper,.serviceEvoSwiper  {
+        .swiper-button-prev {
+            right: unset;
+            left: -28px;
+    
+        }
+        
+    }
 }
 
 
+#menu-main-french {
+    margin-right: 1rem; 
+
+    .menu-item a {
+        font-size: 12px;
+        white-space: nowrap;
+        margin-right: 0;
+
+    }
+}
+
+.investorsBCWrap {
+    .breadcrumb {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+             text-overflow: unset!important;
+             white-space: unset!important;
+             overflow: unset!important;
+             max-width: unset!important;
+
+
+            a {
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+@include respond(phone) {
+    .investoryHistorySwiper .swiper-slide-active {
+        margin-right: 42px!important;
+        margin-left: 42px!important; 
+    }
+    
+    .investoryHistorySwiper .swiper-slide:after {
+        left: unset!important;
+        right: -30px!important;
+        width: 22px!important;
+    }
+}

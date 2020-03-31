@@ -142,7 +142,7 @@
 
     &:hover {
         img {
-            transform: translateX(10px) rotate(0);
+            transform: translateX(10px) rotate(0)!important;
             
         }
     }
@@ -157,6 +157,8 @@
     }
     
 } 
+
+
 
 .list_pagination {
     width: 100%;
