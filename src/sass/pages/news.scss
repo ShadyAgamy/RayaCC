@@ -115,3 +115,15 @@
         margin-top: 2rem!important;
     }
 }
+
+.more_news {
+    .main_left_heading {
+        max-width: 600px;
+
+        @media (max-width: 450px) {
+            margin-left: 7%;
+        }
+    } 
+}
+
+

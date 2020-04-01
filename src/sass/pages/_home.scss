@@ -614,11 +614,12 @@
         &-tab {
             width: 50%;
             max-width: 290px;
-            min-height: 175px;
-            max-height: 250px;
+            min-height: 210px;
+            max-height: 210px;
             display: flex;
             flex-direction: column;
             padding: 0rem 2rem 0rem 4rem;
+            overflow: hidden;
            
 
             &:nth-of-type(1) {

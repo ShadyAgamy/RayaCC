@@ -707,3 +707,35 @@ select[multiple] {
     }
             
 }
+
+
+.w_w_w_us_text .career_over .w_w_w_us_text-cont {
+    width: 49%;
+    top: 17%;
+    right: 52%;
+
+    .custom_content>p, .custom_content ul, .custom_content h2, .custom_content h3, .custom_content h4, .custom_content h5, .custom_content h6, .custom_content ol {
+        margin-bottom: .5rem;
+    }
+    .custom_content ul li, .custom_content ol li {
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 37.5em) {
+    .w_w_w_us_text .career_over .w_w_w_us_text-cont {
+        top: 14%;
+        right: 53%;
+    }
+}
+
+.solutionsTabs.Locations.car {
+    a {
+        max-width: 18rem;
+        @media (max-width: 75em) {
+            max-width: unset;
+        }
+    }
+
+    
+}
