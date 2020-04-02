@@ -710,14 +710,14 @@ select[multiple] {
 
 
 .w_w_w_us_text .career_over .w_w_w_us_text-cont {
-    width: 49%;
+    width: 57%;
     top: 17%;
-    right: 52%;
+    right: 49%;
 
-    .custom_content>p, .custom_content ul, .custom_content h2, .custom_content h3, .custom_content h4, .custom_content h5, .custom_content h6, .custom_content ol {
+    &.custom_content>p, .custom_content ul, .custom_content h2, .custom_content h3, .custom_content h4, .custom_content h5, .custom_content h6, .custom_content ol {
         margin-bottom: .5rem;
     }
-    .custom_content ul li, .custom_content ol li {
+    &.custom_content ul li, .custom_content ol li {
         margin-bottom: 0px;
     }
 }
