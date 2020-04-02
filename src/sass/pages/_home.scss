@@ -337,6 +337,7 @@
                             height: 100%;
                             position: relative;
                             z-index: -1;
+                            object-fit: cover;
                         }
 
                         h2 {
@@ -737,5 +738,15 @@
     .swiper-pagination-current,
     .swiper-pagination-total {
         color : #4184C5;
+    }
+}
+
+.header {
+    .swiper-slide {
+        .header__cont {
+           .header__cont-text {
+            overflow: hidden;
+           } 
+        }
     }
 }

@@ -23,7 +23,6 @@ $(document).ready(function () {
   // menu open
   $("#navbar__menu").click(function (e) {
     e.preventDefault();
-    console.log("clicked");
     $("#Menupopup").toggleClass("toggleMenu");
     $("#Menupopup .popup__container").toggleClass("scale-up-center");
     $("#Menupopup .popup__container").removeClass("scale-down-center");
@@ -192,7 +191,6 @@ $(document).ready(function () {
     });
   });
   $("#careers_loc_tabs_select").on("change", function () {
-    console.log($("#careers_loc_tabs_select").val());
     $(".careers_loc_content").css("display", "none");
     $(".careers_loc_content").each(function (i, el) {
       if ($(el).hasClass($("#careers_loc_tabs_select").val())) {
@@ -202,7 +200,6 @@ $(document).ready(function () {
   });
   $(".careers_loc_content > .careers_loc_content_head").not(".careers_loc_content_head.careers_loc_content_body").each(function (i, el) {
     $(el).on("click", function () {
-      console.log($(el).closest(".careers_loc_content").find("careers_loc_content_body"));
       $(el).closest(".careers_loc_content").find(".careers_loc_content_body").slideToggle().css("display", "flex");
       $(el).find("img").toggleClass("open");
     });
@@ -218,19 +215,16 @@ $(document).ready(function () {
       the_returnsArr = _toConsumableArray(the_returns);
 
   for (var i = 0; i < fileInputArr.length; i++) {
-    console.log(fileInputArr[i]);
     $(buttonsArr[i]).on("keydown", function (event) {
       if (event.keyCode == 13 || event.keyCode == 32) {
         fileInputArr[i].focus();
       }
     });
     buttonsArr[i].addEventListener("click", function (event) {
-      console.log(buttonsArr[i]);
       fileInputArr[i].focus();
       return false;
     });
     fileInputArr[i].addEventListener("change", function (event) {
-      console.log($(this).parent().next());
       $(this).parent().parent().next().text($(this).val());
     });
   } // career apply now btn scroll to form 
@@ -243,14 +237,15 @@ $(document).ready(function () {
       $('html, body').animate({
         scrollTop: $(".application_form_form").offset().top
       }, 800);
-      var select = $(".application_form_form").find(".custom_selectbox #Position");
-      $(select).find("option").each(function (i, el) {
-        $(el).removeAttr('selected');
+      var jobPos = $(".application_form_form").find(".custom_input #Position");
+      $(jobPos).val(jobName)
+      // $(jobPos).find("option").each(function (i, el) {
+      //   $(el).removeAttr('selected');
 
-        if ($(el).val().toLowerCase() == jobName) {
-          $(el).attr('selected', 'selected');
-        }
-      });
+      //   if ($(el).val().toLowerCase() == jobName) {
+      //     $(el).attr('selected', 'selected');
+      //   }
+      // });
     });
   }); // var swiperFractionDiv = $(".swiper-pagination.swiper-pagination-fraction");
   // var swiperSpanText =  swiperFractionDiv.find("span").text();
@@ -309,9 +304,6 @@ $(document).ready(function () {
   } // dispay empty content in IR tabs
 
 
-  console.log($(".emptyCont"));
-  console.log($(".emptyCont").next());
-
   if ($(".emptyCont").next().length != 0) {
     $(".emptyCont").css("display", "none");
   } else {
@@ -327,6 +319,8 @@ $(document).ready(function () {
   $("#closeEve").click(function () {
     $("#eventContent").fadeOut(300);
   });
+
+
   $("#tab_mobile").on("change", function () {
     var relatedData = $("#tab_mobile").val();
     $('.investorsTabItem').hide();

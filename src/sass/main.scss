@@ -166,6 +166,11 @@
   .fc-toolbar.fc-header-toolbar {
     margin-bottom: 2em;
   }
+  .irCalendarWrap.investorContainItem  .fc-dayGrid-view .fc-day-top .fc-day-number {
+    
+    padding: 3px 13px!important;
+    
+}
   .fc-ltr .fc-dayGrid-view .fc-day-top .fc-day-number {
     float: left;
     font-size: 2rem;
@@ -286,6 +291,8 @@
     .fc-content {
       display: flex;
       flex-direction: column;
+      margin-bottom: .5rem;
+
       .fc-time {
         font-size:10px;
         color : #58595B;
@@ -295,6 +302,10 @@
         padding-top: 1px;
         font-size:11px;
         color : #58595B;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
       }
     }
   }
