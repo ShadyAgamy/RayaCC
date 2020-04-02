@@ -312,6 +312,8 @@
             margin-left: 4rem;
             @include respond(phone){
                 margin-left: 1rem;
+                margin-right: 1rem;
+                width: 98%;
             }
             .swiper-wrapper{
 
@@ -322,7 +324,7 @@
                         width: 48%;
                     }
                     @include respond(phone){
-                        width: 90%;
+                        width: 100%;
 
                     }
                     .inds_slide{

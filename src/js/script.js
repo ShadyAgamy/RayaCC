@@ -330,12 +330,15 @@ $(document).ready(function () {
   var textDivs = $(".investorsTabItem_board_b-text");
   function myFunction(x) {
        if (x.matches) { // If media query matches
-           for (var i =0; i <= textDivs.length; i++ ) {
-               if (i >= 1) {
-                   var box = document.getElementById('customScroll' + i)
-                   new SimpleBar(box)
-               }
-           }
+        if (textDivs.length > 0) {
+          for (var i =0; i <= textDivs.length; i++ ) {
+            if (i >= 1) {
+                var box = document.getElementById('customScroll' + i)
+                new SimpleBar(box)
+            }
+          }
+        }
+           
        } else {
            
        }
