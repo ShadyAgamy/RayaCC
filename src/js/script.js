@@ -328,9 +328,10 @@ $(document).ready(function () {
   });
 
   var textDivs = $(".investorsTabItem_board_b-text");
+  console.log($(textDivs) != undefined)
   function myFunction(x) {
        if (x.matches) { // If media query matches
-        if (textDivs.length > 0) {
+        if (textDivs) {
           for (var i =0; i <= textDivs.length; i++ ) {
             if (i >= 1) {
                 var box = document.getElementById('customScroll' + i)

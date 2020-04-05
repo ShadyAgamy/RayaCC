@@ -311,7 +311,9 @@
   }
 
 
-
+  .fc-unthemed td.fc-today {
+    background:unset;
+  }
 
   // test for calender plugins
  .irHome ~ .popper, .irHome ~ .tooltip {
