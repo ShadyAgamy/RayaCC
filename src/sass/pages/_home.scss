@@ -752,3 +752,16 @@
         }
     }
 }
+
+.homePage {
+    .header_main_video_cont {
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            margin-left: -4rem;
+            margin-top: 3rem;
+        }
+    }
+}

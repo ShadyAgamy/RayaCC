@@ -334,7 +334,7 @@ $(document).ready(function () {
         if (textDivs) {
           for (var i =0; i <= textDivs.length; i++ ) {
             if (i >= 1) {
-                var box = document.getElementById('customScroll' + i)
+                var box = document.getElementById('customScroll' + i);
                 new SimpleBar(box)
             }
           }
