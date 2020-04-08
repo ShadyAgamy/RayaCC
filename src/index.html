@@ -631,9 +631,6 @@
             $(elem)[0].style.width = "0px";
             var width = 1;
             var autoplayTime = autoplay / 100;
-            
-            
-            
             clearInterval(previousid);
              previousid = setInterval(function(_id) { 
                 return function() {
@@ -699,6 +696,7 @@
                 watchSlidesProgress: true,
                 autoplay: {
                     delay: 5000,
+                    disableOnInteraction: false
                 },
                 on: {
                     slideChange : function () {                 
@@ -732,6 +730,7 @@
                 watchSlidesProgress: true,
                 autoplay: {
                     delay: 5000,
+                    disableOnInteraction: false
                 },
                 on: {
                     slideChange : function () {  
@@ -763,6 +762,7 @@
                 watchSlidesProgress: true,
                 autoplay: {
                     delay: 5000,
+                    
                 },
                 on: {
                     slideChange : function () {  

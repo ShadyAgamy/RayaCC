@@ -60,12 +60,33 @@ $(document).ready(function () {
     });
   }); // Investors Tabs Handling
 
+  var textDivs = $(".investorsTabItem_board_b-text:visible");
+  function checkMediaFortextDivs(x,textDivss) {
+       if (x.matches) { // If media query matches
+        if (textDivss) {
+          console.log(textDivss)
+          for (var i =0; i <= textDivss.length; i++ ) {
+            if (i >= 1) {
+                var box = document.getElementById('customScroll' + i);
+                new SimpleBar(box)
+            }
+          }
+        }
+           
+       } 
+   }
+   var x = window.matchMedia("(min-width: 900px)")
+   checkMediaFortextDivs(x,textDivs); 
+
   $('.investorsTabsKey').on('click', function () {
     var relatedData = $(this).attr('related-data');
     $(this).siblings().removeClass('active');
     $(this).addClass('active');
     $('.investorsTabItem').hide();
     $('.' + relatedData).fadeIn('fast');
+    console.log("clicked");
+    let textDivs = $(".investorsTabItem_board_b-text");
+   checkMediaFortextDivs(x,textDivs);
   }); // Investors menu sticky on scroll
 
   if ($('.investorsData').length) {
@@ -327,28 +348,23 @@ $(document).ready(function () {
     $('.' + relatedData).fadeIn('fast');
   });
 
-  var textDivs = $(".investorsTabItem_board_b-text");
-  console.log($(textDivs) != undefined)
-  function myFunction(x) {
-       if (x.matches) { // If media query matches
-        if (textDivs) {
-          for (var i =0; i <= textDivs.length; i++ ) {
-            if (i >= 1) {
-                var box = document.getElementById('customScroll' + i);
-                new SimpleBar(box)
-            }
-          }
-        }
-           
-       } else {
-           
-       }
-   }
-   var x = window.matchMedia("(min-width: 900px)")
-   myFunction(x) // Call listener function at run time
+
+  $("#langs").mousedown(function(e){
+    e.preventDefault();
+
+    var select = this;
+    var scroll = select.scrollTop;
+
+    e.target.selected = !e.target.selected;
+
+    setTimeout(function(){select.scrollTop = scroll;}, 0);
+
+    $(select ).focus();
+}).mousemove(function(e){e.preventDefault()});
+
 
    var menuCustomScroll = document.getElementById('menuCustomScroll')
-   new SimpleBar(menuCustomScroll)
+   new SimpleBar(menuCustomScroll);
 
 }); //jquery end
 

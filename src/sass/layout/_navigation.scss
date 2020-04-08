@@ -16,6 +16,7 @@
 
     &__logo {
         width: 125px;
+        min-width: 70px;
         @include respond(phone){
             width: 70px;
         }
@@ -38,7 +39,7 @@
             color: white;
             & > a {
                 font-size: 13px;
-                margin-right: 1rem;
+                margin-right: .7rem;
                 font-weight: 600;
                 text-transform: uppercase;
                 padding: .8rem 1.6rem;
@@ -46,6 +47,7 @@
                 color: white;
                 position: relative;
                 transition: all ease .3s;
+                white-space: nowrap;
     
                 img {
                     width:23px;

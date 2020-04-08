@@ -459,6 +459,7 @@
             flex-direction: column;   
             align-self: flex-end;
             margin-bottom: -9rem;
+            overflow: hidden;
             @include respond(tab-land){
                 width: 80%;
                 overflow: hidden;
@@ -531,7 +532,7 @@
                 img {
                     width: 100%;
                     height: 100%;;
-                    object-fit: cover;
+                    object-fit: contain;
                 }
             }
         }
@@ -702,6 +703,7 @@
         
         a {
             background: #0D2B4A;
+            transition: all .3s ease;
 
             &:hover {
                 background: #37689B;
@@ -755,13 +757,16 @@
 
 .homePage {
     .header_main_video_cont {
+        position: relative;
+        z-index: -1;
         iframe {
             position: absolute;
             top: 0;
             left: 0;
             pointer-events: none;
-            margin-left: -4rem;
+            margin-left: 1rem;
             margin-top: 3rem;
+            width: 100%!important;
         }
     }
 }

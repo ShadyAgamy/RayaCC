@@ -418,7 +418,7 @@
     &_form {
         background-color: #0B63AC;
         min-height: 750px;
-        padding: 10rem 3rem 4rem 9rem;
+        padding: 10rem 3rem 6rem 9rem;
         width: 55%;
         flex-grow: 1;
         @include respond(tab-land){
@@ -505,10 +505,10 @@
   }
   .js .file-return {
     font-style: italic;
-    font-size: 1.3em;
+    font-size: 1.2rem;
     font-weight: bold;
     color: white;
-    margin: .3rem 0;
+    margin: 0.3rem 13px;
   }
   .js .file-return:not(:empty):before {
     content: "Selected file: ";
@@ -568,7 +568,7 @@
           
       }
 
-      span {
+      img + span {
         left: 30%;
       }
   }
@@ -615,7 +615,6 @@
             outline: none;
             padding-left: 1rem;
             width: 100%;
-            cursor: pointer;
            
         }
 
@@ -738,4 +737,32 @@ select[multiple] {
     }
 
     
+}
+
+.wpcf7-response-output {
+    background: #D65F5F!important;
+    border: 0!important;
+    padding: .5rem 2rem!important;
+    color: white!important;
+    font-size: 1.2rem!important;
+    border-radius: 1rem!important;
+    margin-bottom: 3rem!important;
+    float: left;
+}
+
+.custom_input_group  {
+    input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #065495 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
 }
