@@ -554,23 +554,27 @@
 
                     <div class="input_files_cont">
                         <div class="input_file_cont">
-                            <div class="input-file-container">  
-                                <input  class="input-file" id="cv-file" type="file">
-                                <label tabindex="0" for="cv-file" class="input-file-trigger">Attached CV</label>
-                                <span>PDF, DOC, DOCX, maximum 5MB</span>
-                                
+                            <div class="input-file-container">
+    
+    
+           <span class="wpcf7-form-control-wrap cv"><input type="file" name="cv" size="40" class="wpcf7-form-control wpcf7-file wpcf7-validates-as-required input-file" id="cv-file" accept=".doc,.docx,.pdf" aria-required="true" aria-invalid="false"></span> 
+                        
+                                <label tabindex="0" for="cv-file" class="input-file-trigger">Attached CV *</label>
+                                <span>PDF, DOC, DOCX, maximum 1MB</span>
                             </div>
-                              <p class="file-return"></p>
-                              <p class="sizeWarning" >the file exceeded the maximum size </p>
+                            <p class="file-return"></p>
+                            <p class="sizeWarning" >the file exceeded the maximum size </p>
                         </div>
                         <div class="input_file_cont">
-                            <div class="input-file-container">  
-                                <input class="input-file" id="audio-file" type="file">
-                                <label tabindex="0" for="audio-file" class="input-file-trigger">Add Audio Sample</label>
-                                <span>MP3 files maximum 10MB</span>
-                              </div>
-                              <p class="file-return"></p>
-                              <p class="sizeWarning" >the file exceeded the maximum size </p>
+                            <div class="input-file-container">
+    
+    <span class="wpcf7-form-control-wrap audio"><input type="file" name="audio" size="40" class="wpcf7-form-control wpcf7-file wpcf7-validates-as-required input-file" id="audio-file" accept=".mp3" aria-required="true" aria-invalid="false"></span>
+                                
+                                <label tabindex="0" for="audio-file" class="input-file-trigger">Add Audio Sample *</label>
+                                <span>MP3 files maximum 3MB</span>
+                            </div>
+                            <p class="file-return"></p>
+                            <p class="sizeWarning" >the file exceeded the maximum size </p>
                         </div>
                     </div>
                     
