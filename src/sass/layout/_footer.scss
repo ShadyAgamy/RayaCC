@@ -149,18 +149,18 @@
                         overflow: hidden;
                         position: relative;
                         padding-top: 2rem;
-                        @include respond(tab-land){
-                            display: none;              
-                        } 
+                        // @include respond(tab-land){
+                        //     display: none;              
+                        // } 
                         &:after {
                             content: '';
                             position: absolute;
                             left: 38%;
-                            top: 64%;
+                            top: 4.2rem;                        
                             transform: translateY(-50%);
                             background: #1A436E;
                             width: 1px;
-                            height: 49%;
+                            height: 3rem;
                             @include respond(tab-land) {
                                 display: none;
                             }
@@ -181,7 +181,7 @@
                             font-size: 13px;
                         }
                            
-                        & span {
+                        & span:not(.ajax-loader) {
                             display: block;
                             width: 39%;
                             &  input {
@@ -204,15 +204,19 @@
                             border: none;
                             color: white;
                             outline: none;
+                            height: 44px;
+                            border-radius: 0px 0px 22px 0px;
                             
                         }
                     }
                 
                    .custom_input_group {
-                       display: none;
+                    //    display: none;
 
                        @include respond(tab-land){
-                        display: flex;
+                     }
+
+                     display: flex;
                         margin-top: 2rem;
                         .custom_input {
                              width: 96%; 
@@ -239,8 +243,6 @@
                             margin-bottom: 4rem;
                         
                         }
-
-                     }
 
                    }
                    
@@ -382,4 +384,5 @@
     position: absolute;
     top: 0;
     left: 50px;
+    height:1rem!important;
   }

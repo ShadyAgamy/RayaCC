@@ -557,15 +557,16 @@
                                 </span>
                             </span>
                         </div>
-                        <div class="nameEmailSubmit">
+                        <div class="nameEmailSubmit desk">
                             <div class="desktop">
                                 <label  for="name">Name</label>
                                 <span><input type="text" id="name" name="name"></span>
                                 <label  for="email">Email</label>
                                 <span><input type="email" id="email" name="email"></span>
                                 <input value="SUBSCRIBE" type="submit"/>
-                            </div>
-                            
+                            </div>    
+                        </div>
+                        <div class="nameEmailSubmit mob">
                             <div class="custom_input_group">
                                 <div class="custom_input">
                                     <label for="name">Name</label>
@@ -576,11 +577,11 @@
                                     <label for="Email">Email</label>
                                     <span><input type="email" id="Email"></span>
                                 </div>
-                                <input value="SUBSCRIBE" type="submit"/>
-                              
+                                <input value="SUBSCRIBE" type="submit"/>  
                             </div>
-                            
                         </div>
+                        
+
                         <div class="followUs">
                             <h4>FOLLOW US</h4>
                             <a href="" target="_blank"><img src="./img/icons/facebook-logo.png" alt=""></a>
@@ -621,7 +622,7 @@
         <script src="js/script.js"></script>
 
         <script>
-            var autoplay = 5000;
+            var autoplay = 4000;
             var previousid;
             var previousid2;
             var previousid3;
@@ -695,7 +696,7 @@
                 paginationClickable: true,
                 watchSlidesProgress: true,
                 autoplay: {
-                    delay: 5000,
+                    delay: autoplay,
                     disableOnInteraction: false
                 },
                 on: {
@@ -724,12 +725,12 @@
             var mySwiper_2 = new Swiper ('.industries_swiper.swiper-container', {
                 slidesPerView: 'auto',
                 spaceBetween: 15,  
-                speed: 700,
+                speed: 500,
                 loop: $(".industries_swiper.swiper-container").find(".swiper-slide").length > 4 ? true : false,
                 paginationClickable: true,
                 watchSlidesProgress: true,
                 autoplay: {
-                    delay: 5000,
+                    delay: autoplay,
                     disableOnInteraction: false
                 },
                 on: {

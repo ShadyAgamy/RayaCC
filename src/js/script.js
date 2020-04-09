@@ -349,7 +349,7 @@ $(document).ready(function () {
   });
 
 
-  $("#langs").mousedown(function(e){
+  $("select[multiple]").mousedown(function(e){
     e.preventDefault();
 
     var select = this;
@@ -362,6 +362,10 @@ $(document).ready(function () {
     $(select ).focus();
 }).mousemove(function(e){e.preventDefault()});
 
+
+if($(".tabcontents_link .DIFFERENTIATORS_loc_link").length == 0) {
+  $(".tabcontents_link .tabcontents").css("height", "100%")
+}
 
    var menuCustomScroll = document.getElementById('menuCustomScroll')
    new SimpleBar(menuCustomScroll);
