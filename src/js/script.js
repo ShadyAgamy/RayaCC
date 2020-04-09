@@ -364,12 +364,45 @@ $(document).ready(function () {
 
 
 if($(".tabcontents_link .DIFFERENTIATORS_loc_link").length == 0) {
-  $(".tabcontents_link .tabcontents").css("height", "100%")
+  $(".tabcontents_link .tabcontents").css("height", "100%");
 }
+
+
+
+
 
    var menuCustomScroll = document.getElementById('menuCustomScroll')
    new SimpleBar(menuCustomScroll);
 
 }); //jquery end
 
+// function ValidateSize(file ,size) {
+//   var FileSize = file.files[0].size / size / size; // in MB
+//   if (FileSize > 2) {
+//     var sizeText = $(file).parents(".input_file_cont").find(".sizeWarning");
+//     $(sizeText).html(sizeText.attr("data-text") + ` ${Math.floor(FileSize)} MB`)
+//     $(file).val(''); 
+//   } else {
 
+//   }
+// }
+
+$("#cv-file").on("change", function() {
+  var FileSize = this.files[0].size / 1024 / 1024; // in MB
+  if (FileSize > 1) {
+    $(this).parents(".input_file_cont").find(".sizeWarning").fadeIn();
+    $(this).val(''); 
+  } else {
+    $(this).parents(".input_file_cont").find(".sizeWarning").fadeOut();
+  }
+})
+
+$("#audio-file").on("change", function() {
+  var FileSize = this.files[0].size / 1024 / 1024; // in MB
+  if (FileSize > 3) {
+    $(this).parents(".input_file_cont").find(".sizeWarning").fadeIn();
+    $(this).val(''); 
+  } else {
+    $(this).parents(".input_file_cont").find(".sizeWarning").fadeOut();
+  }
+})

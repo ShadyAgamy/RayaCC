@@ -697,6 +697,9 @@
 select[multiple] {
     overflow-y: auto;
     height: 15rem!important;
+    @include respond(phone) {
+        height: 44px!important;
+     }
     option:checked,option:active {
         background: #4E9CDD linear-gradient(0deg, #4E9CDD 0%, #4E9CDD 100%);
         color: white!important;
