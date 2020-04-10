@@ -368,7 +368,32 @@ if($(".tabcontents_link .DIFFERENTIATORS_loc_link").length == 0) {
 }
 
 
+function tabName(evt, TabContent) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
 
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(TabContent).style.display = "block";
+  evt.currentTarget.className += " active";
+  }
+
+  $("#tab_mobile").on("change", () => {
+      console.log("changed")
+      console.log("value: " + $("#tab_mobile").val())
+      tabName(event, $("#tab_mobile").val());
+  } )
 
 
    var menuCustomScroll = document.getElementById('menuCustomScroll')
@@ -376,33 +401,23 @@ if($(".tabcontents_link .DIFFERENTIATORS_loc_link").length == 0) {
 
 }); //jquery end
 
-// function ValidateSize(file ,size) {
-//   var FileSize = file.files[0].size / size / size; // in MB
-//   if (FileSize > 2) {
-//     var sizeText = $(file).parents(".input_file_cont").find(".sizeWarning");
-//     $(sizeText).html(sizeText.attr("data-text") + ` ${Math.floor(FileSize)} MB`)
-//     $(file).val(''); 
+
+// $("#cv-file").on("change", function() {
+//   var FileSize = this.files[0].size / 1024 / 1024; // in MB
+//   if (FileSize > 1) {
+//     $(this).parents(".input_file_cont").find(".sizeWarning").fadeIn();
+//     $(this).val(''); 
 //   } else {
-
+//     $(this).parents(".input_file_cont").find(".sizeWarning").fadeOut();
 //   }
-// }
+// })
 
-$("#cv-file").on("change", function() {
-  var FileSize = this.files[0].size / 1024 / 1024; // in MB
-  if (FileSize > 1) {
-    $(this).parents(".input_file_cont").find(".sizeWarning").fadeIn();
-    $(this).val(''); 
-  } else {
-    $(this).parents(".input_file_cont").find(".sizeWarning").fadeOut();
-  }
-})
-
-$("#audio-file").on("change", function() {
-  var FileSize = this.files[0].size / 1024 / 1024; // in MB
-  if (FileSize > 3) {
-    $(this).parents(".input_file_cont").find(".sizeWarning").fadeIn();
-    $(this).val(''); 
-  } else {
-    $(this).parents(".input_file_cont").find(".sizeWarning").fadeOut();
-  }
-})
+// $("#audio-file").on("change", function() {
+//   var FileSize = this.files[0].size / 1024 / 1024; // in MB
+//   if (FileSize > 3) {
+//     $(this).parents(".input_file_cont").find(".sizeWarning").fadeIn();
+//     $(this).val(''); 
+//   } else {
+//     $(this).parents(".input_file_cont").find(".sizeWarning").fadeOut();
+//   }
+// })

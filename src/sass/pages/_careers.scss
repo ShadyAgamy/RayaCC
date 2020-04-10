@@ -465,8 +465,9 @@
     display: flex;
     align-items: center;
     font-weight: 300;
+    flex-wrap: wrap;
 
-    span {
+    span:not(.wpcf7-not-valid-tip) {
         font-size: 10px;
         color: white;
         font-weight: 100;
