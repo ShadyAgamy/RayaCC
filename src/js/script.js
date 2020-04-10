@@ -396,6 +396,17 @@ function tabName(evt, TabContent) {
   } )
 
 
+
+
+    if ($(window).width() <= 767) {  
+      console.log("yes")
+      $(".menu-item.menu-item-has-children a").removeAttr("href");
+          
+
+    }     
+
+
+
    var menuCustomScroll = document.getElementById('menuCustomScroll')
    new SimpleBar(menuCustomScroll);
 
