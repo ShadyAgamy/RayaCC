@@ -297,6 +297,8 @@
         background: #0F2F50;
         height: 63px;
         width: 100%;
+        justify-content: space-between;
+        padding: 0 5rem;
 
         p, a {
             color: rgba(255,255,255,0.6);
@@ -314,6 +316,14 @@
             @include respond(phone){
                 text-align: center;
                 width: 90%;               
+            }
+        }
+
+        .cust_link {
+            a {
+                text-transform: capitalize;
+                color: rgba(255,255,255,0.8);
+
             }
         }
     }
