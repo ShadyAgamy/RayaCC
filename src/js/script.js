@@ -400,7 +400,7 @@ function tabName(evt, TabContent) {
 
     if ($(window).width() <= 767) {  
       console.log("yes")
-      $(".menu-item.menu-item-has-children a").removeAttr("href");
+      $(".menu-item.menu-item-has-children > a").removeAttr("href");
           
 
     }     
