@@ -208,19 +208,26 @@
 
 
 .menu-item.langSelect.langSelectMobile {
-    position: relative;
     padding-top: 4rem;
-    &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%,0);
-        width: 60vw;
-        max-width: 400px;
-        height: 1px;
-        background-color: #FFFFFF;
-    }
+    padding-top: 4rem;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #fff;
+    
+    // &:after {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 50%;
+    //     transform: translate(-50%,0);
+    //     width: 60vw;
+    //     max-width: 400px;
+    //     height: 1px;
+    //     background-color: #FFFFFF;
+    // }
     .custom_selectbox {
         position: relative;
         width: 21rem;
