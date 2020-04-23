@@ -9,6 +9,7 @@
     visibility: hidden;
     opacity: 0;
     transition: all .4s ease;
+    overflow-y: scroll!important;
     @include respond(tab-port){
     //    overflow-y: auto;
     //    overflow-y: scroll; /* has to be scroll, not auto */
@@ -28,6 +29,7 @@
         align-items: center;
         justify-content: center;
         background-color: #0B63AC;
+        overflow-y: scroll!important;
         // &.scale-up-center {
         //     animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
         // }
