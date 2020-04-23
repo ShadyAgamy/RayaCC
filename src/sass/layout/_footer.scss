@@ -421,6 +421,15 @@ div .wpcf7-response-output {
     }
 }
 
-.inquiry_links {
-    margin-bottom: 10rem;
+
+
+@media (max-width: 500px) {
+    .inquiry_links {
+        
+        height: 100px;
+    }
+    .inquiry_links_b, .inquiry_links_hr {
+        height: 50%!important;
+    }
 }
+
