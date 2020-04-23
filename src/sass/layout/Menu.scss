@@ -30,7 +30,6 @@
         justify-content: center;
         background-color: #0B63AC;
         overflow-y: scroll!important;
-        padding-bottom: 10rem;
         // &.scale-up-center {
         //     animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
         // }
@@ -71,7 +70,7 @@
         padding-bottom: 10rem;
         @include respond(tab-port){
            
-           
+           display: block!important;
         }
    
     }
