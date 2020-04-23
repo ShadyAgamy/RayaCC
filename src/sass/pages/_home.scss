@@ -614,6 +614,10 @@
             width: 100%;
             padding: 0px 2rem;
             margin-left: 0;
+        }
+
+        @include respond(tab-land){
+            padding: 0px 0rem;
         
         }
 
@@ -626,6 +630,10 @@
             flex-direction: column;
             padding: 0rem 2rem 0rem 4rem;
             overflow: hidden;
+            @include respond(tab-land){
+                padding: 2rem 2rem 0rem 3rem;
+            
+            }
            
 
             &:nth-of-type(1) {

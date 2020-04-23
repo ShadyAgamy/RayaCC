@@ -11,6 +11,7 @@
     }
     @include respond(tab-land){
         height: auto;
+        min-height: 900px;
         padding-bottom: 6rem;
     }
     &_links {
