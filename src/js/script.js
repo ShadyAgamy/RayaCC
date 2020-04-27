@@ -412,23 +412,24 @@ function tabName(evt, TabContent) {
 
 }); //jquery end
 
+$(window).scroll(function(){
+  inqueryPosi()
+  
+});
 
-// $("#cv-file").on("change", function() {
-//   var FileSize = this.files[0].size / 1024 / 1024; // in MB
-//   if (FileSize > 1) {
-//     $(this).parents(".input_file_cont").find(".sizeWarning").fadeIn();
-//     $(this).val(''); 
-//   } else {
-//     $(this).parents(".input_file_cont").find(".sizeWarning").fadeOut();
-//   }
-// })
+function inqueryPosi() {
+  var scroll = $(window).scrollTop();
+  console.log(scroll)
+  console.log($(".footer").offset().top - 600);
+  if (scroll > $(".footer").offset().top -600 ) {
+    
+    $(".inquiry_links").css("position", "static");
+    
+  } else {
+    
+    $(".inquiry_links").css("position", "fixed");
+    
+  }
+}
 
-// $("#audio-file").on("change", function() {
-//   var FileSize = this.files[0].size / 1024 / 1024; // in MB
-//   if (FileSize > 3) {
-//     $(this).parents(".input_file_cont").find(".sizeWarning").fadeIn();
-//     $(this).val(''); 
-//   } else {
-//     $(this).parents(".input_file_cont").find(".sizeWarning").fadeOut();
-//   }
-// })
+inqueryPosi();
