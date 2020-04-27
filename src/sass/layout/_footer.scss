@@ -11,7 +11,10 @@
     }
     @include respond(tab-land){
         height: auto;
-        padding-bottom: 6rem;
+        padding-bottom: 14rem;
+    }
+    @include respond(phone){
+        padding-bottom: 18rem;
     }
     &_links {
         padding: 6rem 5rem;
@@ -445,12 +448,18 @@ div .wpcf7-response-output {
     min-height: 63px;
 }
 .cert_icons {
-   
     display: flex;
     align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0%;
+    bottom: 63px;
+    background: white;
+    width: 100%;
+    padding: .5rem;
     img {
-        width: 3rem;
-        margin-right: 1rem;
+        width: 5rem;
+        margin-right: 2rem;
     }
 
 }

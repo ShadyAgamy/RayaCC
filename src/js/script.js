@@ -433,3 +433,8 @@ function inqueryPosi() {
 }
 
 inqueryPosi();
+
+$(".cert_icons").css("bottom", $(".footer_foot").css("height"))
+$(window).on("resize", function() {
+  $(".cert_icons").css("bottom", $(".footer_foot").css("height"))
+})
