@@ -428,7 +428,7 @@ div .wpcf7-response-output {
 @media (max-width: 500px) {
     .inquiry_links {
         
-        height: 100px;
+        height: 100px!important;
     }
     .inquiry_links_b, .inquiry_links_hr {
         height: 50%!important;
@@ -460,6 +460,10 @@ div .wpcf7-response-output {
     img {
         width: 5rem;
         margin-right: 2rem;
+
+        &:nth-of-type(3),&:nth-of-type(5) {
+            width: 7rem;
+        }
     }
 
 }
