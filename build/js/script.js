@@ -246,7 +246,7 @@ $(document).ready(function () {
       return false;
     });
     fileInputArr[i].addEventListener("change", function (event) {
-      $(this).parent().parent().next().text($(this).val());
+      $(this).parent().parent().next().text(this.files[0].name);
     });
   } // career apply now btn scroll to form 
 
@@ -390,8 +390,6 @@ function tabName(evt, TabContent) {
   }
 
   $("#tab_mobile").on("change", () => {
-      console.log("changed")
-      console.log("value: " + $("#tab_mobile").val())
       tabName(event, $("#tab_mobile").val());
   } )
 
@@ -399,7 +397,6 @@ function tabName(evt, TabContent) {
 
 
     if ($(window).width() <= 767) {  
-      console.log("yes")
       $(".menu-item.menu-item-has-children > a").removeAttr("href");
           
 
@@ -419,8 +416,6 @@ $(window).scroll(function(){
 
 function inqueryPosi() {
   var scroll = $(window).scrollTop();
-  console.log(scroll)
-  console.log($(".footer").offset().top - 600);
   if (scroll > $(".footer").offset().top -600 ) {
     
     $(".inquiry_links").css("position", "static");
