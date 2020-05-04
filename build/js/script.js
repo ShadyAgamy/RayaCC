@@ -260,12 +260,12 @@ $(document).ready(function () {
       }, 800);
       var jobPos = $(".application_form_form").find(".custom_input #Position");
       $(jobPos).val(jobName);
-      if ($(el).closest(".careers_loc_content").hasClass("egypt")) {
-        $("#loc").val("Egypt")
-      } else if ($(el).closest(".careers_loc_content").hasClass("poland")) {
-        $("#loc").val("poland")
-      } else {
-        $("#loc").val("uae")
+      if ($(el).closest(".careers_loc_content").hasClass("EGYPT")) {
+        $("#loc").val("EGYPT")
+      } else if ($(el).closest(".careers_loc_content").hasClass("POLAND")) {
+        $("#loc").val("POLAND")
+      } else if ($(el).closest(".careers_loc_content").hasClass("UAE")){
+        $("#loc").val("UAE")
       }
      console.log($("#loc").val())
     });
