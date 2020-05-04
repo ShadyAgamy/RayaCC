@@ -3,7 +3,7 @@
     align-items: flex-start;
     padding: 0 2.5rem;
     position: relative;
-    z-index: 9999;
+    z-index: 999;
     margin-top: -2px;
      @media(max-width: 80em) {
         padding: 0rem 0 8rem 2.5rem;
@@ -147,9 +147,53 @@
     width: 90%;
 
     a {
+        text-transform: uppercase;
         justify-content: center;
         margin-left: 0rem;
     }
     
    
+}
+
+
+.popUp.investorsTabItem {  
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    background-color: rgba(0,0,0,.7);
+    visibility: hidden;
+    opacity: 0;
+
+    transition: all ease .3s;
+
+    .investorsTabItem_board {
+        @include centerPositioning;
+        min-width: 770px;
+        @include respond(phone) {
+            min-width: 90%;
+         }
+
+    }
+
+    &.openit {
+        visibility: visible;
+        opacity: 1;
+
+    }
+
+    .flex {
+        margin-bottom: 2.5rem;
+        h3 {
+            color: #0B63AC;
+            font-size: 27px;
+            margin-bottom: 0rem;
+        }
+        @include displayFlex;
+    }
 }

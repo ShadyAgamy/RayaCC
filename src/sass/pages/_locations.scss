@@ -182,7 +182,7 @@
     background: #0B63AC;
     clip-path: polygon(0 0, 100% 0%, 94% 100%, 0 100%);
     @include respond(tab-land) {
-        width: 100%;
+        width: 100%!important;
      }
      @include respond(phone) {
         clip-path: unset;

@@ -426,3 +426,27 @@
     margin-left: .5rem;
     margin-bottom: 0.1rem;
 }
+
+
+.img_container {
+    width: 110%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & > p {
+      width: 32%;
+      margin-bottom: 2rem;
+      @include respond(tab-land) {
+        width: 49%
+     }
+     @include respond(phone) {
+      width: 100%
+   }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+}

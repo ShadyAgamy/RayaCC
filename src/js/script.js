@@ -406,6 +406,9 @@ function tabName(evt, TabContent) {
    var menuCustomScroll = document.getElementById('menuCustomScroll')
    new SimpleBar(menuCustomScroll);
 
+
+
+
 }); //jquery end
 
 $(window).scroll(function(){
@@ -451,4 +454,33 @@ var mySwiper_4 = new Swiper ('.testmonialsSlider .swiper-container', {
   }
 
 
+})
+
+
+$(".openCases a").on("click", function(e) {
+ 
+  e.preventDefault();
+  $(".popUp.investorsTabItem").toggleClass("openit");
+//   if ($(".popUp.investorsTabItem").css("display") == "none") {
+//     $(".popUp.investorsTabItem").css("display", "flex");
+//     $(".investorsTabItem_board_b").fadeIn();
+//   } else if ($(".popUp.investorsTabItem").css("display") == "block") {
+//     $(".popUp.investorsTabItem").css("display", "none")
+//   } else if ($(".popUp.investorsTabItem").css("display") == "flex") {
+//     $(".popUp.investorsTabItem").css("display", "none")
+//   }
+})
+
+$(".popUp.investorsTabItem").on("click", function(e) {
+  e.stopPropagation();
+  $(".popUp.investorsTabItem").toggleClass("openit");
+})
+$(".popUp.investorsTabItem .close").on("click", function(e) {
+  e.stopPropagation();
+  $(".popUp.investorsTabItem").toggleClass("openit");
+})
+
+$(".popUp.investorsTabItem .investorsTabItem_board").on("click", function(e) {
+  e.stopPropagation();
+  
 })
