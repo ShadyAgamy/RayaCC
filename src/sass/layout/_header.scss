@@ -25,7 +25,7 @@
             width: 50%;
             margin-right: -37rem;
             margin-left: 14rem;
-            margin-top: 5rem;
+            margin-top: 1rem;
             @include respond(tab-land){
                 width: 90%;
                 margin-right: -45%;
@@ -40,7 +40,7 @@
             }
 
             &_footer {
-                margin-top: 4rem;
+                margin-top: -1rem;
                 margin-left: 2rem;
             }
            
