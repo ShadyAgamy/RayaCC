@@ -259,18 +259,17 @@ $(document).ready(function () {
         scrollTop: $(".application_form_form").offset().top
       }, 800);
       var jobPos = $(".application_form_form").find(".custom_input #Position");
-      $(jobPos).val(jobName)
-      // $(jobPos).find("option").each(function (i, el) {
-      //   $(el).removeAttr('selected');
-
-      //   if ($(el).val().toLowerCase() == jobName) {
-      //     $(el).attr('selected', 'selected');
-      //   }
-      // });
+      $(jobPos).val(jobName);
+      if ($(el).closest(".careers_loc_content").hasClass("egypt")) {
+        $("#loc").val("Egypt")
+      } else if ($(el).closest(".careers_loc_content").hasClass("poland")) {
+        $("#loc").val("poland")
+      } else {
+        $("#loc").val("uae")
+      }
+     console.log($("#loc").val())
     });
-  }); // var swiperFractionDiv = $(".swiper-pagination.swiper-pagination-fraction");
-  // var swiperSpanText =  swiperFractionDiv.find("span").text();
-  // swiperSpanText = ( "0" + swiperSpanText)
+  }); 
 
   $(".Languages_img img");
 
