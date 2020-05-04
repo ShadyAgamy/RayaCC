@@ -327,7 +327,7 @@
         margin: 8rem auto;
         padding: 9rem 0;
         @include respond(tab-land) {
-            width: 95%;
+            width: 95%!important;
         }
     }
 
@@ -410,7 +410,7 @@
         }  
     }
 
-    .swiper-button-prev,.swiper-button-next{
+    .swiper-button-prev,.swiper-button-prev_w,.swiper-button-next,.swiper-button-next_w{
         top: 53%;
         width: 10px;
         height: 21px;
@@ -420,10 +420,10 @@
         }
     }
 
-    .swiper-button-prev {
+    .swiper-button-prev,.swiper-button-prev_w {
         left: 14%;
     }
-    .swiper-button-next {
+    .swiper-button-next,.swiper-button-next_w {
         right: 14%;
     }
 }

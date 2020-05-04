@@ -433,3 +433,23 @@ $(".cert_icons").css("bottom", $(".footer_foot").css("height"))
 $(window).on("resize", function() {
   $(".cert_icons").css("bottom", $(".footer_foot").css("height"))
 })
+
+
+var mySwiper_4 = new Swiper ('.testmonialsSlider .swiper-container', {
+  slidesPerView: 1,
+  spaceBetween: 0, 
+  speed: 700,
+  loop: $(".testmonialsSlider .swiper-container").find(".swiper-slide").length > 1 ? true : false,
+  paginationClickable: true,
+  watchSlidesProgress: true,
+  autoplay: {
+      delay: 5000,
+      
+  },
+  navigation: {
+  nextEl: '.testmonialsSlider .swiper-button-next_w',
+  prevEl: '.testmonialsSlider .swiper-button-prev_w',
+  }
+
+
+})
