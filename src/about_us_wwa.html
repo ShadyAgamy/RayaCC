@@ -538,28 +538,31 @@
         <script src="js/script.js"></script>
 
         <script>
-            var certImgsSrcs = [];
+           var certImgsSrcs = [];
             $(".swiper-pagination_cert img").each((i, el) => {
                
                 certImgsSrcs.push( $(el).attr("src"))
             }) 
-            
-            var mySwiper = new Swiper ('.certification .swiper-container', {
-                // If we need pagination
-                pagination: {
-                el: '.swiper-pagination',
-                        clickable: true,
-                    renderBullet: function (index, className) {
-                    // return '<span class="' + className + '">' + (menu[index]) + '</span>';
-                    return '<img class="' + className + '" src="' + (certImgsSrcs[index]) + '">';
-                    },
-                },
 
-                // Navigation arrows
-                navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+            var ss = new Swiper ('.certification .swiper-container', {
+            autoplay: {
+                delay: 5000, 
+            },
+            speed: 1100,
+            pagination: {
+            el: '.swiper-pagination',
+                    clickable: true,
+                renderBullet: function (index, className) {
+                // return '<span class="' + className + '">' + (menu[index]) + '</span>';
+                return '<img class="' + className + '" src="' + (certImgsSrcs[index]) + '">';
                 },
+            },
+
+            // Navigation arrows
+            navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            },
             })
 
 

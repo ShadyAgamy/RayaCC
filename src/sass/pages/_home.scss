@@ -475,7 +475,7 @@
 
             .main_left_heading {
                 margin-bottom: 14rem;
-                max-width: 100%;
+                max-width: 90%;
                 @include respond(tab-land){
                     position: absolute;
                     top: 0;
@@ -484,8 +484,9 @@
                     max-width: 500px;
                 }
                 @include respond(phone){
-                    min-width: 370px;
-                    right: -11%;
+                    min-width: 90%;
+                    right: -6%;
+                    padding-right: 8rem;
 
                     h2 {
                         font-size: 38px!important;
@@ -794,6 +795,10 @@ html {
         width: 65%;
         margin: 0rem 0;
         padding: 4rem 0;
+        @media (max-width: 900px) {
+            margin-top: 6rem;
+           
+        }
     }
     .solutions_content_slider {
         align-self: center;

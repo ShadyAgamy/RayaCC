@@ -452,10 +452,7 @@ var mySwiper_4 = new Swiper ('.testmonialsSlider .swiper-container', {
   nextEl: '.testmonialsSlider .swiper-button-next_w',
   prevEl: '.testmonialsSlider .swiper-button-prev_w',
   }
-
-
 })
-
 
 $(".openCases a").on("click", function(e) {
  

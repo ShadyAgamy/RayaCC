@@ -152,7 +152,7 @@
     .DIFFERENTIATORS.loc .DIFFERENTIATORS_loc_link a img,
     .careers_loc_content_head-toggle img,
     .apply_now_btn a img,
-    .list_pagination_cont .arrows a img {
+    .list_pagination_cont .arrows a img,.popup .menu-item_cont .menu-item .sub-menu>li:nth-of-type(1) a img {
         transform: rotate(180deg) translateX(0);
     }
     .locations img {

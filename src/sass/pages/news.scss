@@ -53,6 +53,11 @@
                 line-height: 1.4;
                 display: block;
                 color: white;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
             }
         }
     }
@@ -129,5 +134,14 @@
 .newsSingle{
     h1 {
         font-size: 46px!important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;
+        @media (max-width: 600px) {
+            font-size: 25px !important;
+           
+        }
     }
 }

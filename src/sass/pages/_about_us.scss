@@ -64,6 +64,7 @@
             width: 61%;
             max-height: 410px;
             background-size: cover;
+            background-repeat: no-repeat;
             @include respond(tab-land){
                 width: 100%;
                 background-position: -26rem;
@@ -1238,5 +1239,11 @@ ul.breadcrumb {
     .managementContain .managementDataSwiper .managementDataSwiperArrows,
     .managementContain .managementDataSwiper .managementDataSwiperCont {
         width: 100%;
+    }
+}
+
+.header.about.investors_header h3 {
+    @media (max-width: 600px) {
+        margin-top: 1rem; 
     }
 }
