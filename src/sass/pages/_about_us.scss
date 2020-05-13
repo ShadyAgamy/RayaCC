@@ -225,6 +225,9 @@
     &:nth-of-type(3) {
         margin-top: 6rem;
         margin-bottom: 25rem;
+        @include respond(phone) {
+            margin-bottom: 8rem;
+        }
         .wwa_sec_img  {
             width: 435px;
             @include respond(tab-land) {
@@ -297,14 +300,14 @@
         .main_left_heading {
             min-width: 59rem;
             @include respond(phone) {
-                min-width: 51rem;
-                margin-left: -19%;
+                min-width: 47rem;
+                margin-left: -22%;
             }
 
             h2 {
                 font-size: 65px;
                 @include respond(phone) {
-                    font-size: 38px;
+                    font-size: 34px;
                 }
             }
 

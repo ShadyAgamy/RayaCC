@@ -11,7 +11,7 @@
           padding: 3rem 0;
           margin-top: -2rem;
         @include respond(phone){
-            font-size: 35px;      
+            font-size: 31px;      
         }
      
           
@@ -810,6 +810,10 @@ html {
         box-shadow: 0 3px 16px #00000029;
         color: white;
         padding: 7.5rem 9rem ;
+        @media (max-width: 600px) {
+            padding: 4rem 2rem ;
+           
+        }
 
         &:before, &:after{
             display: none;

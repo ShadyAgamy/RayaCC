@@ -1139,3 +1139,12 @@ min-width: unset;
         }
     }
 }
+
+
+.header.about.investors_header {
+    .header_main_text h1 {
+        @media (max-width: 600px) {
+            font-size: 29px !important;
+        }
+    }
+}
