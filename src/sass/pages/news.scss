@@ -134,13 +134,9 @@
 .header_main .header_main_text.newsSingle{
     h1 {
         font-size: 46px!important;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 7;
-        -webkit-box-orient: vertical;
         @media (max-width: 600px) {
-            font-size: 25px !important;
+            font-size: 22px !important;
+            width: 140%;
            
         }
     }

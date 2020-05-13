@@ -1079,6 +1079,8 @@ html { overflow-x: hidden !important; }
 
 .solutions.testmonialsSlider.certification .swiper-button-prev_w, .solutions.testmonialsSlider.certification .swiper-button-next_w { position: absolute; margin-top: -22px; z-index: 10; cursor: pointer; background-position: center; background-repeat: no-repeat; background-size: unset; }
 
+.solutions_content_slider .main_left_heading h2 { line-height: 1; }
+
 .header.about { min-height: 450px; max-height: 450px; position: relative; }
 
 .header.about .header_main { padding: 12rem 4.5rem 0 0; overflow: hidden; }
@@ -1780,9 +1782,9 @@ ul.breadcrumb li a:hover { color: white; text-decoration: underline; }
 
 @media (max-width: 450px) { .more_news .main_left_heading { margin-left: 7%; } }
 
-.header_main .header_main_text.newsSingle h1 { font-size: 46px !important; overflow: hidden; -o-text-overflow: ellipsis; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 7; -webkit-box-orient: vertical; }
+.header_main .header_main_text.newsSingle h1 { font-size: 46px !important; }
 
-@media (max-width: 600px) { .header_main .header_main_text.newsSingle h1 { font-size: 25px !important; } }
+@media (max-width: 600px) { .header_main .header_main_text.newsSingle h1 { font-size: 22px !important; width: 140%; } }
 
 .careers { padding: 8rem 4.5rem; width: 75%; }
 
