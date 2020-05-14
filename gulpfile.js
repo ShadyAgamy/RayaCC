@@ -7,7 +7,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var rtlcss = require('gulp-rtlcss');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
-
+var concatCss = require('gulp-concat-css');
 //Copy All HTML Files
 gulp.task('copyHTML', function() {
     gulp.src('src/*.html')
@@ -34,11 +34,10 @@ gulp.task('imagemin', () =>
 gulp.task('css', function () {
     return gulp.src('src/sass/main.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compact'})
+        .pipe(sass({outputStyle: 'compressed'})
             .on('error', sass.logError)
         )
         .pipe(prefix("last 5 version"))
-        
         .pipe(gulp.dest('build/css'))
         .pipe(rtlcss()) // Convert to RTL.
         

@@ -488,3 +488,53 @@ div .wpcf7-response-output {
         }
     }
 }
+
+.cookies {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    transition: all .2s ease-in-out;
+    width: 100%;
+    height: 75px;
+    background: #D0D0CE;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+
+    .ps {
+        width: 75%;
+        margin-right: auto;
+    }
+    p {
+        color: #58595B;
+        font-weight: bold;
+        font-size :15px;
+        
+    }
+
+    .btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+         text-transform: capitalize;
+
+        .priv {
+            color: #2874B1;
+            font-size : 13px;
+            text-decoration: underline!important;
+            margin-right: 2rem;
+            white-space: nowrap;
+        }
+
+        .ok {
+            background-color: #0B63AC;
+            color: white;
+            padding: 1.5rem 3rem;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+    }
+
+}

@@ -409,6 +409,7 @@ function tabName(evt, TabContent) {
 
 
 
+
 }); //jquery end
 
 $(window).scroll(function(){
@@ -481,3 +482,9 @@ $(".popUp.investorsTabItem .investorsTabItem_board").on("click", function(e) {
   e.stopPropagation();
   
 })
+
+$(".btns .ok").on("click", function(e) {
+  e.preventDefault();
+   console.log("hee")
+   $(this).closest(".cookies").fadeOut();
+ })
