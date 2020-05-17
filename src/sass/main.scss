@@ -1,5 +1,10 @@
 
 // START HERE
+@import "swiper.min";
+@import "dayGrid.min";
+@import "fullcalendar";
+@import "fullcalendar.print";
+@import "simplebar";
 @import 'abstracts/functions';
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
@@ -28,11 +33,7 @@
 @import "pages/careers";
 @import "pages/contact";
 @import "pages/investors";
-@import "swiper.min";
-@import "dayGrid.min";
-@import "fullcalendar";
-@import "fullcalendar.print";
-@import "simplebar";
+
 
 
 

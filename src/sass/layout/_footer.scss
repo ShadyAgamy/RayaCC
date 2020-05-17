@@ -502,10 +502,18 @@ div .wpcf7-response-output {
     align-items: center;
     justify-content: space-between;
     padding: 2rem 4rem;
-
+    @include respond(tab-port) {
+        height: auto;
+        flex-wrap: wrap;
+    }
     .ps {
         width: 75%;
         margin-right: auto;
+        @include respond(tab-port) {
+            width: 100%;
+            margin-right: auto;
+            margin-bottom: 1rem;
+        }
     }
     p {
         color: #58595B;
@@ -519,7 +527,9 @@ div .wpcf7-response-output {
         align-items: center;
         justify-content: space-between;
          text-transform: capitalize;
-
+         @include respond(tab-port) {
+            margin-left: auto;
+        }
         .priv {
             color: #2874B1;
             font-size : 13px;

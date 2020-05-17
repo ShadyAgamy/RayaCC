@@ -291,7 +291,7 @@ $(document).ready(function () {
       width: "24%"
     }, 1000);
   }, function () {}); //   add title and back btn to menu after the page load
-
+  var backText = $("#Menupopup").attr("backText");
   var backSrc = $("#Menupopup").attr("backSrc");
   $("#Menupopup .menu-item_cont > .menu-item ").each(function (i, el) {
     if ($(el).hasClass("menu-item-has-children")) {
@@ -302,7 +302,7 @@ $(document).ready(function () {
 
         if ($(el).children("a").next().find("li").first().hasClass("closeD")) {} else {
           $(el).find(".sub-menu").prepend("<li>".concat(liName, "</li>"));
-          $(el).find(".sub-menu").prepend(" <li class='closeD'><a onclick='$(this).closest(\".sub-menu\").css(\"display\",\"none\")'><img src='".concat(backSrc, "' alt='back icon'>Back </a></li>"));
+          $(el).find(".sub-menu").prepend(" <li class='closeD'><a onclick='$(this).closest(\".sub-menu\").css(\"display\",\"none\")'><img src='".concat(backSrc, "' alt='back icon'>" + backText + "</a></li>"));
         }
       });
     }
