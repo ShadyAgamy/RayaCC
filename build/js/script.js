@@ -301,13 +301,14 @@ $(document).ready(function () {
 
         if ($(el).children("a").next().find("li").first().hasClass("closeD")) {} else {
           $(el).find(".sub-menu").prepend("<li>".concat(liName, "</li>"));
-          $(el).find(".sub-menu").prepend(" <li class='closeD'><a ><img src='".concat(backSrc, "' alt='back icon'>" + backText + "</a></li>")); 
-          var closeIc = $(el).find(".closeD a");
-          $(document).on('touchstart click', closeIc, function(e){
-            console.log("clickeed")
-            e.stopPropagation(); 
-            (closeIc).closest(".sub-menu").css("display","none")
-       });
+          // $(el).find(".sub-menu").prepend(" <li class='closeD'><a ><img src='".concat(backSrc, "' alt='back icon'>" + backText + "</a></li>")); 
+          $(el).find(".sub-menu").prepend(" <li class='closeD'><a onclick='$(this).closest(\".sub-menu\").css(\"display\",\"none\")'><img src='".concat(backSrc, `' alt='back icon'>${backText} </a></li>`));
+      //     var closeIc = $(el).find(".closeD a");
+      //     $(document).on('touchstart click', closeIc, function(e){
+      //       console.log("clickeed")
+      //       e.stopPropagation(); 
+      //       (closeIc).closest(".sub-menu").css("display","none")
+      //  });
         }
       });
     }
