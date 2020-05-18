@@ -64,7 +64,6 @@ $(document).ready(function () {
   function checkMediaFortextDivs(x,textDivss) {
        if (x.matches) { // If media query matches
         if (textDivss) {
-          console.log(textDivss)
           for (var i =0; i <= textDivss.length; i++ ) {
             if (i >= 1) {
                 var box = document.getElementById('customScroll' + i);
@@ -84,7 +83,6 @@ $(document).ready(function () {
     $(this).addClass('active');
     $('.investorsTabItem').hide();
     $('.' + relatedData).fadeIn('fast');
-    console.log("clicked");
     let textDivs = $(".investorsTabItem_board_b-text");
    checkMediaFortextDivs(x,textDivs);
   }); // Investors menu sticky on scroll
@@ -267,7 +265,6 @@ $(document).ready(function () {
       } else if ($(el).closest(".careers_loc_content").hasClass("UAE")){
         $("#loc").val("UAE")
       }
-     console.log($("#loc").val())
     });
   }); 
 
@@ -293,6 +290,7 @@ $(document).ready(function () {
   }, function () {}); //   add title and back btn to menu after the page load
   var backText = $("#Menupopup").attr("backText");
   var backSrc = $("#Menupopup").attr("backSrc");
+  let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
   $("#Menupopup .menu-item_cont > .menu-item ").each(function (i, el) {
     if ($(el).hasClass("menu-item-has-children")) {
       $(el).children("a").on("click", function (e) {
@@ -302,7 +300,10 @@ $(document).ready(function () {
 
         if ($(el).children("a").next().find("li").first().hasClass("closeD")) {} else {
           $(el).find(".sub-menu").prepend("<li>".concat(liName, "</li>"));
-          $(el).find(".sub-menu").prepend(" <li class='closeD'><a onclick='$(this).closest(\".sub-menu\").css(\"display\",\"none\")'><img src='".concat(backSrc, "' alt='back icon'>" + backText + "</a></li>"));
+          $(el).find(".sub-menu").prepend(" <li class='closeD'><a ><img src='".concat(backSrc, "' alt='back icon'>" + backText + "</a></li>")); 
+          $(el).find(".closeD a").on(touchEvent, function() {
+            $(el).find(".closeD a").closest(".sub-menu").css("display","none")
+          });
         }
       });
     }
@@ -447,6 +448,7 @@ var mySwiper_4 = new Swiper ('.testmonialsSlider .swiper-container', {
   watchSlidesProgress: true,
   autoplay: {
       delay: 5000,
+      disableOnInteraction: true,
       
   },
   navigation: {
@@ -454,6 +456,13 @@ var mySwiper_4 = new Swiper ('.testmonialsSlider .swiper-container', {
   prevEl: '.testmonialsSlider .swiper-button-prev_w',
   }
 })
+ $(".testmonialsSlider .swiper-container").hover(function() {
+        (this).swiper.autoplay.stop();
+        
+    }, function() {
+        (this).swiper.autoplay.start();
+    });
+    
 
 $(".openCases a").on("click", function(e) {
  
@@ -485,6 +494,5 @@ $(".popUp.investorsTabItem .investorsTabItem_board").on("click", function(e) {
 
 $(".btns .ok").on("click", function(e) {
   e.preventDefault();
-   console.log("hee")
    $(this).closest(".cookies").fadeOut();
  })
