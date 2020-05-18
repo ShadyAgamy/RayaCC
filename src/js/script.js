@@ -290,7 +290,8 @@ $(document).ready(function () {
   }, function () {}); //   add title and back btn to menu after the page load
   var backText = $("#Menupopup").attr("backText");
   var backSrc = $("#Menupopup").attr("backSrc");
-  let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+  // let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+  // console.log(touchEvent)
   $("#Menupopup .menu-item_cont > .menu-item ").each(function (i, el) {
     if ($(el).hasClass("menu-item-has-children")) {
       $(el).children("a").on("click", function (e) {
@@ -301,9 +302,12 @@ $(document).ready(function () {
         if ($(el).children("a").next().find("li").first().hasClass("closeD")) {} else {
           $(el).find(".sub-menu").prepend("<li>".concat(liName, "</li>"));
           $(el).find(".sub-menu").prepend(" <li class='closeD'><a ><img src='".concat(backSrc, "' alt='back icon'>" + backText + "</a></li>")); 
-          $(el).find(".closeD a").on(touchEvent, function() {
-            $(el).find(".closeD a").closest(".sub-menu").css("display","none")
-          });
+          var closeIc = $(el).find(".closeD a");
+          $(document).on('touchstart click', closeIc, function(e){
+            console.log("clickeed")
+            e.stopPropagation(); 
+            (closeIc).closest(".sub-menu").css("display","none")
+       });
         }
       });
     }
