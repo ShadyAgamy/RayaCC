@@ -435,10 +435,10 @@
 
 
 
-        <div id="loading">
-            <!-- <img src="img/preloader.gif" alt=""> -->
+        <!-- <div id="loading">
+            <img src="img/preloader.gif" alt="">
         </div>  
-       
+        -->
 
 
 
@@ -478,20 +478,20 @@
                 
                 }
                 var mySwiper_2 = new Swiper ('.industries_swiper.swiper-container', {
-                    slidesPerView: 'auto',
+                    slidesPerView: "auto",
                     spaceBetween: 15,  
                     speed: 700,
                     loop: true,
-                    paginationClickable: true,
-                    watchSlidesProgress: true,
+                    // paginationClickable: true,
+                    // watchSlidesProgress: true,
                     autoplay: {
                         delay: 5000,
                     },
-                    on: {
-                        slideChange : function () {  
-                        move(".industries_content")
-                    }
-                    },  
+                    // on: {
+                    //     slideChange : function () {  
+                    //     move(".industries_content")
+                    // }
+                    // },  
                     navigation: {
                     nextEl: '.industries .swiper-button-next_b',
                     prevEl: '.industries .swiper-button-prev_b',

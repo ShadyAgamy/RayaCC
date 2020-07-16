@@ -1,23 +1,52 @@
-
 "use strict";
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _toConsumableArray(arr) {
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
+}
 
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
 
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+function _iterableToArray(iter) {
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
+}
 
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+}
 
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
 
-// hide Loader
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+} // hide Loader
+
+
 $(window).on('load', function () {
   $('#loading').fadeOut();
   $("body").removeClass("overflowHidden");
 });
+
+window.onload = function () {
+  console.log("hee");
+  $('#loading').fadeOut();
+  $("body").removeClass("overflowHidden");
+};
+
 $(document).ready(function () {
   // Menu Toggle Function
   // menu open
@@ -61,22 +90,23 @@ $(document).ready(function () {
   }); // Investors Tabs Handling
 
   var textDivs = $(".investorsTabItem_board_b-text:visible");
-  function checkMediaFortextDivs(x,textDivss) {
-       if (x.matches) { // If media query matches
-        if (textDivss) {
-          for (var i =0; i <= textDivss.length; i++ ) {
-            if (i >= 1) {
-                var box = document.getElementById('customScroll' + i);
-                new SimpleBar(box)
-            }
+
+  function checkMediaFortextDivs(x, textDivss) {
+    if (x.matches) {
+      // If media query matches
+      if (textDivss) {
+        for (var i = 0; i <= textDivss.length; i++) {
+          if (i >= 1) {
+            var box = document.getElementById('customScroll' + i);
+            new SimpleBar(box);
           }
         }
-           
-       } 
-   }
-   var x = window.matchMedia("(min-width: 900px)")
-   checkMediaFortextDivs(x,textDivs); 
+      }
+    }
+  }
 
+  var x = window.matchMedia("(min-width: 900px)");
+  checkMediaFortextDivs(x, textDivs);
   $('.investorsTabsKey').on('click', function () {
     var relatedData = $(this).attr('related-data');
     $(this).siblings().removeClass('active');
@@ -84,7 +114,7 @@ $(document).ready(function () {
     $('.investorsTabItem').hide();
     $('.' + relatedData).fadeIn('fast');
     let textDivs = $(".investorsTabItem_board_b-text");
-   checkMediaFortextDivs(x,textDivs);
+    checkMediaFortextDivs(x, textDivs);
   }); // Investors menu sticky on scroll
 
   if ($('.investorsData').length) {
@@ -258,16 +288,16 @@ $(document).ready(function () {
       }, 800);
       var jobPos = $(".application_form_form").find(".custom_input #Position");
       $(jobPos).val(jobName);
+
       if ($(el).closest(".careers_loc_content").hasClass("EGYPT")) {
-        $("#loc").val("EGYPT")
+        $("#loc").val("EGYPT");
       } else if ($(el).closest(".careers_loc_content").hasClass("POLAND")) {
-        $("#loc").val("POLAND")
-      } else if ($(el).closest(".careers_loc_content").hasClass("UAE")){
-        $("#loc").val("UAE")
+        $("#loc").val("POLAND");
+      } else if ($(el).closest(".careers_loc_content").hasClass("UAE")) {
+        $("#loc").val("UAE");
       }
     });
-  }); 
-
+  });
   $(".Languages_img img");
 
   function myFunction(checkMedia) {
@@ -288,10 +318,11 @@ $(document).ready(function () {
       width: "24%"
     }, 1000);
   }, function () {}); //   add title and back btn to menu after the page load
+
   var backText = $("#Menupopup").attr("backText");
-  var backSrc = $("#Menupopup").attr("backSrc");
-  // let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+  var backSrc = $("#Menupopup").attr("backSrc"); // let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
   // console.log(touchEvent)
+
   $("#Menupopup .menu-item_cont > .menu-item ").each(function (i, el) {
     if ($(el).hasClass("menu-item-has-children")) {
       $(el).children("a").on("click", function (e) {
@@ -300,15 +331,14 @@ $(document).ready(function () {
         var liName = $(el).children("a").text();
 
         if ($(el).children("a").next().find("li").first().hasClass("closeD")) {} else {
-          $(el).find(".sub-menu").prepend("<li>".concat(liName, "</li>"));
-          // $(el).find(".sub-menu").prepend(" <li class='closeD'><a ><img src='".concat(backSrc, "' alt='back icon'>" + backText + "</a></li>")); 
-          $(el).find(".sub-menu").prepend(" <li class='closeD'><a onclick='$(this).closest(\".sub-menu\").css(\"display\",\"none\")'><img src='".concat(backSrc, `' alt='back icon'>${backText} </a></li>`));
-      //     var closeIc = $(el).find(".closeD a");
-      //     $(document).on('touchstart click', closeIc, function(e){
-      //       console.log("clickeed")
-      //       e.stopPropagation(); 
-      //       (closeIc).closest(".sub-menu").css("display","none")
-      //  });
+          $(el).find(".sub-menu").prepend("<li>".concat(liName, "</li>")); // $(el).find(".sub-menu").prepend(" <li class='closeD'><a ><img src='".concat(backSrc, "' alt='back icon'>" + backText + "</a></li>")); 
+
+          $(el).find(".sub-menu").prepend(" <li class='closeD'><a onclick='$(this).closest(\".sub-menu\").css(\"display\",\"none\")'><img src='".concat(backSrc, `' alt='back icon'>${backText} </a></li>`)); //     var closeIc = $(el).find(".closeD a");
+          //     $(document).on('touchstart click', closeIc, function(e){
+          //       console.log("clickeed")
+          //       e.stopPropagation(); 
+          //       (closeIc).closest(".sub-menu").css("display","none")
+          //  });
         }
       });
     }
@@ -345,159 +375,125 @@ $(document).ready(function () {
   $("#closeEve").click(function () {
     $("#eventContent").fadeOut(300);
   });
-
-
   $("#tab_mobile").on("change", function () {
     var relatedData = $("#tab_mobile").val();
     $('.investorsTabItem').hide();
     $('.' + relatedData).fadeIn('fast');
   });
-
-
-  $("select[multiple]").mousedown(function(e){
+  $("select[multiple]").mousedown(function (e) {
     e.preventDefault();
-
     var select = this;
     var scroll = select.scrollTop;
-
     e.target.selected = !e.target.selected;
+    setTimeout(function () {
+      select.scrollTop = scroll;
+    }, 0);
+    $(select).focus();
+  }).mousemove(function (e) {
+    e.preventDefault();
+  });
 
-    setTimeout(function(){select.scrollTop = scroll;}, 0);
+  if ($(".tabcontents_link .DIFFERENTIATORS_loc_link").length == 0) {
+    $(".tabcontents_link .tabcontents").css("height", "100%");
+  }
 
-    $(select ).focus();
-}).mousemove(function(e){e.preventDefault()});
+  function tabName(evt, TabContent) {
+    // Declare all variables
+    var i, tabcontent, tablinks; // Get all elements with class="tabcontent" and hide them
 
+    tabcontent = document.getElementsByClassName("tabcontent");
 
-if($(".tabcontents_link .DIFFERENTIATORS_loc_link").length == 0) {
-  $(".tabcontents_link .tabcontents").css("height", "100%");
-}
-
-
-function tabName(evt, TabContent) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
-
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
+    for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
-  }
+    } // Get all elements with class="tablinks" and remove the class "active"
 
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
+
+    tablinks = document.getElementsByClassName("tablinks");
+
+    for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
+    } // Show the current tab, and add an "active" class to the link that opened the tab
 
-  // Show the current tab, and add an "active" class to the link that opened the tab
-  document.getElementById(TabContent).style.display = "block";
-  evt.currentTarget.className += " active";
+
+    document.getElementById(TabContent).style.display = "block";
+    evt.currentTarget.className += " active";
   }
 
   $("#tab_mobile").on("change", () => {
-      tabName(event, $("#tab_mobile").val());
-  } )
+    tabName(event, $("#tab_mobile").val());
+  });
 
+  if ($(window).width() <= 767) {
+    $(".menu-item.menu-item-has-children > a").removeAttr("href");
+  }
 
-
-
-    if ($(window).width() <= 767) {  
-      $(".menu-item.menu-item-has-children > a").removeAttr("href");
-          
-
-    }     
-
-
-
-   var menuCustomScroll = document.getElementById('menuCustomScroll')
-   new SimpleBar(menuCustomScroll);
-
-
-
-
-
+  var menuCustomScroll = document.getElementById('menuCustomScroll');
+  new SimpleBar(menuCustomScroll);
 }); //jquery end
 
-$(window).scroll(function(){
-  inqueryPosi()
-  
+$(window).scroll(function () {
+  inqueryPosi();
 });
 
 function inqueryPosi() {
   var scroll = $(window).scrollTop();
-  if (scroll > $(".footer").offset().top -600 ) {
-    
+
+  if (scroll > $(".footer").offset().top - 600) {
     $(".inquiry_links").css("position", "static");
-    
   } else {
-    
     $(".inquiry_links").css("position", "fixed");
-    
   }
 }
 
 inqueryPosi();
-
-$(".cert_icons").css("bottom", $(".footer_foot").css("height"))
-$(window).on("resize", function() {
-  $(".cert_icons").css("bottom", $(".footer_foot").css("height"))
-})
-
-
-var mySwiper_4 = new Swiper ('.testmonialsSlider .swiper-container', {
+$(".cert_icons").css("bottom", $(".footer_foot").css("height"));
+$(window).on("resize", function () {
+  $(".cert_icons").css("bottom", $(".footer_foot").css("height"));
+});
+var mySwiper_4 = new Swiper('.testmonialsSlider .swiper-container', {
   slidesPerView: 1,
-  spaceBetween: 0, 
+  spaceBetween: 0,
   speed: 700,
   loop: $(".testmonialsSlider .swiper-container").find(".swiper-slide").length > 1 ? true : false,
   paginationClickable: true,
   watchSlidesProgress: true,
   autoplay: {
-      delay: 5000,
-      disableOnInteraction: true,
-      
+    delay: 5000,
+    disableOnInteraction: true
   },
   navigation: {
-  nextEl: '.testmonialsSlider .swiper-button-next_w',
-  prevEl: '.testmonialsSlider .swiper-button-prev_w',
+    nextEl: '.testmonialsSlider .swiper-button-next_w',
+    prevEl: '.testmonialsSlider .swiper-button-prev_w'
   }
-})
- $(".testmonialsSlider .swiper-container").hover(function() {
-        (this).swiper.autoplay.stop();
-        
-    }, function() {
-        (this).swiper.autoplay.start();
-    });
-    
-
-$(".openCases a").on("click", function(e) {
- 
+});
+$(".testmonialsSlider .swiper-container").hover(function () {
+  this.swiper.autoplay.stop();
+}, function () {
+  this.swiper.autoplay.start();
+});
+$(".openCases a").on("click", function (e) {
   e.preventDefault();
-  $(".popUp.investorsTabItem").toggleClass("openit");
-//   if ($(".popUp.investorsTabItem").css("display") == "none") {
-//     $(".popUp.investorsTabItem").css("display", "flex");
-//     $(".investorsTabItem_board_b").fadeIn();
-//   } else if ($(".popUp.investorsTabItem").css("display") == "block") {
-//     $(".popUp.investorsTabItem").css("display", "none")
-//   } else if ($(".popUp.investorsTabItem").css("display") == "flex") {
-//     $(".popUp.investorsTabItem").css("display", "none")
-//   }
-})
-
-$(".popUp.investorsTabItem").on("click", function(e) {
+  $(".popUp.investorsTabItem").toggleClass("openit"); //   if ($(".popUp.investorsTabItem").css("display") == "none") {
+  //     $(".popUp.investorsTabItem").css("display", "flex");
+  //     $(".investorsTabItem_board_b").fadeIn();
+  //   } else if ($(".popUp.investorsTabItem").css("display") == "block") {
+  //     $(".popUp.investorsTabItem").css("display", "none")
+  //   } else if ($(".popUp.investorsTabItem").css("display") == "flex") {
+  //     $(".popUp.investorsTabItem").css("display", "none")
+  //   }
+});
+$(".popUp.investorsTabItem").on("click", function (e) {
   e.stopPropagation();
   $(".popUp.investorsTabItem").toggleClass("openit");
-})
-$(".popUp.investorsTabItem .close").on("click", function(e) {
+});
+$(".popUp.investorsTabItem .close").on("click", function (e) {
   e.stopPropagation();
   $(".popUp.investorsTabItem").toggleClass("openit");
-})
-
-$(".popUp.investorsTabItem .investorsTabItem_board").on("click", function(e) {
+});
+$(".popUp.investorsTabItem .investorsTabItem_board").on("click", function (e) {
   e.stopPropagation();
-  
-})
-
-$(".btns .ok").on("click", function(e) {
+});
+$(".btns .ok").on("click", function (e) {
   e.preventDefault();
-   $(this).closest(".cookies").fadeOut();
- })
+  $(this).closest(".cookies").fadeOut();
+});

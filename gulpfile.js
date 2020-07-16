@@ -37,11 +37,11 @@ gulp.task('css', function () {
         .pipe(sass({outputStyle: 'compressed'})
             .on('error', sass.logError)
         )
-        .pipe(prefix("last 5 version"))
-        .pipe(gulp.dest('build/css'))
-        .pipe(rtlcss()) // Convert to RTL.
+        // .pipe(prefix("last 5 version"))
+        // .pipe(gulp.dest('build/css'))
+        // .pipe(rtlcss()) // Convert to RTL.
         
-        .pipe(rename({ suffix: '-rtl'})) // Append "-rtl" to the filename.
+        // .pipe(rename({ suffix: '-rtl'})) // Append "-rtl" to the filename.
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('build/css')) // Output RTL stylesheets.
 });

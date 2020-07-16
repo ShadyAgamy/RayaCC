@@ -70,7 +70,8 @@
                 background-position: -26rem;
             }
             @include respond(phone){
-                background-position: -42rem;
+                background-position: center;
+                width: 120%;
             }
             img {
                 width: 100%;
@@ -1250,3 +1251,5 @@ ul.breadcrumb {
         margin-top: 1rem; 
     }
 }
+
+
