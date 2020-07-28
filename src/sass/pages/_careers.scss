@@ -744,16 +744,19 @@ select[multiple] {
 }
 
 .wpcf7-response-output {
-    background: #D65F5F!important;
-    border: 0!important;
-    padding: .5rem 2rem!important;
-    color: white!important;
-    font-size: 1.2rem!important;
-    border-radius: 1rem!important;
-    margin-bottom: 3rem!important;
-    float: left;
-}
+    background: #D65F5F;
+    border: 0 !important;
+    padding: 0.5rem 2rem !important;
+    color: white !important;
+    font-size: 1.2rem !important;
+    border-radius: 1rem !important;
+    margin-bottom: 3rem !important;
+    float: left; }
+  
+  .wpcf7 form.sent .wpcf7-response-output {
+    background-color: #46b450; }
 
+    
 .custom_input_group  {
     input:-webkit-autofill,
 input:-webkit-autofill:hover, 
