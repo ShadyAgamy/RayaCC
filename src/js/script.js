@@ -298,6 +298,8 @@ $(document).ready(function () {
       }
     });
   });
+
+  
   $(".Languages_img img");
 
   function myFunction(checkMedia) {
